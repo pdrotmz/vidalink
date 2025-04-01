@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # Aplicação principal (JDK 21)
+  vidalink:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: test  # Perfil padrão para testes
+    depends_on:
+      - redis
+      - h2
+    profiles:
+      - test
+
+  # Redis (compartilhado entre todos os ambientes)
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    profiles:
+      - dev
+      - prod
+      - test
+
+  # MySQL para desenvolvimento
+  mysql_dev:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app_dev
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: dev_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_dev_data:/var/lib/mysql
+    profiles:
+      - dev
+
+  # MySQL para produção
+  mysql_prod:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app_prod
+      MYSQL_USER: prod_user
+      MYSQL_PASSWORD: prod_password
+    ports:
+      - "3307:3306"  # Porta diferente para evitar conflito
+    volumes:
+      - mysql_prod_data:/var/lib/mysql
+    profiles:
+      - prod
+
+  h2:
+    image: oscarfonts/h2
+    ports:
+      - "9092:9092"  # Porta TCP do H2
+      - "8082:81"  # Porta do Console Web do H2
+    environment:
+      H2_OPTIONS: -tcp -tcpAllowOthers -tcpPort 9092  -ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+    profiles:
+      - test
+
+# Volumes para persistência dos dados
+volumes:
+  mysql_dev_data:
+  mysql_prod_data:
+  h2-data:

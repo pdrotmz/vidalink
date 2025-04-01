@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: vidalink
+
+  profiles:
+    active: test
