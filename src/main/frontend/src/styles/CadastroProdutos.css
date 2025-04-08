@@ -1,0 +1,89 @@
+.CadastroProdutosContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+}
+
+form {
+    display: flex;
+    padding: 2vw;
+    justify-content: space-between;
+}
+
+.esquerda {
+    display: inline-block;
+    position: relative;
+}
+
+form .esquerda input[type="text"] {
+    height: 3vw;
+    width: 48vw;
+
+    border-style: solid;
+    border-color: #BFBFBF;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+form .direita textarea{
+    height: 95%;
+    width: 40vw;
+
+    resize: vertical; /* permite redimensionar verticalmente */
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+
+
+    border-style: solid;
+    border-color: #BFBFBF;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+form .comprovante input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+form .comprovante .custom-button {
+    background-color: #FF4343;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+}
+
+.botoes button{
+    margin: 0.5vw;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #BFBFBF;
+    border-width: 1px;
+
+    width: 8vw;
+    height: 3vw;
+}
+
+.botoes .cancelar{
+    background-color: #fff;
+    color: #FF4343;
+}
+
+.botoes .salvar{
+    background-color: #FF4343;
+    color: #fff;
+}
