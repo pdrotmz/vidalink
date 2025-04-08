@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Layout principal */
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* NavSection */
+  .nav-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    font-weight: 400;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    margin: auto;
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .main-text {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .main-content h1 {
+    color: #333;
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  
+  /* Seção de login */
+  .login-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .login-section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .login-button {
+    background: #FF4343;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .login-button:hover {
+    background: #e03a3a;
+  }
+  
+  /* Botão */
+  .donate-button {
+    background: #FF4343;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .donate-button:hover {
+    background: #e03a3a;
+  }

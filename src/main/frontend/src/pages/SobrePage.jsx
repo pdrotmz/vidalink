@@ -3,7 +3,7 @@ import "../styles/SobrePage.css";
 import logo from "../assets/images/logo-vidalink.png";
 import { useNavigate } from "react-router-dom";
 
-export function SobrePage() {
+const SobrePage = () => {
   const navigate = useNavigate();
 
   return (
@@ -45,3 +45,5 @@ export function SobrePage() {
     </div>
   );
 }
+
+export default SobrePage;
