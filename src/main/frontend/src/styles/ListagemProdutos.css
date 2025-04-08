@@ -1,0 +1,34 @@
+.listagemProdutosContent {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+
+}
+.listagemProdutosContent .botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listagemProdutosContent .botoes input{
+    width: 20vw;
+    height: 3vw;
+    margin-right: 2vw;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #BFBFBF;
+}
+
+.listagemProdutosContent .botoes button{
+    width: 8vw;
+    height: 3vw;
+    margin-right: 2vw;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #BFBFBF;
+    background-color: #FF4343;
+    color: #fff;
+}
