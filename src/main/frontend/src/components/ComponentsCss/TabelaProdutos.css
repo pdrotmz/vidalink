@@ -1,0 +1,35 @@
+.tabela-container {
+    padding: 2rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabela-produtos th {
+    background-color: #ddd;
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .tabela-produtos td {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .acoes {
+    color: #ff4343;
+    cursor: pointer;
+  }
+  
+  .acoes .deletar:hover {
+    text-decoration: underline;
+  }
