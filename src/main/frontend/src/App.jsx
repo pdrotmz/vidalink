@@ -7,6 +7,7 @@ import "../src/styles/globals.css";
 import HomePage from "../src/pages/HomePage";
 import SobrePage from "../src/pages/SobrePage";
 import ContatoPage from "../src/pages/ContatoPage";
+import DoarPage from "../src/pages/DoarPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} index />
         <Route path="/sobre" element={<SobrePage />} />
         <Route path="/contato" element={<ContatoPage />} />
+        <Route path="/doar" element={<DoarPage />} />
       </Routes>
     </BrowserRouter>
   );

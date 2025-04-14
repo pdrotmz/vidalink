@@ -158,3 +158,126 @@
   .logo img {
     width: 256px;
   }
+
+
+  /* ========== RESPONSIVIDADE ========== */
+
+/* Tablet (768px a 1024px) */
+@media (max-width: 1024px) {
+  .main-content {
+    width: 85%;
+  }
+
+  .main-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .blood-drop {
+    margin-left: 3rem;
+  }
+
+  .blood-drop img {
+    width: 120px;
+  }
+
+  .donate-button {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 1.8rem;
+  }
+}
+
+/* Smartphone (até 767px) */
+@media (max-width: 767px) {
+  .nav-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .login-section {
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .main-content {
+    width: 95%;
+    margin-top: 0;
+  }
+
+  .main-text {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .main-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .blood-drop {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .blood-drop img {
+    width: 100px;
+  }
+
+  .call-action p {
+    font-size: 1.1rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .donate-button {
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+}
+
+/* Smartphones pequenos (até 480px) */
+@media (max-width: 480px) {
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .blood-drop img {
+    width: 80px;
+  }
+
+  .call-action p {
+    font-size: 1rem;
+  }
+
+  .donate-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+}
