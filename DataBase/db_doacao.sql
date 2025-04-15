@@ -74,7 +74,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(50) NOT NULL DEFAULT '0',
   `pontos` int NOT NULL DEFAULT (0),
   `codigoDeRecomendacao` int NOT NULL DEFAULT (0),
-  `foto` int DEFAULT NULL,
+  `foto` varchar(100) DEFAULT NULL,
+  'TipoSanguineo' varchar(5) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
