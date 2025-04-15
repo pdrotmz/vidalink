@@ -11,38 +11,39 @@ export const CadastroProdutos = () => {
             <div className="CadastroProdutosContent">
                 <h1>Cadastro de produtos</h1>
 
-                <form action="">
+                <form action="cadastro.java" autoComplete="off">
                     <div className="esquerda">
-                        <label htmlFor="">Nome do produto</label>
+
+                        <label htmlFor="inome">Nome do produto</label>
                         <br />
-                        <input type="text" placeholder="Nome do produto..."/>
+                        <input type="text" placeholder="Nome do produto..." name="nome" id="inome"/>
                         <br /><br />
 
-                        <label htmlFor="">Preço</label>
+                        <label htmlFor="ipreco">Preço</label>
                         <br />
-                        <input type="text" placeholder="Preço..."/>
+                        <input type="text" placeholder="Preço..." name="preco" id="ipreco"/>
                         <br /><br />
 
-                        <label htmlFor="">Categoria</label>
+                        <label htmlFor="icategoria">Categoria</label>
                         <br />
-                        <input type="text" placeholder="Categoria..."/>
+                        <input type="text" placeholder="Categoria..." name="categoria" id="icategoria"/>
                         <br /><br />
 
-                        <label htmlFor="">Estoque</label>
+                        <label htmlFor="iestoque">Estoque</label>
                         <br />
-                        <input type="text" placeholder="Estoque..."/>
+                        <input type="text" placeholder="Estoque..." name="estoque" id="iestoque"/>
                         <br /><br />
 
                         <div className="comprovante">
-                            <label className="custom-button" htmlFor="imagem">Submeter comprovante</label>
-                            <input type="file" id="imagem" name="imagem" accept="image/*" />
+                            <label className="custom-button" htmlFor="iimagem">Submeter comprovante</label>
+                            <input type="file" id="iimagem" name="imagem" accept="image/*" />
                         </div>
                     </div>
 
                     <div className="direita">
-                        <label htmlFor="">Descrição</label>
+                        <label htmlFor="idescricao">Descrição</label>
                         <br />
-                        <textarea name="" id="" placeholder="Descrição..."></textarea>
+                        <textarea name="descricao" id="idescricao" placeholder="Descrição..."></textarea>
                     </div>
                 </form>  
                 <br />
