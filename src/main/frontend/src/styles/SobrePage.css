@@ -1,0 +1,70 @@
+.sobre-container {
+  background-color: #ffd9d9;
+  color: #000000;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  opacity: 1.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.conteudo-central {
+  max-width: 800px;
+  z-index: 2;
+  position: relative;
+  text-align: left;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topo-sobre {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.voltar-btn {
+  background-color: #ff4343;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.titulo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.espaco-botao {
+  width: 102px; /* mesmo tamanho do botão para centralizar o título */
+}
+
+.sobre-texto {
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: left;
+}
