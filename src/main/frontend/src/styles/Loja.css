@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .container-principal {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .topo {
+    height: 80px;
+    background-color: #ef3b3b;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 28px;
+    color: white;
+  }
+  
+  .perfil {
+    background-color: #d86d6d;
+    padding: 40px 20px;
+    color: white;
+  }
+  
+  .perfil h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .level {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  
+  .pontos {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  
+  .gota {
+    font-size: 22px;
+    margin-left: 6px;
+  }
+  
+  .itens {
+    background-color: #fff;
+    padding: 40px 20px;
+    flex-grow: 1;
+  }
+  
+  .itens h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .grid-itens {
+    display: flex;
+    justify-content: space-between;
+    background-color: #c3c3c3;
+    border-radius: 12px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .item {
+    text-align: center;
+    font-size: 18px;
+    flex: 1 1 22%;
+  }
+  
+  .item img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  

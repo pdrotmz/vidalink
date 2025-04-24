@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 2vw;
+    background-color: #fff;
 }
 
 .CadastroProdutosContent form {

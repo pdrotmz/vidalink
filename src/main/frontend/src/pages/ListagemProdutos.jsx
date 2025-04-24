@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../components/ui/Header";
-import { TabelaProdutos } from "../components/sections/TabelaProdutos";
-import "../styles/ListagemProdutos.css"
+import Header from "../Components/Header";
+import TabelaProdutos from "../Components/TabelaProdutos";
+
+import "../Styles/ListagemProdutos.css"
 
 export const ListagemProdutos = () => {
 
@@ -33,3 +34,5 @@ export const ListagemProdutos = () => {
         </div>
     );
 }
+
+export default ListagemProdutos;

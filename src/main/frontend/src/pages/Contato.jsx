@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/ContatoPage.css";
-import logo from "../assets/images/logo-vidalink.png";
+import "../Styles/Contato.css";
+import logo from "../Assets/images/logoVidaLink.png";
 import { useNavigate } from "react-router-dom";
 
-const ContatoPage = () => {
+const Contato = () => {
   const navigate = useNavigate();
 
   return (
@@ -57,4 +57,4 @@ const ContatoPage = () => {
   );
 };
 
-export default ContatoPage;
+export default Contato;

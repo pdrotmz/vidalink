@@ -1,7 +1,32 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+th {
+    background: #d9d9d9;
+    padding: 12px;
+    text-align: left;
+}
+td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+}
+.editar {
+    color: red;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .listagemProdutosContent {
     display: flex;
     flex-direction: column;
     padding: 2vw;
+    background: #fff;
 
 }
 .listagemProdutosContent .botoes{
@@ -32,3 +57,4 @@
     background-color: #FF4343;
     color: #fff;
 }
+

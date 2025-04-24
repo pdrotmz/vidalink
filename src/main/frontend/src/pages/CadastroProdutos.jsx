@@ -1,6 +1,6 @@
 import React from "react";
-import { Header } from "../components/ui/Header";
-import "../styles/CadastroProdutos.css"
+import Header from "../Components/Header";
+import "../Styles/CadastroProdutos.css"
 
 export const CadastroProdutos = () => {
 
@@ -58,3 +58,5 @@ export const CadastroProdutos = () => {
         </div>
     );
 }
+
+export default CadastroProdutos;
