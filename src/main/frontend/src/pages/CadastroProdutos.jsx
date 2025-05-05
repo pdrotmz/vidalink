@@ -6,7 +6,7 @@ export const CadastroProdutos = () => {
 
     return (
         
-        <div className="content">
+        <div className="containerCadastroProdutos">
             <Header />
             <div className="CadastroProdutosContent">
                 <h1>Cadastro de produtos</h1>

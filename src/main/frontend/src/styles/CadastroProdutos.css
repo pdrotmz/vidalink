@@ -1,3 +1,8 @@
+.containerCadastroProdutos{
+    margin-top: -20px;
+
+}
+
 .CadastroProdutosContent{
     display: flex;
     flex-direction: column;
@@ -70,13 +75,15 @@
 .CadastroProdutosContent .botoes button{
     margin: 0.5vw;
 
-    border-radius: 10px;
+    border-radius: 0.8vw;
     border-style: solid;
     border-color: #BFBFBF;
     border-width: 1px;
 
     width: 8vw;
     height: 3vw;
+
+    font-size: 80%;
 }
 
 .CadastroProdutosContent .botoes .cancelar{
@@ -88,3 +95,45 @@
     background-color: #FF4343;
     color: #fff;
 }
+
+@media (max-width: 1000px) {
+    input{
+      width: 50vw !important;
+      height: 5vw !important;
+
+    }
+
+    button{
+        width: 10vw !important;
+        height: 3.75 !important;
+    }
+}
+
+@media (max-width: 650px) {
+    input{
+      width: 50vw !important;
+      height: 6vw !important;
+
+    }
+
+    button {
+        width: 12vw !important;
+        height: 4.5vw !important;
+  
+      }
+}
+
+@media (max-width: 500px) {
+    input{
+      width: 50vw !important;
+      height: 6vw !important;
+
+    }
+
+    button {
+        width: 15vw !important;
+        height: 5.625vw !important;
+  
+      }
+}
+

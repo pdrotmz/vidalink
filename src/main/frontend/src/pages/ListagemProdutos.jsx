@@ -9,9 +9,10 @@ export const ListagemProdutos = () => {
 
     return (
         
-        <div className="content">
+        <div className="listagemProdutosContent">
             <Header />
-            <div className="listagemProdutosContent">
+
+            <div className="containerListagemProdutos">
                 <h1>Listagem de produtos</h1>
                 <br />
 
