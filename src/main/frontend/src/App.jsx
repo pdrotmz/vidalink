@@ -11,6 +11,9 @@ import Loja from "./Pages/Loja";
 import Principal from "./Pages/Principal";
 import Sobre from "./Pages/Sobre";
 
+import "../src/index.css";
+import "../src/App.css"
+
 
 function App() {
   return (

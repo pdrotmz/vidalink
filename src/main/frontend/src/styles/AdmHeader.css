@@ -1,4 +1,4 @@
-.headerContent {
+.admHeaderContent {
     margin: 0vw;
     background-color: #FF4343;
     display: flex;
@@ -6,23 +6,23 @@
     align-items: center;
 }
 
-.headerContent nav {
+.admHeaderContent nav {
     width: 100vw;
 }
 
-.headerContent ul {
+.admHeaderContent ul {
     display: flex;
     justify-content: end;
 }
 
-.headerContent ul li {
+.admHeaderContent ul li {
     list-style: none;
     margin: 2.5vw;
     font-size: 2vw;
 }
 
 
-.headerContent nav a {
+.admHeaderContent nav a {
     color: #fff;
 }
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import "../Styles/Header.css"
+import "../Styles/AdmHeader.css"
 
-export const Header = () => {
+export const AdmHeader = () => {
     return (
-        <header className="headerContent">
+        <header className="admHeaderContent">
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
@@ -19,4 +19,4 @@ export const Header = () => {
     );
 };
 
-export default Header;
+export default AdmHeader;
