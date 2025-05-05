@@ -27,7 +27,7 @@
 }
 
 @media (max-width: 800px) {
-    .headerContent ul li {
+    .admHeaderContent ul li {
         list-style: none;
         margin: 2.5vw;
         font-size: 3vw;

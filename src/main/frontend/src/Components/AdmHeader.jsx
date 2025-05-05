@@ -7,11 +7,9 @@ export const AdmHeader = () => {
         <header className="admHeaderContent">
             <nav>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/">Loja</Link></li>
-                    <li><Link to="/">Submeter</Link></li>
-                    <li><Link to="/sobre">Sobre</Link></li>
-                    <li><Link to="/contato">Contato</Link></li>
+                    <li><Link to="/">Validação</Link></li>
+                    <li><Link to="/">Listagem</Link></li>
+                    <li><Link to="/">Cadastro</Link></li>
                 </ul>
                 
             </nav>
