@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    gap: 20px;
+    background-color: #f44336;
+}
+
+.titulo {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2.0em;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+
+
+.container {
+
+    margin-top: -45px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    max-width: 900px;
+    text-align: center;
+    height: 475px
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+h2 {
+    color: white;
+    background-color: #f44336;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    margin: -40px -40px 20px -40px;
+    font-size: 1.5em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row input,
+.row select {
+    flex: 1;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 250px;
+    
+
+}
+
+.button:hover {
+    background-color: #d32f2f;
+}
+
+.terms {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+input[type="date"] {
+    height: 40px;
+    max-width: 150px;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-left: auto;
+
+}
+
+.form-group.genero-data {
+    margin-bottom: 20px;
+}
+
+.genero-label {
+    font-size: 1.3em;
+    font-weight: medium;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 19px;
+    font-weight: medium;
+
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.terms-icone {
+    width: 16px;
+    height: 16px;
+}
+
+select {
+    width: 150px;
+    height: 40px;
+  
+    font-size: 14px;
+    
+}
+
+.form-group select {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
