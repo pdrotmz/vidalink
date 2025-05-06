@@ -1,4 +1,4 @@
-li{
+.recompensaContent{
     padding: 5px;
     margin-bottom: 20px;
 
@@ -19,7 +19,7 @@ li{
 
 }
 
-li hr{
+.recompensaContent hr{
     width: 80%;
     height: 1px;
     color: black;
@@ -29,18 +29,22 @@ li hr{
 
 }
 
-li .preco{
+.recompensaContent .preco{
     color: #FF4343;
     font-weight: bolder;
 }
 
-li .nome{
+.recompensaContent p{
+    font-size: 1.4vw;
+}
+
+.recompensaContent .nome{
     margin-top: 5%;
     color: #000;
 }
 
 
-li img{
+.recompensaContent img{
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
@@ -51,6 +55,6 @@ li img{
 
 
 
-li a{
+.recompensaContent a{
     text-decoration: none;
 }
