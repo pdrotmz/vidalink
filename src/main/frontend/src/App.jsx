@@ -10,6 +10,7 @@ import Login from "./Pages/Login";
 import Loja from "./Pages/Loja";
 import Principal from "./Pages/Principal";
 import Sobre from "./Pages/Sobre";
+import DetalhesRecompensa from './Pages/DetalhesRecompensa';
 
 import "../src/index.css";
 import "../src/App.css"
@@ -29,7 +30,8 @@ function App() {
           <Route path='/Loja' element={<Loja />} />
           <Route path='/Principal' element={<Principal />} />
           <Route path='/Sobre' element={<Sobre />} />
-          
+
+          <Route path="/Recompensa/:id" element={<DetalhesRecompensa/>} />
 
         </Routes>
       </BrowserRouter>
