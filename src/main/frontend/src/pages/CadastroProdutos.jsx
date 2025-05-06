@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Components/Header";
+import AdmHeader from "../Components/AdmHeader";
 import "../Styles/CadastroProdutos.css"
 
 export const CadastroProdutos = () => {
@@ -7,7 +7,7 @@ export const CadastroProdutos = () => {
     return (
         
         <div className="containerCadastroProdutos">
-            <Header />
+            <AdmHeader />
             <div className="CadastroProdutosContent">
                 <h1>Cadastro de produtos</h1>
 

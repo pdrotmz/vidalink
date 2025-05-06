@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../Components/Header";
+import AdmHeader from "../Components/AdmHeader";
 import TabelaProdutos from "../Components/TabelaProdutos";
 
 import "../Styles/ListagemProdutos.css"
@@ -10,7 +10,7 @@ export const ListagemProdutos = () => {
     return (
         
         <div className="listagemProdutosContent">
-            <Header />
+            <AdmHeader />
 
             <div className="containerListagemProdutos">
                 <h1>Listagem de produtos</h1>

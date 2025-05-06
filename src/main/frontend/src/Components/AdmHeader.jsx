@@ -7,7 +7,7 @@ export const AdmHeader = () => {
         <header className="admHeaderContent">
             <nav>
                 <ul>
-                    <li><Link to="/">Validação</Link></li>
+                    <li><Link to="/ValidarComprovante">Validação</Link></li>
                     <li><Link to="/ListagemProdutos">Listagem</Link></li>
                     <li><Link to="/CadastroProdutos">Cadastro</Link></li>
                 </ul>
