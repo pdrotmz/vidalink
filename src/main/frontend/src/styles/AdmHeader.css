@@ -1,0 +1,36 @@
+.admHeaderContent {
+    margin: 0vw;
+    background-color: #FF4343;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.admHeaderContent nav {
+    width: 100vw;
+}
+
+.admHeaderContent ul {
+    display: flex;
+    justify-content: end;
+}
+
+.admHeaderContent ul li {
+    list-style: none;
+    margin: 2.5vw;
+    font-size: 2vw;
+}
+
+
+.admHeaderContent nav a {
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .admHeaderContent ul li {
+        list-style: none;
+        margin: 2.5vw;
+        font-size: 3vw;
+    }
+}
+

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import '../styles/HomePage.css';
-import bloodDrop from '../assets/images/blood-drop.png'
-import vidalink from '../assets/images/logo-vidalink.png'
+import gota_sangue from '../Assets/images/gotaSangue.png'
+import logo from '../Assets/images/logoVidaLink.png'
 
-const HomePage = () => {
+import '../Styles/Home.css'
+
+const Home = () => {
   return (
     <div className="homepage">
      <div className='nav-section'>
@@ -24,7 +25,7 @@ const HomePage = () => {
         <div className='main-text'>
           <h1>Doe sangue, <br /> Salve vidas</h1>
          <div className='blood-drop'>
-          <img src={bloodDrop} alt="Gota de sangue" />
+          <img src={gota_sangue} alt="Gota de sangue" />
          </div>
         </div>
 
@@ -33,7 +34,7 @@ const HomePage = () => {
           <button className="donate-button">Doar agora</button>
         </div>
         <div className='logo'>
-          <img src={vidalink} alt="Logo da Vidalink" />
+          <img src={logo} alt="Logo da Vidalink" />
         </div>
       </main>
 
@@ -42,4 +43,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

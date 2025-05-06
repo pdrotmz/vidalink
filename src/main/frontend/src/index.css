@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -69,5 +73,3 @@ button:focus-visible {
   }
 }
   */
-=======
->>>>>>> develop

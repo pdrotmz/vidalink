@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../ComponentsCss/TabelaProdutos.css";
+import "../Styles/TabelaProdutos.css";
 
 export const TabelaProdutos = () => {
 
@@ -63,3 +63,5 @@ export const TabelaProdutos = () => {
     </div>
   );
 };
+
+export default TabelaProdutos;

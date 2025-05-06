@@ -1,0 +1,137 @@
+.containerLoja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.lojaContent {
+  margin-top: 20px;
+  width: 90vw;
+
+
+  border-color: black;
+  border-style: solid;
+  border-width: 0.01vw;
+  border-radius: 2vw;
+
+  padding: 5%;
+}
+
+.containerLoja .lojaContent .categorias ul{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+.containerLoja .lojaContent .categorias ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+    margin-right: 2%;
+
+    width: 15%;
+    
+}
+
+.containerLoja .lojaContent .categorias ul li p{
+    margin-top: 5%;
+    
+}
+
+.containerLoja .lojaContent .categorias ul li img{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FF4343;
+    border-width: 1px;
+
+    width: 80%;
+}
+
+
+
+
+
+.containerLoja .lojaContent .vitrine ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.containerLoja .lojaContent .vitrine ul li{
+    padding: 5px;
+    margin-bottom: 20px;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: black;
+
+    width: 21%;
+
+    text-align: center;
+
+}
+
+.containerLoja .lojaContent .vitrine ul li hr{
+    width: 80%;
+    height: 1px;
+    color: black;
+    background: #000;
+    border-style: none;
+    margin: 5%;
+
+}
+
+.containerLoja .lojaContent .vitrine ul li .preco{
+    color: #FF4343;
+    font-weight: bolder;
+}
+
+.containerLoja .lojaContent .vitrine ul li .nome{
+    margin-top: 5%;
+}
+
+
+.containerLoja .lojaContent .vitrine ul li img{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: black;
+
+    width: 80%;
+    
+
+}
+
+.containerLoja .lojaContent .line{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.containerLoja .lojaContent .line .redline{
+    width: 33.33%;
+    height: 8px;
+    background-color: #FF4343;
+    border-Radius: 3px 0 0 3px;
+}
+
+.containerLoja .lojaContent .line .blackline{
+    width: 66.66%;
+    height: 4px;
+    background-color: #EDEDED;
+    border-Radius: 0 3px 3px 0;
+    align-Self: center;
+}
+

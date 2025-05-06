@@ -1,12 +1,12 @@
 import React from "react";
-import { Header } from "../components/ui/Header";
-import "../styles/CadastroProdutos.css"
+import Header from "../Components/Header";
+import "../Styles/CadastroProdutos.css"
 
 export const CadastroProdutos = () => {
 
     return (
         
-        <div className="content">
+        <div className="containerCadastroProdutos">
             <Header />
             <div className="CadastroProdutosContent">
                 <h1>Cadastro de produtos</h1>
@@ -58,3 +58,5 @@ export const CadastroProdutos = () => {
         </div>
     );
 }
+
+export default CadastroProdutos;

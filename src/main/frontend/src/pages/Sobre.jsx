@@ -1,9 +1,10 @@
 import React from "react";
-import "../styles/SobrePage.css";
-import logo from "../assets/images/logo-vidalink.png";
+import logo from "../Assets/images/logoVidaLink.png";
 import { useNavigate } from "react-router-dom";
 
-const SobrePage = () => {
+import "../Styles/Sobre.css";
+
+const Sobre = () => {
   const navigate = useNavigate();
 
   return (
@@ -46,4 +47,4 @@ const SobrePage = () => {
   );
 }
 
-export default SobrePage;
+export default Sobre;

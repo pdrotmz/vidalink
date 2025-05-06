@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/DoarPage.css";
-import logo from "../assets/images/logo-vidalink.png";
+import "../Styles/Doar.css";
+import logo from "../Assets/images/logoVidaLink.png";
 import { useNavigate } from "react-router-dom";
 
-const ContatoPage = () => {
+const Doar = () => {
   const navigate = useNavigate();
 
   return (
@@ -42,7 +42,7 @@ const ContatoPage = () => {
                 6. Acupuntura;
             </li>
             <li>
-                    7.Bebidas alcóolicas;
+                7.Bebidas alcóolicas;
             </li>
             <li>
                 8.Extração dentária;
@@ -54,4 +54,4 @@ const ContatoPage = () => {
   );
 };
 
-export default ContatoPage;
+export default Doar;

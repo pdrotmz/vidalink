@@ -1,22 +1,36 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import '../src/styles/globals.css'
-import { HomePage } from './pages/HomePage'
-import { CadastroProdutos } from './pages/CadastroProdutos';
-import { ListagemProdutos } from './pages/ListagemProdutos';
-import { SobrePage } from './pages/SobrePage';
-import { DoarPage } from './pages/DoarPage';
-import { ContatoPage } from './pages/ContatoPage';
+
+import Home from "./Pages/Home";
+import CadastroProdutos from "./Pages/CadastroProdutos";
+import CadastroUsuarios from "./Pages/CadastroUsuarios";
+import Contato from "./Pages/Contato";
+import Doar from "./Pages/Doar";
+import ListagemProdutos from "./Pages/ListagemProdutos";
+import Login from "./Pages/Login";
+import Loja from "./Pages/Loja";
+import Principal from "./Pages/Principal";
+import Sobre from "./Pages/Sobre";
+
+import "../src/index.css";
+import "../src/App.css"
+
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/' element={<Home />} />
           <Route path='/CadastroProdutos' element={<CadastroProdutos />} />
+          <Route path='/CadastroUsuarios' element={<CadastroUsuarios />} />
+          <Route path='/Contato' element={<Contato />} />
+          <Route path='/Doar' element={<Doar />} />
           <Route path='/ListagemProdutos' element={<ListagemProdutos />} />
-          <Route path='SobrePage' element={<SobrePage />} />
-          <Route path='DoarPage' element={<DoarPage />} />
-          <Route path='ContatoPage' element={<ContatoPage />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/Loja' element={<Loja />} />
+          <Route path='/Principal' element={<Principal />} />
+          <Route path='/Sobre' element={<Sobre />} />
+          
+
         </Routes>
       </BrowserRouter>
   );
