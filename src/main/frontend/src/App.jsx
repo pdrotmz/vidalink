@@ -11,6 +11,8 @@ import Loja from "./Pages/Loja";
 import Principal from "./Pages/Principal";
 import Sobre from "./Pages/Sobre";
 import DetalhesRecompensa from './Pages/DetalhesRecompensa';
+import Cadastro from './Pages/cadastro';
+import ValidarComprovante from './Pages/validarcomprovante';
 
 import "../src/index.css";
 import "../src/App.css"
@@ -22,7 +24,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/CadastroProdutos' element={<CadastroProdutos />} />
-          <Route path='/CadastroUsuarios' element={<CadastroUsuarios />} />
           <Route path='/Contato' element={<Contato />} />
           <Route path='/Doar' element={<Doar />} />
           <Route path='/ListagemProdutos' element={<ListagemProdutos />} />
@@ -30,6 +31,11 @@ function App() {
           <Route path='/Loja' element={<Loja />} />
           <Route path='/Principal' element={<Principal />} />
           <Route path='/Sobre' element={<Sobre />} />
+
+          <Route path='/ValidarComprovante' element={<ValidarComprovante />} />
+
+          <Route path='/Cadastro' element={<Cadastro />} />
+          <Route path='/CadastroUsuarios' element={<CadastroUsuarios />} />
 
           <Route path="/Recompensa/:id" element={<DetalhesRecompensa/>} />
 

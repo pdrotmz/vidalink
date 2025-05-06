@@ -1,4 +1,4 @@
-body {
+.CadastroContainer body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,7 @@ body {
     background-color: #f44336;
 }
 
-.titulo {
+.CadastroContainer .titulo {
     margin-top: -200px;
     color: white;
     text-align: center;
@@ -20,7 +20,7 @@ body {
 
 
 
-.container {
+.CadastroContainer .container {
 
     margin-top: -45px;
     background-color: white;
@@ -33,12 +33,12 @@ body {
     height: 280px
 }
 
-.form-group {
+.CadastroContainer .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
 
-h2 {
+.CadastroContainer h2 {
     color: white;
     background-color: #f44336;
     padding: 20px;
@@ -47,21 +47,21 @@ h2 {
     font-size: 1.5em;
 }
 
-.form-group {
+.CadastroContainer .form-group {
     margin-bottom: 15px;
 }
 
-.row {
+.CadastroContainer .row {
     display: flex;
     gap: 15px;
 }
 
-.row input,
+.CadastroContainer .row input,
 .row select {
     flex: 1;
 }
 
-input,
+.CadastroContainer input,
 select {
     width: 100%;
     padding: 10px;
@@ -70,7 +70,7 @@ select {
     font-size: 1em;
 }
 
-.button {
+.CadastroContainer .button {
     background-color: #f44336;
     color: white;
     border: none;
@@ -84,16 +84,16 @@ select {
 
 }
 
-.button:hover {
+.CadastroContainer .button:hover {
     background-color: #d32f2f;
 }
 
-.terms {
+.CadastroContainer .terms {
     font-size: 14px;
     margin-top: 15px;
 }
 
-input[type="date"] {
+.CadastroContainer input[type="date"] {
     height: 40px;
     max-width: 150px;
     /* Define um limite máximo de largura */
@@ -110,12 +110,12 @@ input[type="date"] {
 
 }
 
-.form-group.genero-data {
+.CadastroContainer .form-group.genero-data {
     margin-bottom: 20px;
     /* Adiciona um espaçamento abaixo do grupo de gênero e data */
 }
 
-.genero-label {
+.CadastroContainer .genero-label {
     font-size: 1.3em;
     /* Aumenta o tamanho da fonte */
     font-weight: medium;
@@ -126,7 +126,7 @@ input[type="date"] {
     /* Garante que ocupe toda a largura */
 }
 
-.row {
+.CadastroContainer .row {
     display: flex;
     justify-content: space-between;
     /* Distribui os elementos na linha */
@@ -134,7 +134,7 @@ input[type="date"] {
     /* Alinha verticalmente */
 }
 
-.row label {
+.CadastroContainer .row label {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -146,7 +146,7 @@ input[type="date"] {
 
 }
 
-.terms {
+.CadastroContainer .terms {
     display: flex;
     align-items: center;
     /* Alinha o ícone com o texto */
@@ -162,14 +162,14 @@ input[type="date"] {
     /* Ocupa toda a largura disponível */
 }
 
-.terms-icone {
+.CadastroContainer .terms-icone {
     width: 16px;
     /* Tamanho da imagem */
     height: 16px;
     /* Tamanho da imagem */
 }
 
-select {
+.CadastroContainer select {
     width: 150px;
     /* Ajuste a largura conforme necessário */
     height: 40px;
@@ -178,7 +178,7 @@ select {
     /* Ajuste o tamanho do texto dentro da caixa */
 }
 
-.form-group select {
+.CadastroContainer .form-group select {
     display: block;
     margin: 0 auto;
     /* Centraliza horizontalmente */

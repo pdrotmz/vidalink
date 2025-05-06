@@ -1,9 +1,9 @@
 import React from 'react';
-import '../assets/cadastro.css'; 
+import '../Styles/cadastro.css'; 
 
 export default function Cadastro() {
     return (
-        <div className="page">
+        <div className="CadastroContainer">
             <h2 className="titulo">
                 Salve vidas com um simples gesto! Cadastre-se<br />
                 e faça a diferença na vida de quem precisa.
