@@ -8,7 +8,7 @@ import Doar from "./Pages/Doar";
 import ListagemProdutos from "./Pages/ListagemProdutos";
 import Login from "./Pages/Login";
 import Loja from "./Pages/Loja";
-import Principal from "./Pages/Principal";
+import Perfil from "./pages/Perfil";
 import Sobre from "./Pages/Sobre";
 import DetalhesRecompensa from './Pages/DetalhesRecompensa';
 import Cadastro from './Pages/cadastro';
@@ -29,7 +29,7 @@ function App() {
           <Route path='/ListagemProdutos' element={<ListagemProdutos />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Loja' element={<Loja />} />
-          <Route path='/Principal' element={<Principal />} />
+          <Route path='/Perfill' element={<Perfil />} />
           <Route path='/Sobre' element={<Sobre />} />
 
           <Route path='/ValidarComprovante' element={<ValidarComprovante />} />

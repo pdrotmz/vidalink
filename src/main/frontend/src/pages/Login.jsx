@@ -1,42 +1,30 @@
-import React from "react";
+import React from 'react';
+import '../styles/Login.css';
+import imagemPainel from '../Assets/images/HomemDoando.png';
+import logoVidaLink from '../Assets/images/logoVidaLink.png';
 
-import "../Styles/Login.css"
-
-export const Login = () => {
-
+function Login() {
     return (
-        <div className="LoginContent"> 
-            {/* Esquerda - Área vermelha */}
+        <div className="container">
             <div className="left-panel">
-                <h1>INDENTIFIQUE O SEU CPF</h1>
+                <h1>IDENTIFIQUE O SEU EMAIL</h1>
                 <div className="form-container">
-                    <label htmlFor="cpf">CPF</label>
-                    <input type="text" id="cpf" placeholder="DIGITE SEU CPF" />
+                    <label htmlFor="cpf">EMAIL</label>
+                    <input type="text" id="cpf" placeholder="DIGITE SEU EMAIL" />
                     <button>CONTINUAR</button>
                     <p><a href="#">Fazer Cadastro</a></p>
                 </div>
             </div>
-
-            {/* Direita - Área branca com imagem */}
             <div className="right-panel">
                 <div className="image-container">
-                    <img src="imagens/ChatGPT Image 31 de mar. de 2025, 19_21_19.png" alt="" />
+                    <img src={imagemPainel} alt="Imagem do painel" />
                 </div>
                 <div className="logo-container">
-                    {/* conteúdo da logo, se houver, pode ser inserido aqui */}
+                    <img src={logoVidaLink} alt="Logo VidaLink" className="main-image" />
                 </div>
             </div>
         </div>
-        
     );
 }
 
 export default Login;
-
-
-
-
-
-
-
-
