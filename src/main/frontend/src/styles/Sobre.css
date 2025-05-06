@@ -1,71 +1,97 @@
-.sobre-container {
-    background-color: #ffd9d9;
-    color: #000000;
-    width: 100vw;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper da página */
+.sobre-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Cartão central */
+.sobre-card {
+  background-color: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 6px solid #FF4343;
+}
+
+/* Botão voltar dentro da box */
+.voltar-btn {
+  background-color: #FF4343;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.voltar-btn:hover {
+  background-color: #990000;
+}
+
+/* Título */
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  color: #FF4343;
+  margin-bottom: 30px;
+}
+
+/* Texto da página */
+.sobre-texto p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.sobre-texto ul {
+  list-style-type: decimal;
+  padding-left: 20px;
+  color: #333;
+}
+
+.sobre-texto li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .sobre-card {
+    padding: 30px 20px;
   }
-  
-  .logo-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    opacity: 1.5;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .conteudo-central {
-    max-width: 800px;
-    z-index: 2;
-    position: relative;
-    text-align: left;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .topo-sobre {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-  
-  .voltar-btn {
-    background-color: #ff4343;
-    color: #ffffff;
-    border: none;
-    padding: 0.8rem 2.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
+
   .titulo {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .espaco-botao {
-    width: 102px; /* mesmo tamanho do botão para centralizar o título */
-  }
-  
-  .sobre-texto {
     font-size: 1.5rem;
-    line-height: 2;
-    text-align: left;
   }
-  
+
+  .voltar-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .sobre-texto p,
+  .sobre-texto li {
+    font-size: 0.95rem;
+  }
+}
