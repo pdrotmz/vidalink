@@ -1,0 +1,56 @@
+li{
+    padding: 5px;
+    margin-bottom: 20px;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: black;
+
+    width: 21%;
+
+    text-align: center;
+
+}
+
+li hr{
+    width: 80%;
+    height: 1px;
+    color: black;
+    background: #000;
+    border-style: none;
+    margin: 5%;
+
+}
+
+li .preco{
+    color: #FF4343;
+    font-weight: bolder;
+}
+
+li .nome{
+    margin-top: 5%;
+    color: #000;
+}
+
+
+li img{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: black;
+
+    width: 80%;
+}
+
+
+
+li a{
+    text-decoration: none;
+}

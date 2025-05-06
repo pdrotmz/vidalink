@@ -8,8 +8,8 @@ export const AdmHeader = () => {
             <nav>
                 <ul>
                     <li><Link to="/">Validação</Link></li>
-                    <li><Link to="/">Listagem</Link></li>
-                    <li><Link to="/">Cadastro</Link></li>
+                    <li><Link to="/ListagemProdutos">Listagem</Link></li>
+                    <li><Link to="/CadastroProdutos">Cadastro</Link></li>
                 </ul>
                 
             </nav>
