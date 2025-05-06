@@ -1,106 +1,117 @@
-.contato-container {
-    background-color: #ffd9d9;
-    color: #000000;
-    width: 100vw;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper da página */
+.contato-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Card central */
+.contato-card {
+  background-color: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 6px solid #FF4343;
+}
+
+/* Botão voltar */
+.voltar-btn {
+  background-color: #FF4343;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.voltar-btn:hover {
+  background-color: #990000;
+}
+
+/* Título */
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  color: #FF4343;
+  margin-bottom: 30px;
+}
+
+/* Texto */
+.contato-texto {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.contato-texto ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contato-texto li {
+  margin-bottom: 10px;
+}
+
+.contato-texto a {
+  color: #003cff;
+  text-decoration: none;
+}
+
+.contato-texto a:hover {
+  text-decoration: underline;
+}
+
+/* Contato final */
+.contato-final {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.05rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .contato-card {
+    padding: 30px 20px;
   }
-  
-  .logo-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    opacity: 0.9;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .conteudo-central {
-    max-width: 800px;
-    z-index: 2;
-    position: relative;
-    text-align: left;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .topo-contato {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-  
-  .voltar-btn {
-    background-color: #ff4343;
-    color: #ffffff;
-    border: none;
-    padding: 0.8rem 2.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
+
   .titulo {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .espaco-botao {
-    width: 102px; /* espaço para centralizar o título */
-  }
-  
-  .contato-texto {
     font-size: 1.5rem;
-    line-height: 2.2;
-    text-align: left;
   }
-  
-  .contato-texto ul {
-    padding-left: 1.5rem;
-    margin-top: 1rem;
+
+  .voltar-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
-  
-  .contato-texto a {
-    color: #003cff;
-    text-decoration: none;
+
+  .contato-texto {
+    font-size: 1rem;
   }
-  
-  .contato-texto a:hover {
-    text-decoration: underline;
-  }
-  
+
   .contato-final {
-    margin-top: 3rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    line-height: 1.4; /* <<< reduz o espaçamento entre as linhas */
+    font-size: 0.95rem;
   }
-  
-  .contato-final a {
-    color: #003cff;
-    text-decoration: none;
-    margin: 2px 0; /* <<< deixa mais compacto */
-  }
-  
-  .contato-final span {
-    margin-top: 2px;
-  }
-  
+}
