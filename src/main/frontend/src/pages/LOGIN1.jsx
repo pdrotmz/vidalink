@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css';
+import './login1.css';
 import imagemPainel from './imagens/ChatGPT Image 31 de mar. de 2025, 19_21_19.png';
 import logoVidaLink from './imagens/VidaLink (1) (1).png';
 
