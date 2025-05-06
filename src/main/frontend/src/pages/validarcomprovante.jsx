@@ -1,16 +1,11 @@
 import React from 'react';
 import '../Styles/validarcomprovante.css';
+import AdmHeader from "../Components/AdmHeader";
 
 const ValidarComprovante = () => {
   return (
     <div>
-      <header>
-        <img
-          src=""
-          alt="Logo VidaLink"
-          className="logo"
-        />
-      </header>
+      <AdmHeader />
 
       <div className="container">
         <h1>Validação de Comprovante</h1>
