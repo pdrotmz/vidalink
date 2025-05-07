@@ -2,7 +2,7 @@ import React from "react";
 
 import "../Styles/Principal.css"
 
-export const Perfil = () => {
+export const Principal = () => {
 
     return (
         <div className="PrincipalContent">
@@ -55,4 +55,4 @@ export const Perfil = () => {
     );
 }
 
-export default Perfil;
+export default Principal;
