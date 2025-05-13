@@ -8,12 +8,12 @@ import Doar from "./Pages/Doar";
 import ListagemProdutos from "./Pages/ListagemProdutos";
 import Login from './pages/Login';
 import Loja from "./Pages/Loja";
-import Principal from "./Pages/Principal";
+import Perfil from "./pages/Perfil";
 import Sobre from "./Pages/Sobre";
 import DetalhesRecompensa from './Pages/DetalhesRecompensa';
 import Cadastro from './Pages/cadastro';
 import ValidarComprovante from './Pages/validarcomprovante';
-
+import EditarPerfil from './pages/EditarPerfil';
 import "../src/index.css";
 import "../src/App.css"
 
@@ -29,8 +29,9 @@ function App() {
           <Route path='/ListagemProdutos' element={<ListagemProdutos />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Loja' element={<Loja />} />
-          <Route path='/Principal' element={<Principal />} />
+          <Route path='/Perfil' element={<Perfil />} />
           <Route path='/Sobre' element={<Sobre />} />
+          <Route path='/EditarPerfil' element={<EditarPerfil/>} />
 
           <Route path='/ValidarComprovante' element={<ValidarComprovante />} />
 

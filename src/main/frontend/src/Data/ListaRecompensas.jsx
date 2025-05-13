@@ -6,18 +6,21 @@ export const recompensas = [
     { id: 1, 
     imagem: Certificado1,
     nome: "Primeira doação", 
+    descricao: "Descrição muito massa",
     preco: "1", 
     },
 
     { id: 2, 
     imagem: Certificado2,
     nome: "Segunda doação", 
+    descricao: "Descrição muito massa",
     preco: "10", 
     },
 
     { id: 3, 
     imagem: Certificado3,
     nome: "Terceira doação", 
+    descricao: "Descrição muito massa",
     preco: "50", 
     },
 ]
