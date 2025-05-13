@@ -6,7 +6,7 @@ import CadastroUsuarios from "./Pages/CadastroUsuarios";
 import Contato from "./Pages/Contato";
 import Doar from "./Pages/Doar";
 import ListagemProdutos from "./Pages/ListagemProdutos";
-import Login from "./Pages/Login";
+import Login from './pages/Login';
 import Loja from "./Pages/Loja";
 import Principal from "./Pages/Principal";
 import Sobre from "./Pages/Sobre";
