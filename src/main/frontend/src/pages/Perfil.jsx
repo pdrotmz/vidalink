@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 
 import "../Styles/Principal.css"
 
-<<<<<<< HEAD
-export const Principal = () => {
-=======
 import Header from "../Components/Header";
 
 import fotoperfil from "../Assets/images/perfildejhon.jpg"
@@ -19,7 +16,6 @@ import certificado3 from "../Assets/images/certificado3.png"
 
 
 export const Perfil = () => {
->>>>>>> c3109bd4b638ae416a605ed2fab8c3183a6fd10f
 
     return (
         <div className="PerfilContainer">
@@ -75,4 +71,4 @@ export const Perfil = () => {
     );
 }
 
-export default Principal;
+export default Perfil;

@@ -1,42 +1,48 @@
-package com.vidalink.DAO;
+package com.vidalink.services;
 
 import com.vidalink.models.Usuario;
+import com.vidalink.repository.UsuarioRepository;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
-public class UsuarioDAO {
+public class UsuarioService {
+
     @Autowired
-    private final UsuarioRepository repository;
+    private UsuarioRepository repository;
 
-    public List<Usuario> findAll(){
-        return repository.findAll();//vai exibir uma lista com todos os usuario
- 
+    public Usuario registerUsuario(Usuario usuario) {
+        return repository.save(usuario);
     }
 
-    public findById(Integer id){ //Integer = int sq com uns ngc massa a mais
-        return Optional<Usuario> repository.findById();//procura especifico pelo id
-
+    public List<Usuario> findAllUsers() {
+        return repository.findAll();
     }
 
-    public Usuario insert(Usuario usuario){
-        return repository.insert(usuario);
-    }
-
-    public void delete(Usuario usuario){
-        if(!usuario.getUsuario()){
-            throw new RuntimeException('Usuário não existe');
+    public Optional<Usuario> findUsuarioById(String id) {
+        if(repository.findById(id).isEmpty()) {
+            throw new EntityNotFoundException("Usuário não encontrado!");
         }
-
-        repository.delete(usuario);
+        return repository.findById(id);
     }
 
-    public void update(Usuario usuario){
-        if(usuario.getId() == null){
-            throw new RuntimeException('Usuário não existe');
-        }
+    public Usuario updateUsuarioById(Usuario usuario, String id) {
+        return repository.findById(id).map(existingUsuario -> {
+            existingUsuario.setNome(usuario.getNome());
+            existingUsuario.setEmail(usuario.getEmail());
+            existingUsuario.setTipoSanguineo(usuario.getTipoSanguineo());
+            existingUsuario.setFoto(usuario.getFoto());
 
-        repository.save(usuario);
+            Usuario newUsuario = repository.save(existingUsuario);
+            return existingUsuario;
+        }).orElseThrow(() -> new RuntimeException("Erro ao atualizar!"));
+    }
+
+    public void deleteUsuarioById(String id) {
+        repository.deleteById(id);
     }
 }

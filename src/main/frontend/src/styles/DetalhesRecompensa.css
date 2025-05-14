@@ -1,7 +1,48 @@
-.container-DetalhesLivro{
+.container-DetalhesRecompensas{
     margin-top: -20px;
 }
 
-.container-DetalhesLivro img{
-    width: 10vw;
+.container-DetalhesRecompensas img{
+    width: 20vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f44336;
+    border-radius: 1vw;
+
+    margin-right: 2vw;
+}
+
+.container-DetalhesRecompensas .detalhesRecompensasContent{
+    display: flex;
+    padding: 3vw;
+}
+
+.container-DetalhesRecompensas .detalhesRecompensasContent img{
+    display: flex;
+    
+}
+
+.container-DetalhesRecompensas .detalhesRecompensasContent .detalhes{
+    width: 60vw;
+    
+}
+
+.container-DetalhesRecompensas .detalhesRecompensasContent .botoes button{
+    background-color: #f44336;
+    color: #ffffff;
+
+    border-style: none;
+    border-radius: 0.5vw;
+
+    width: 40%;
+    height: 4vw;
+
+    font-size: 1.5vw;
+}
+
+.container-DetalhesRecompensas .detalhesRecompensasContent .imagem{
+    display: flex;
+    flex-direction: column;
+    
+
 }
