@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from "./Pages/Home";
 import CadastroProdutos from "./Pages/CadastroProdutos";
-import CadastroUsuarios from "./Pages/CadastroUsuarios";
 import Contato from "./Pages/Contato";
 import Doar from "./Pages/Doar";
 import ListagemProdutos from "./Pages/ListagemProdutos";
@@ -36,7 +35,6 @@ function App() {
           <Route path='/ValidarComprovante' element={<ValidarComprovante />} />
 
           <Route path='/Cadastro' element={<Cadastro />} />
-          <Route path='/CadastroUsuarios' element={<CadastroUsuarios />} />
 
           <Route path="/Recompensa/:id" element={<DetalhesRecompensa/>} />
 
