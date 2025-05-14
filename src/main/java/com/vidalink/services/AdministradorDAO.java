@@ -1,43 +1,46 @@
-package com.vidalink.DAO;
+package com.vidalink.services;
 
 import com.vidalink.models.Administrador;
+import com.vidalink.repository.AdministradorRepository;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-@service
+@Service
+public class AdministradorService {
 
-public class AdministradorDAO {
     @Autowired
-    private final UsuarioRepository repository;
+    private AdministradorRepository repository;
 
-    public List<Administrador> findAll(){
+    public Administrador registerAdmin(Administrador admin) {
+        return repository.save(admin);
+    }
+
+    public List<Administrador>findAllAdmins() {
         return repository.findAll();
     }
 
-    public findById(Integer id){
-        return Optional<Administrador> repository.findById();
-    }
-
-    public Administrador insert(Administrador administrador){
-        return repository.insert(administrador);
-    }
-
-    public void delete(Administrador administrador){
-        if(!administrador.getAdministrador()){
-            throw new RuntimeException('Usuário não existe');
+    public Optional<Administrador> findAdminById(String id) {
+        if(repository.findById(id).isEmpty()) {
+            throw new EntityNotFoundException("Admin não encontrado!");
         }
-
-        repository.delete(administrador);
+        return repository.findById(id);
     }
 
-    public void update(Administrador administrador){
-        if(administrador.getAdministrador() == null){
-            throw new RuntimeException('Usuário não existe');
-        }
+    public Administrador updateAdminById(Administrador admin, String id) {
+        return repository.findById(id).map(existingAdmin -> {
+            existingAdmin.setNome(admin.getNome());
+            existingAdmin.setEmail(admin.getEmail());
 
-        repository.save(administrador);
+            Administrador newAdmin = repository.save(existingAdmin);
+            return existingAdmin;
+        }).orElseThrow(() -> new RuntimeException("Erro ao atualizar suas infos!"));
     }
 
-
+    public void deleteAdminById(String id) {
+        repository.deleteById(id);
+    }
 }
