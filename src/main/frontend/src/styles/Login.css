@@ -1,10 +1,10 @@
-.LoginContent * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.LoginContent body {
+body {
     font-family: Arial, sans-serif;
     display: flex;
     height: 100vh;
@@ -12,14 +12,13 @@
     align-items: center;
 }
 
-.LoginContent {
+.container {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: -20px;
 }
 
-.LoginContent .left-panel {
+.left-panel {
     width: 50%;
     background-color: #E3342F;
     color: white;
@@ -30,7 +29,7 @@
     padding: 20px;
 }
 
-.LoginContent .left-panel h1 {
+.left-panel h1 {
     position: relative;
     top: -40px;
 
@@ -38,7 +37,7 @@
 
 }
 
-.LoginContent .form-container {
+.form-container {
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -50,7 +49,7 @@
 
 
 
-.LoginContent .form-container input {
+.form-container input {
     width: 100%;
     height: 60px;
     font-size: 15px;
@@ -60,7 +59,7 @@
     margin-top: 30px;
 }
 
-.LoginContent .form-container button {
+.form-container button {
     width: 100%;
     height: 50px;
     font-size: 18px;
@@ -72,7 +71,7 @@
     cursor: pointer;
 }
 
-.LoginContent .form-container label {
+.form-container label {
     display: block;
     text-align: left;
     font-size: 20px;
@@ -82,17 +81,17 @@
 }
 
 
-.LoginContent .form-container p a {
+.form-container p a {
     color: #3B82F6;
     text-decoration: none;
 }
 
-.LoginContent .form-container p {
+.form-container p {
     text-align: right;
     margin-top: 10px;
 }
 
-.LoginContent .right-panel {
+.right-panel {
     width: 50%;
     position: relative;
     display: flex;
@@ -102,19 +101,19 @@
 
 }
 
-.LoginContent .image-container {
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 120%;
 }
 
-.LoginContent .image-container img {
+.image-container img {
     max-width: 135%;
     height: auto;
 }
 
-.LoginContent .logo-container {
+.logo-container {
     position: absolute;
     top: 5px;
     right: 190px;
@@ -122,7 +121,7 @@
     color: #E3342F;
 }
 
-.LoginContent .main-image {
+.main-image {
     max-width: 80%;
     height: auto;
 }

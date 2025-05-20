@@ -15,20 +15,33 @@ function DetalhesRecompensa() {
     const recompensa = recompensas.find((rec) => rec.id === parseInt(id));
 
     if (!recompensa) {
-        return <h2>Livro não encontrado!</h2>;
+        return <h2>Recompensa não encontrado!</h2>;
     }
 
     return (
-        <div className="container-DetalhesLivro">
+        <div className="container-DetalhesRecompensas">
             <Header />
 
-            <div className=""></div>
-            <img src={recompensa.imagem} alt="" />
+            <div className="detalhesRecompensasContent">
 
-            <p>{recompensa.nome}</p>
-            
+                <div className="Imagem">
+                    <img src={recompensa.imagem} alt={recompensa.nome} />
+                    <br />
+                    <h1>Pontos atuais: </h1>
+                </div>
 
-            
+                <div className="detalhes">
+                    <h1>{recompensa.nome}</h1>
+                    <p><strong>Preço: </strong>{recompensa.preco} pts</p>
+                    <br />
+                    <p>{recompensa.descricao}</p>
+                    <br />
+
+                    <div className="botoes">
+                        <button>Comprar</button>
+                    </div>
+                </div>
+            </div>    
         
         </div>
     );

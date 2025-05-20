@@ -56,16 +56,6 @@ const Loja = () => {
 
             <RecompensaLoja imagem={Certificado3} nome={'Primeira doação'} preco={'50'} recompensaId={3}/>
 
-            <RecompensaLoja imagem={Certificado1} nome={'Primeira doação'} preco={'50'} recompensaId={1}/>
-
-            <RecompensaLoja imagem={Certificado2} nome={'Primeira doação'} preco={'50'} recompensaId={2}/>
-
-            <RecompensaLoja imagem={Certificado3} nome={'Primeira doação'} preco={'50'} recompensaId={3}/>
-
-            <RecompensaLoja imagem={Certificado1} nome={'Primeira doação'} preco={'50'} recompensaId={1}/>
-
-            <RecompensaLoja imagem={Certificado2} nome={'Primeira doação'} preco={'50'} recompensaId={2}/>
-
           </ul>
         </div>
       </div>
