@@ -27,7 +27,7 @@ public class AdminController {
 
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable UUID id) {
-        Optional<User> user = userService.findById(id);
+        Optional<User> user = Optional.ofNullable(userService.findById(id));
         return user.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }

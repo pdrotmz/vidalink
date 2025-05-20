@@ -34,6 +34,32 @@ public class SecurityConfiguration {
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
 
+                        // Donation
+                        .requestMatchers(HttpMethod.POST, "/api/donations/register").hasRole("USER")
+                        .requestMatchers(HttpMethod.GET, "/api/donations/donor/").hasRole("USER")
+                        .requestMatchers(HttpMethod.GET, "/api/donations/points/").hasRole("USER")
+
+                        // Donor
+                        .requestMatchers(HttpMethod.POST, "/api/donors").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/donors/").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "api/donors/").hasRole("ADMIN")
+
+                        // Reward
+                        .requestMatchers(HttpMethod.POST, "api/rewards").hasRole("USER")
+
+                        // Reward Redemption
+                        .requestMatchers(HttpMethod.POST, "api/redeem").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "api/redeem/").hasRole("ADMIN")
+
+                        // User
+                        .requestMatchers(HttpMethod.POST, "user/register").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "user").hasRole("ADMIN")
+
+                        // Admin
+                        .requestMatchers(HttpMethod.PUT, "admin/users/").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "admin/").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "admin/users").hasRole("ADMIN")
+
                         // H2 Database Endpoints
                         .requestMatchers(HttpMethod.POST, "/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/h2-console/**").permitAll()

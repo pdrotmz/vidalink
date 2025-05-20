@@ -26,11 +26,8 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<User> findById(UUID id) {
-        if(userRepository.findById(id).isEmpty()) {
-            throw new IllegalArgumentException("Erro ao achar o user!");
-        }
-        return userRepository.findById(id);
+    public User findById(UUID id) {
+        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Erro ao procurar donor"));
     }
 
     @Transactional
