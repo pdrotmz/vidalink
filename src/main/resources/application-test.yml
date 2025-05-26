@@ -15,7 +15,5 @@ spring:
       path: /h2-console
 
 
-api:
-  security:
-    token:
-      secret: token-vidalink
+server:
+  port: 8083

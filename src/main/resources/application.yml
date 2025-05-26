@@ -4,3 +4,8 @@ spring:
 
   profiles:
     active: test
+
+  api:
+    security:
+      secret:
+        key: ${SECRET}
