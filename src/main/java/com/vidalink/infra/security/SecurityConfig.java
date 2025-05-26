@@ -38,29 +38,17 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
 
-                        // Auth Requests
+                        // 🔓 Público
                         .requestMatchers("/api/auth/**").permitAll()
 
-                        // Author Requests
-                        .requestMatchers(HttpMethod.POST, "/author/register").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/author/filter-by/").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.GET, "/author/filter-by/name/").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.GET, "/author/find-all").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.PUT, "/author/update-by/id/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/author/delete-by/id/**").hasRole("ADMIN")
+                        // 👤 Acesso USER (usuário comum)
+                        .requestMatchers(HttpMethod.POST, "/submissions").hasRole("USER")
 
-                        // Book Requests
-                        .requestMatchers(HttpMethod.POST, "/book/register").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/book/list-all").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.GET, "/book/search-by/id/").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/book/search-by/title/").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.GET, "/book/search-by/isbn/").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/book/filter-by/release-date/").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.GET, "/book/filter-by/category/").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.GET, "/book/filter-by/author/").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/book/filter-by/price-between").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.PUT, "/book/update-by/id/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/book/delete-by/id/").hasRole("ADMIN")
+                        // 🔐 Acesso ADMIN
+                        .requestMatchers(HttpMethod.GET, "/submissions/pending").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/submissions/{id}/approve").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/submissions/{id}/reject").hasRole("ADMIN")
+
 
 
                         .anyRequest().authenticated()
