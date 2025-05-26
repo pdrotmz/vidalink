@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  vidalink:
+    env_file:
+      - .env
+    build: .
+    container_name: vidalink-app
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/vidalink_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=${MYSQL_DEV_USER}
+      - SPRING_DATASOURCE_PASSWORD=${MYSQL_DEV_PASSWORD}
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=com.mysql.cj.jdbc.Driver
+      - SPRING_PROFILES_ACTIVE=dev
+      - SECRET=${SECRET}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - dev-net
+
+  mysql:
+    image: mysql:8.3
+    container_name: mysql-db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=vidalink_db
+      - MYSQL_USER=${MYSQL_DEV_USER}
+      - MYSQL_PASSWORD=${MYSQL_DEV_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    networks:
+      - dev-net
+
+  redis:
+    image: redis:7
+    container_name: redis-vidalink
+    ports:
+      - "6379:6379"
+    networks:
+      - dev-net
+
+volumes:
+  mysql-data:
+
+networks:
+  dev-net:
+    driver: bridge
