@@ -1,17 +1,17 @@
 /* Reset */
-* {
+.sobre-wrapper * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+.sobre-wrapper .sobre-wrapper body {
   background-color: #fafafa;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Wrapper da página */
-.sobre-wrapper {
+.sobre-wrapper .sobre-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,7 @@ body {
 }
 
 /* Cartão central */
-.sobre-card {
+.sobre-wrapper .sobre-card {
   background-color: #fff;
   max-width: 700px;
   width: 100%;
@@ -31,7 +31,7 @@ body {
 }
 
 /* Botão voltar dentro da box */
-.voltar-btn {
+.sobre-wrapper .voltar-btn {
   background-color: #FF4343;
   color: white;
   border: none;
@@ -43,12 +43,12 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.voltar-btn:hover {
+.sobre-wrapper .voltar-btn:hover {
   background-color: #990000;
 }
 
 /* Título */
-.titulo {
+.sobre-wrapper .titulo {
   text-align: center;
   font-size: 2rem;
   color: #FF4343;
@@ -56,20 +56,20 @@ body {
 }
 
 /* Texto da página */
-.sobre-texto p {
+.sobre-wrapper .sobre-texto p {
   font-size: 1.1rem;
   color: #444;
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.sobre-texto ul {
+.sobre-wrapper .sobre-texto ul {
   list-style-type: decimal;
   padding-left: 20px;
   color: #333;
 }
 
-.sobre-texto li {
+.sobre-wrapper .sobre-texto li {
   margin-bottom: 15px;
   font-size: 1rem;
   line-height: 1.6;
@@ -77,21 +77,21 @@ body {
 
 /* Responsividade */
 @media (max-width: 600px) {
-  .sobre-card {
+  .sobre-wrapper .sobre-card {
     padding: 30px 20px;
   }
 
-  .titulo {
+  .sobre-wrapper .titulo {
     font-size: 1.5rem;
   }
 
-  .voltar-btn {
+  .sobre-wrapper .voltar-btn {
     font-size: 0.9rem;
     padding: 8px 12px;
   }
 
-  .sobre-texto p,
-  .sobre-texto li {
+  .sobre-wrapper .sobre-texto p,
+  .sobre-wrapper .sobre-texto li {
     font-size: 0.95rem;
   }
 }

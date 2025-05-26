@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Home from "./Pages/Home";
+import Home from "./pages/Home";
 import CadastroProdutos from "./Pages/CadastroProdutos";
 import Contato from "./Pages/Contato";
 import Doar from "./Pages/Doar";
@@ -10,9 +10,10 @@ import Loja from "./Pages/Loja";
 import Perfil from "./pages/Perfil";
 import Sobre from "./Pages/Sobre";
 import DetalhesRecompensa from './Pages/DetalhesRecompensa';
-import Cadastro from './Pages/cadastro';
-import ValidarComprovante from './Pages/validarcomprovante';
+import Cadastro from './pages/cadastro';
+import ValidarComprovante from './pages/validarcomprovante';
 import EditarPerfil from './pages/EditarPerfil';
+import SubmeterComprovante from './pages/submeterComprovante';
 import "../src/index.css";
 import "../src/App.css"
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/Perfil' element={<Perfil />} />
           <Route path='/Sobre' element={<Sobre />} />
           <Route path='/EditarPerfil' element={<EditarPerfil/>} />
+          <Route path='/SubmeterComprovante' element={<SubmeterComprovante/>} />
 
           <Route path='/ValidarComprovante' element={<ValidarComprovante />} />
 

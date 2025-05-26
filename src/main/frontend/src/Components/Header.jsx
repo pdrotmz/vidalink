@@ -9,7 +9,7 @@ export const Header = () => {
                 <ul>
                     <li><Link to="/Perfil">Perfil</Link></li>
                     <li><Link to="/Loja">Loja</Link></li>
-                    <li><Link to="/">Submeter</Link></li>
+                    <li><Link to="/SubmeterComprovante">Submeter</Link></li>
                     <li><Link to="/Sobre">Sobre</Link></li>
                     <li><Link to="/Contato">Contato</Link></li>
                 </ul>

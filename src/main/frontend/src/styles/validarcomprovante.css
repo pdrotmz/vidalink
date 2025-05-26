@@ -1,107 +1,83 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
+.validacaoContent{
+  display: flex;
+  padding: 2vw;
+}
+
+.validacaoContent .left-box figure{
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 15px;
+
+  width: 50vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.validacaoContent .left-box figure img{
+  max-width: 100%;
+}
+
+.validacaoContent .left-box h1{
+  margin-bottom: 2vw;
+  font-size: 3vw;
+  font-weight: 400;
+}
+
+.validacaoContent .right-box p{
+  font-size: 1.5vw;
+  
+}
+
+.validacaoContent .right-box {
+  margin-top: 5vw;
+  margin-left: 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .validacaoContent .reprovar {
+    background-color: white;
+    color: #ff4a4a;
+    
+    border-style: solid;
+    border-color: #ff4a4a;
+    border-width: 1px;
   }
 
-  header {
+  .validacaoContent  .aprovar {
     background-color: #ff4a4a;
-    padding: 20px;
-    display: flex;
-    align-items: center;
+    color: white;
+
+    border-style: none;
   }
 
-  .logo {
-    height: 60px;
-  }
-
-  .container {
-    padding: 30px;
-  }
-
-  h1 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .content {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-
-  .left-box {
-    border: 2px solid #000;
-    padding: 15px;
-    border-radius: 12px;
-    flex: 2;
-    max-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .left-box img {
-    width: 100%;
-    height: 75vh;
-    object-fit: contain;
-    border-radius: 10px;
-    display: block;
-  }
-
-  .right-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .info p {
-    margin: 8px 0;
-    font-size: 16px;
-  }
-
-  .info b {
-    font-weight: bold;
-  }
-
-  .buttons {
+    .validacaoContent .buttons {
     margin-top: auto;
     display: flex;
     gap: 20px;
     margin-bottom: 10px;
   }
 
-  .buttons button {
-    padding: 12px 25px;
+  .validacaoContent .buttons button {
+    padding: 0.8vw 2.4vw;
     font-size: 16px;
-    border: none;
     border-radius: 8px;
     cursor: pointer;
+
+    font-size: 1.5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .reprovar {
-    background-color: white;
-    color: #ff4a4a;
-    border: 2px solid #ff4a4a;
+  .validacaoContent .buttons .proximo, .validacaoContent .buttons .anterior{
+    padding: 0 2vw;
   }
 
-  .aprovar {
-    background-color: #ff4a4a;
-    color: white;
-  }
-
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-    }
-
-    .left-box img {
-      height: auto;
-      max-height: 60vh;
-    }
-
-    .buttons {
-      justify-content: center;
-    }
-  }
