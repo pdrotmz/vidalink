@@ -1,54 +1,34 @@
 package com.vidalink.controller;
 
-import com.vidalink.dto.auth.AuthenticationDTO;
-import com.vidalink.infra.security.TokenService;
-import com.vidalink.dto.auth.LoginResponseDTO;
-import com.vidalink.dto.auth.RegisterDTO;
+import com.vidalink.dto.auth.AuthRequest;
+import com.vidalink.dto.auth.AuthResponse;
+import com.vidalink.dto.auth.RegisterRequest;
 import com.vidalink.model.user.User;
-import com.vidalink.repository.UserRepository;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import com.vidalink.services.AuthService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("auth")
-@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/auth")
+@RequiredArgsConstructor
 public class AuthenticationController {
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private TokenService tokenService;
-
-    @PostMapping("/login")
-    public ResponseEntity login(@RequestBody @Valid AuthenticationDTO data) {
-        var usernamePassword = new UsernamePasswordAuthenticationToken(data.username(), data.password());
-        var auth = this.authenticationManager.authenticate(usernamePassword);
-
-        var token = tokenService.generateToken((User) auth.getPrincipal());
-
-        return ResponseEntity.ok(new LoginResponseDTO(token));
-    }
+    private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody @Valid RegisterDTO data) {
-        if(this.userRepository.findByUsername(data.username()) != null) return ResponseEntity.badRequest().build();
+    public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request) {
+        return ResponseEntity.ok(authService.register(request));
+    }
 
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.password());
-        User newUser = new User(data.username(), data.email(), encryptedPassword, data.role());
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest request) {
+        return ResponseEntity.ok(authService.authenticate(request));
+    }
 
-        this.userRepository.save(newUser);
-
-
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+    @GetMapping("/me")
+    public ResponseEntity<User> me(@AuthenticationPrincipal User user) {
+        return ResponseEntity.ok(user);
     }
 }
