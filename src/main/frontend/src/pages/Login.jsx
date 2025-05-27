@@ -1,30 +1,49 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../styles/Login.css';
-import imagemPainel from '../Assets/images/HomemDoando.png';
-import logoVidaLink from '../Assets/images/logoVidaLink.png';
+import gif from '../Assets/images/gif_doacao.gif'
+
 
 function Login() {
     return (
-        <div className="container">
-            <div className="left-panel">
-                <h1>IDENTIFIQUE O SEU EMAIL</h1>
-                <div className="form-container">
-                    <label htmlFor="cpf">EMAIL</label>
-                    <input type="text" id="cpf" placeholder="DIGITE SEU EMAIL" />
-                    <button>CONTINUAR</button>
-                    <p><a href="#">Fazer Cadastro</a></p>
-                </div>
+        <div className="containerLogin">
+            <div className='loginEsquerda'>
+                <form action="">
+                    <h1>Bem vindo!</h1>
+
+                    <div className='formulario'>
+                        <label htmlFor="">E-mail:</label>
+                        <br />
+                        <input type="text" />
+                        <br /><br />
+
+                        <label htmlFor="">Senha:</label>
+                        <br />
+                        <input type="text" />
+                        <br />
+                    </div>
+
+                    <div className='botao'>
+                        <button>Entrar</button>
+
+                        <p>Não tem conta? <Link to={"/Cadastro"}>cadastre-se</Link></p>
+                    </div>
+                    
+                </form>
+                
+
             </div>
-            <div className="right-panel">
-                <div className="image-container">
-                    <img src={imagemPainel} alt="Imagem do painel" />
-                </div>
-                <div className="logo-container">
-                    <img src={logoVidaLink} alt="Logo VidaLink" className="main-image" />
-                </div>
+
+            <div className='loginDireita'>
+                <img src={gif} alt="" />
+
             </div>
+            
         </div>
     );
 }
 
 export default Login;
+
+
+

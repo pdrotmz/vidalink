@@ -1,127 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.containerLogin{
+    display: flex;
+    
 }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
+.containerLogin .loginEsquerda{
+    width: 50vw;
     height: 100vh;
+    
+    
+    display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.container {
-    display: flex;
-    width: 100%;
-    height: 100%;
 }
-
-.left-panel {
-    width: 50%;
-    background-color: #E3342F;
-    color: white;
+.containerLogin .loginEsquerda form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    height: 60vh;
+
 }
 
-.left-panel h1 {
-    position: relative;
-    top: -40px;
-
+.containerLogin .loginEsquerda form h1{
     text-align: center;
+}
+
+.containerLogin .loginEsquerda form input{
+    width: 30vw;
+    height: 5vw;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: #d3d3d3;
+    border-width: 10%;
 
 }
 
-.form-container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    color: black;
-    width: 70%;
-    min-height: 300px;
+.containerLogin .loginEsquerda form button{
+    width: 30vw;
+    height: 5vw;
+    color: #fff;
+    background: #ef2558;
+
+    border-style: none;
+    border-radius: 1vw;
+
+    font-size: large;
 }
 
 
-
-.form-container input {
-    width: 100%;
-    height: 60px;
-    font-size: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 30px;
+.containerLogin .loginEsquerda p{
+    text-align: end;
+    color: #b0b0b0;
 }
 
-.form-container button {
-    width: 100%;
-    height: 50px;
-    font-size: 18px;
-    padding: 10px;
-    background-color: #E3342F;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.containerLogin .loginEsquerda a{
+    text-align: end;
+    color: #ef2558;
 }
 
-.form-container label {
-    display: block;
-    text-align: left;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    top: 15px;
-}
-
-
-.form-container p a {
-    color: #3B82F6;
-    text-decoration: none;
-}
-
-.form-container p {
-    text-align: right;
-    margin-top: 10px;
-}
-
-.right-panel {
-    width: 50%;
-    position: relative;
+.containerLogin .loginDireita{
+    width: 50vw;
+    height: 100vh;
+    background: #ef2558;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 0;
+    align-items: end;
 
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120%;
-}
+.containerLogin .loginDireita img{
+    width: 50vw;
+    transform: scaleX(-1);
 
-.image-container img {
-    max-width: 135%;
-    height: auto;
-}
-
-.logo-container {
-    position: absolute;
-    top: 5px;
-    right: 190px;
-    text-align: center;
-    color: #E3342F;
-}
-
-.main-image {
-    max-width: 80%;
-    height: auto;
 }
