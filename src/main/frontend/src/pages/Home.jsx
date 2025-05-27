@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import gota_sangue from '../Assets/images/gotaSangue.png'
 import logo from '../Assets/images/logoVidaLink.png'
 
-import '../Styles/Home.css'
+import '../styles/Home.css'
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         </ul>
       </nav>
       <div className="login-section">
-          <button type='button' className='login-button'>LOGIN</button>
+          <Link to="/cadastro"><button type='button' className='login-button'>LOGIN</button></Link>
       </div>
      </div>
       

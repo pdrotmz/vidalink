@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../Styles/Contato.css";
+import "../styles/Contato.css";
 
 const Contato = () => {
   const navigate = useNavigate();

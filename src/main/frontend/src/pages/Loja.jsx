@@ -10,7 +10,7 @@ import Categoria1 from "../Assets/images/categoria1.png"
 
 
 
-import "../Styles/Loja.css";
+import "../styles/Loja.css";
 
 const Loja = () => {
   return (

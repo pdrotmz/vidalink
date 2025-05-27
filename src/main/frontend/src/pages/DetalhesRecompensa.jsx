@@ -7,7 +7,7 @@ import { Header } from "../Components/Header";
 
 import { recompensas } from "../Data/ListaRecompensas";
 
-import "../Styles/DetalhesRecompensa.css"
+import "../styles/DetalhesRecompensa.css"
 
 
 function DetalhesRecompensa() {

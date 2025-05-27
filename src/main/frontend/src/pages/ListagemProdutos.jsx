@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AdmHeader from "../Components/AdmHeader";
 import TabelaProdutos from "../Components/TabelaProdutos";
 
-import "../Styles/ListagemProdutos.css"
+import "../styles/ListagemProdutos.css"
 
 export const ListagemProdutos = () => {
 

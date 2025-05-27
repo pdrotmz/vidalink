@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import gif from '../Assets/images/gif_doacao.gif'
-import '../Styles/cadastroUsuarios.css'; 
+import '../styles/CadastroUsuarios.css'; 
 
 export default function Cadastro() {
     return (

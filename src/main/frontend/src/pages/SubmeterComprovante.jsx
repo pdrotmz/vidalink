@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/submeterComprovante.css';
+import '../styles/submeterComprovante.css';
 import Header from "../Components/Header";
 import gif from "../Assets/images/gif_doacao.gif";
 

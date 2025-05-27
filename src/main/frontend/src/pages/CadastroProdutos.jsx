@@ -1,6 +1,6 @@
 import React from "react";
 import AdmHeader from "../Components/AdmHeader";
-import "../Styles/CadastroProdutos.css"
+import "../styles/CadastroProdutos.css"
 
 export const CadastroProdutos = () => {
 

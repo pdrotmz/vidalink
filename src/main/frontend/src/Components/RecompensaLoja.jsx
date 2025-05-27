@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import "../Styles/RecompensaLoja.css"
+import "../styles/RecompensaLoja.css"
 
 import Certificado1 from "../Assets/images/certificado1.png"
 import Certificado2 from "../Assets/images/certificado2.png"

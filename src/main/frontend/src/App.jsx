@@ -1,19 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from "./pages/Home";
-import CadastroProdutos from "./Pages/CadastroProdutos";
-import Contato from "./Pages/Contato";
-import Doar from "./Pages/Doar";
-import ListagemProdutos from "./Pages/ListagemProdutos";
+import CadastroProdutos from "./pages/CadastroProdutos";
+import Contato from "./pages/Contato";
+import Doar from "./pages/Doar";
+import ListagemProdutos from "./pages/ListagemProdutos";
 import Login from './pages/Login';
-import Loja from "./Pages/Loja";
+import Loja from "./pages/Loja";
 import Perfil from "./pages/Perfil";
-import Sobre from "./Pages/Sobre";
-import DetalhesRecompensa from './Pages/DetalhesRecompensa';
+import Sobre from "./pages/Sobre";
+import DetalhesRecompensa from './pages/DetalhesRecompensa';
 import Cadastro from './pages/cadastro';
 import ValidarComprovante from './pages/validarcomprovante';
 import EditarPerfil from './pages/EditarPerfil';
-import SubmeterComprovante from './pages/submeterComprovante';
+import SubmeterComprovante from './pages/SubmeterComprovante';
 
 import LoginCadastro from './Components/LoginCadastro';
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import "../Styles/AdmHeader.css"
+import "../styles/AdmHeader.css"
 
 export const AdmHeader = () => {
     return (

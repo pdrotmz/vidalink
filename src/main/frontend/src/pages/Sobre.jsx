@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../Styles/Sobre.css";
+import "../styles/Sobre.css";
 
 const Sobre = () => {
   const navigate = useNavigate();

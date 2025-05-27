@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/validarcomprovante.css';
+import '../styles/validarcomprovante.css';
 import AdmHeader from "../Components/AdmHeader";
 
 

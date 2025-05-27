@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Doar.css";
+import "../styles/Doar.css";
 import logo from "../Assets/images/logoVidaLink.png";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../Styles/TabelaProdutos.css";
+import "../styles/TabelaProdutos.css";
 
 export const TabelaProdutos = () => {
 

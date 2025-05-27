@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import "../Styles/Principal.css"
+import "../styles/Principal.css"
 
 import Header from "../Components/Header";
 
