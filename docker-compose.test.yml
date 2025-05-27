@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  vidalink:
+    build: .
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=${H2_URL}
+      - SPRING_DATASOURCE_USERNAME=${H2_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${H2_PASSWORD}
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=${H2_DRIVER}
+      - SPRING_PROFILES_ACTIVE=test
+      - SECRET=${SECRET}
+    depends_on:
+      - h2
+      - redis
+
+  h2:
+    image: oscarfonts/h2
+    container_name: h2-vidalink
+    ports:
+      - "9092:9092"   # TCP port (Spring se conecta aqui)
+      - "8082:8082"   # Web console
+    environment:
+      H2_OPTIONS: >-
+        -web
+        -webAllowOthers
+        -webPort 8082
+        -tcp
+        -tcpAllowOthers
+        -tcpPort 9092
+        -ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+
+  redis:
+    image: redis:7
+    container_name: redis-vidalink-test
+    ports:
+      - "6379:6379"
+
+volumes:
+  h2-data:

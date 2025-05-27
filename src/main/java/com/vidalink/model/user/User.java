@@ -1,78 +1,51 @@
 package com.vidalink.model.user;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.io.Serializable;
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.UUID;
 
-@Entity(name = "tb_users")
+@Entity(name = "users")
 @Table(name = "tb_users")
-public class User implements UserDetails, Serializable {
-
-    private static final long serialVersionUID = 1L;
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "username", nullable = false, unique = true)
     private String username;
 
-    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password", nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
-    public User(String username, String email, String password, UserRole role) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
-
-    public User() {}
-
-    // getter e setter
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-
-    // Obtendo as authorities ou autoridades, ou seja, as roles de usuário
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        if(this.role == UserRole.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
-        else return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+        return List.of(() -> "ROLE_" + this.role.name());
     }
 
     @Override
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     @Override
     public String getUsername() {
-        return username;
+        return this.email;
     }
 
     @Override
