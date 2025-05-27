@@ -5,6 +5,7 @@ import com.vidalink.dto.auth.AuthResponse;
 import com.vidalink.dto.auth.RegisterRequest;
 import com.vidalink.infra.security.JwtService;
 import com.vidalink.model.user.User;
+import com.vidalink.model.user.UserRole;
 import com.vidalink.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,15 +23,13 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
 
     public AuthResponse register(RegisterRequest request) {
-        if(userRepository.findByEmail(request.email()).isPresent()) {
-            throw new RuntimeException("Email Já cadastrado!");
-        }
+        UserRole role = defineUserRole(request.email());
 
         var user = User.builder()
                 .username(request.name())
                 .email(request.email())
                 .password(passwordEncoder.encode(request.password()))
-                .role(request.role())
+                .role(role)
                 .build();
 
         userRepository.save(user);
@@ -49,5 +48,12 @@ public class AuthService {
 
         var jwt = jwtService.generateToken(user);
         return new AuthResponse(jwt);
+    }
+
+    private UserRole defineUserRole(String email) {
+        if(email.endsWith("@vidalink.com")) {
+            return UserRole.ADMIN;
+        }
+        return UserRole.USER;
     }
 }
