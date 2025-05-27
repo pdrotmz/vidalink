@@ -14,6 +14,9 @@ import Cadastro from './pages/cadastro';
 import ValidarComprovante from './pages/validarcomprovante';
 import EditarPerfil from './pages/EditarPerfil';
 import SubmeterComprovante from './pages/submeterComprovante';
+
+import LoginCadastro from './Components/LoginCadastro';
+
 import "../src/index.css";
 import "../src/App.css"
 
@@ -39,6 +42,8 @@ function App() {
           <Route path='/Cadastro' element={<Cadastro />} />
 
           <Route path="/Recompensa/:id" element={<DetalhesRecompensa/>} />
+
+          <Route path='/LoginCadastro' element={<LoginCadastro />} />
 
         </Routes>
       </BrowserRouter>
