@@ -29,7 +29,7 @@ function Login() {
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('token', data.token);
-            navigate('/');
+            navigate('/Perfil');
         } else {
             alert('Credenciais inválidas');
         }
