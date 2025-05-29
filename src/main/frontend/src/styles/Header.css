@@ -1,9 +1,11 @@
 .headerContent {
     margin: 0vw;
-    background-color: #FF4343;
+    background-color: #ef2558;
     display: flex;
     justify-content: end;
     align-items: center;
+
+    border-bottom: 0.1em dashed #fff;
 }
 
 .headerContent nav {
@@ -24,6 +26,7 @@
 
 .headerContent nav a {
     color: #fff;
+    text-decoration: none;
 }
 
 @media (max-width: 800px) {

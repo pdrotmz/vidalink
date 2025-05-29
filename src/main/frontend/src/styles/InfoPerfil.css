@@ -1,0 +1,49 @@
+.infoPerfilContainer{
+    width: 100vw;
+    height: 400px;
+    background: url("../Assets/images/bgPerfil.svg");
+    background-size: cover;       /* cobre todo o elemento */
+    background-position: center;  /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita repetição */
+
+    padding: 2vw;
+
+}
+
+.infoPerfilContainer .infoPerfilContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoPerfilContainer .infoPerfilContent button{
+    background: #ef2558;
+
+    width: 10vw;
+    height: 50px;
+
+    border: 1.5px solid white;
+    border-radius: 2vw;
+
+    color: white;
+}
+
+.infoPerfilContainer .perfil {
+  display: flex;
+  align-items: center;
+
+}
+
+.infoPerfilContainer .perfil img{
+  border-radius: 50%;
+
+  margin-right: 20px;
+
+  width: 10vw;
+  height: 10vw;
+  border: 3px solid white;
+}
+
+.infoPerfilContainer .perfil .textos{
+  color: white;
+}
