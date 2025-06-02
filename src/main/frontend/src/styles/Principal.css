@@ -2,12 +2,25 @@
   margin: 0;
 }
 
-.perfilContainer .perfilContent .perfil{
-  width: 100vw;
-  height: 500px;
-  background: url("../Assets/images/bgPerfil.svg");
-  background-size: cover;       /* cobre todo o elemento */
-  background-position: center;  /* centraliza a imagem */
-  background-repeat: no-repeat; /* evita repetição */
+.perfilContainer .perfilContent{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
 }
 
+.perfilContainer .perfilContent h1{
+  font-size: 5rem;
+}
+
+.perfilContainer .perfilContent ul {
+  display: flex;
+
+  width: 100vw;
+  justify-content: start;
+
+  padding: 2vw;
+
+  flex-wrap: wrap;
+}
