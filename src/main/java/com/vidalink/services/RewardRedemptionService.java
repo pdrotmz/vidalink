@@ -3,6 +3,7 @@ package com.vidalink.services;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.reward.RewardRedemption;
 import com.vidalink.repository.RewardRedemptionRepository;
+import com.vidalink.repository.RewardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

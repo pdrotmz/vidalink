@@ -10,4 +10,8 @@ import java.util.UUID;
 @Repository
 public interface RewardRepository extends JpaRepository<Reward, UUID> {
     List<Reward> findByActiveTrue();
+
+    List<Reward> findByPointsRequiredLessThanEqualAndActiveTrue(Integer points);
+
+    List<Reward> findByActiveTrueOrderByPointsRequiredAsc();
 }
