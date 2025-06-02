@@ -20,7 +20,7 @@ public class Donation {
     private LocalDate donationDate;
 
     @Enumerated(EnumType.STRING)
-    private DonationType type; // SANGUE, ÓRGÃO
+    private DonationType type;
 
     @ManyToOne
     @JoinColumn(name = "donor_id")
