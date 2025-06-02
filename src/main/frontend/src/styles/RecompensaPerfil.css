@@ -1,0 +1,34 @@
+.recompensaPerfilContent{
+
+    width: 20vw;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5vw;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1.5px solid black;
+    border-radius: 2vw;
+
+    margin-bottom: 20px;
+    margin-right: 24px;
+    margin-left: 25px;
+}
+
+.recompensaPerfilContent a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-decoration: none;
+    color: black;
+}
+
+.recompensaPerfilContent img{
+    width: 80%;
+
+}

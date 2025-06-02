@@ -1,36 +1,38 @@
-.admHeaderContent {
+.headerContent {
     margin: 0vw;
-    background-color: #FF4343;
+    background-color: #ef2558;
     display: flex;
     justify-content: end;
     align-items: center;
+
+    border-bottom: 0.1em dashed #fff;
 }
 
-.admHeaderContent nav {
+.headerContent nav {
     width: 100vw;
 }
 
-.admHeaderContent ul {
+.headerContent ul {
     display: flex;
     justify-content: end;
 }
 
-.admHeaderContent ul li {
+.headerContent ul li {
     list-style: none;
     margin: 2.5vw;
     font-size: 2vw;
 }
 
 
-.admHeaderContent nav a {
+.headerContent nav a {
     color: #fff;
+    text-decoration: none;
 }
 
 @media (max-width: 800px) {
-    .admHeaderContent ul li {
+    .headerContent ul li {
         list-style: none;
         margin: 2.5vw;
         font-size: 3vw;
     }
 }
-
