@@ -3,6 +3,7 @@ package com.vidalink.model.reward;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.net.ssl.SSLSession;
 import java.util.UUID;
 
 @Entity
