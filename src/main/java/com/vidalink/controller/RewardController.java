@@ -4,7 +4,6 @@ import com.vidalink.model.reward.Reward;
 import com.vidalink.model.user.User;
 import com.vidalink.services.RewardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -15,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/rewards")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:5173/CadastroProduto")
 public class RewardController {
 
     private final RewardService rewardService;

@@ -1,62 +1,102 @@
-import React from "react";
+import React, {useState} from "react";
 import AdmHeader from "../Components/AdmHeader";
 import "../styles/CadastroProdutos.css"
 
-export const CadastroProdutos = () => {
+
+export default function CadastroProdutos() {
+    const [formData, setFormData] = useState({
+        name: '',
+        description: '',
+        pointsRequired: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:8083/rewards', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    description: formData.description,
+                    pointsRequired: parseInt(formData.pointsRequired),
+                })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert('Recompensa cadastrada com sucesso!');
+                console.log(data);
+            } else {
+                alert('Erro ao cadastrar recompensa');
+                console.error(`Status: ${response.status}`);
+            }
+        } catch (error) {
+            alert('Erro ao cadastrar recompensa');
+            console.error(error);
+        }
+    };
 
     return (
-        
         <div className="containerCadastroProdutos">
             <AdmHeader />
             <div className="CadastroProdutosContent">
-                <h1>Cadastro de produtos</h1>
+                <h1>Cadastro de Recompensas</h1>
 
-                <form action="cadastro.java" autoComplete="off">
+                <form onSubmit={handleSubmit} autoComplete="off">
                     <div className="esquerda">
 
-                        <label htmlFor="inome">Nome do produto</label>
+                        <label htmlFor="inome">Nome da recompensa</label>
                         <br />
-                        <input type="text" placeholder="Nome do produto..." name="nome" id="inome"/>
+                        <input
+                            type="text"
+                            placeholder="Nome..."
+                            name="name"
+                            id="inome"
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
                         <br /><br />
 
-                        <label htmlFor="ipreco">Preço</label>
+                        <label htmlFor="ipreco">Pontos necessários</label>
                         <br />
-                        <input type="text" placeholder="Preço..." name="preco" id="ipreco"/>
+                        <input
+                            type="number"
+                            placeholder="Ex: 10"
+                            name="pointsRequired"
+                            id="ipreco"
+                            value={formData.pointsRequired}
+                            onChange={handleChange}
+                        />
                         <br /><br />
 
-                        <label htmlFor="icategoria">Categoria</label>
-                        <br />
-                        <input type="text" placeholder="Categoria..." name="categoria" id="icategoria"/>
-                        <br /><br />
-
-                        <label htmlFor="iestoque">Estoque</label>
-                        <br />
-                        <input type="text" placeholder="Estoque..." name="estoque" id="iestoque"/>
-                        <br /><br />
-
-                        <div className="comprovante">
-                            <label className="custom-button" htmlFor="iimagem">Submeter comprovante</label>
-                            <input type="file" id="iimagem" name="imagem" accept="image/*" />
-                        </div>
-                    </div>
-
-                    <div className="direita">
                         <label htmlFor="idescricao">Descrição</label>
                         <br />
-                        <textarea name="descricao" id="idescricao" placeholder="Descrição..."></textarea>
+                        <textarea
+                            placeholder="Descrição da recompensa..."
+                            name="description"
+                            id="idescricao"
+                            value={formData.description}
+                            onChange={handleChange}
+                        />
+                        <br /><br />
+
                     </div>
-                </form>  
-                <br />
-
-                <div className="botoes">
-                    <button className="cancelar">Cancelar</button>
-                    <button className="salvar">Salvar</button>
-                </div>
-
-                
+                    <div className="botoes">
+                        <button type="button" className="cancelar" onClick={() => setFormData({ name: '', description: '', pointsRequired: '' })}>Cancelar</button>
+                        <button type="submit" className="salvar">Salvar</button>
+                    </div>
+                </form>
             </div>
         </div>
     );
 }
-
-export default CadastroProdutos;

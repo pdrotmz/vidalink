@@ -29,6 +29,7 @@ function Login() {
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('token', data.token);
+            localStorage.setItem('userEmail', credentials.email); // 👈 Adicionado aqui
             navigate('/Perfil');
         } else {
             alert('Credenciais inválidas');

@@ -51,7 +51,7 @@ public class AuthService {
     }
 
     private UserRole defineUserRole(String email) {
-        if(email.endsWith("@vidalink.com")) {
+        if(email.endsWith("@vidalink.com.br")) {
             return UserRole.ADMIN;
         }
         return UserRole.USER;

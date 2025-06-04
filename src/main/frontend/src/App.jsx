@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 import CadastroProdutos from "./pages/CadastroProdutos";
 import Contato from "./pages/Contato";
 import Doar from "./pages/Doar";
@@ -19,32 +19,53 @@ import LoginCadastro from './Components/LoginCadastro';
 
 import "../src/index.css";
 import "../src/App.css"
+import ProtectedRoute from "./Components/ProtectedRoute.jsx";
+import Unauthorized from "./pages/Unauthorized.jsx";
 
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/CadastroProdutos' element={<CadastroProdutos />} />
-          <Route path='/Contato' element={<Contato />} />
-          <Route path='/Doar' element={<Doar />} />
-          <Route path='/ListagemProdutos' element={<ListagemProdutos />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/Loja' element={<Loja />} />
-          <Route path='/Perfil' element={<Perfil />} />
-          <Route path='/Sobre' element={<Sobre />} />
-          <Route path='/EditarPerfil' element={<EditarPerfil/>} />
-          <Route path='/SubmeterComprovante' element={<SubmeterComprovante/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Cadastro" element={<Cadastro />} />
+          <Route path="/Contato" element={<Contato />} />
+          <Route path="/Doar" element={<Doar />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Loja" element={<Loja />} />
+          <Route path="/Perfil" element={<Perfil />} />
+          <Route path="/Sobre" element={<Sobre />} />
+          <Route path="/EditarPerfil" element={<EditarPerfil />} />
+          <Route path="/SubmeterComprovante" element={<SubmeterComprovante />} />
+          <Route path="/Recompensa/:id" element={<DetalhesRecompensa />} />
+          <Route path="/LoginCadastro" element={<LoginCadastro />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
 
-          <Route path='/ValidarComprovante' element={<ValidarComprovante />} />
-
-          <Route path='/Cadastro' element={<Cadastro />} />
-
-          <Route path="/Recompensa/:id" element={<DetalhesRecompensa/>} />
-
-          <Route path='/LoginCadastro' element={<LoginCadastro />} />
-
+          {/* 🔐 ROTAS PROTEGIDAS */}
+          <Route
+              path="/CadastroProdutos"
+              element={
+                <ProtectedRoute>
+                  <CadastroProdutos />
+                </ProtectedRoute>
+              }
+          />
+          <Route
+              path="/ListagemProdutos"
+              element={
+                <ProtectedRoute>
+                  <ListagemProdutos />
+                </ProtectedRoute>
+              }
+          />
+          <Route
+              path="/ValidarComprovante"
+              element={
+                <ProtectedRoute>
+                  <ValidarComprovante />
+                </ProtectedRoute>
+              }
+          />
         </Routes>
       </BrowserRouter>
   );
