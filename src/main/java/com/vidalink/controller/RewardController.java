@@ -3,18 +3,21 @@ package com.vidalink.controller;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.user.User;
 import com.vidalink.services.RewardService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/rewards")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173/CadastroProduto")
+@CrossOrigin(origins = "http://localhost:5173")
 public class RewardController {
 
     private final RewardService rewardService;
@@ -39,7 +42,7 @@ public class RewardController {
     // 3. Cria uma nova recompensa (requer ADMIN)
     @PostMapping
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Reward> createReward(@RequestBody Reward reward) {
+    public ResponseEntity<Reward> createReward(@RequestBody @Valid Reward reward) {
         return ResponseEntity.ok(rewardService.createReward(reward));
     }
 
@@ -47,5 +50,26 @@ public class RewardController {
     @GetMapping("/my-rewards")
     public ResponseEntity<List<Reward>> listUserRewards(@AuthenticationPrincipal User user) {
         return ResponseEntity.ok(rewardService.getRewardsForUser(user));
+    }
+
+    // 5. Atualiza recompensa (requer ADMIN)
+    @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Reward> updateReward(@PathVariable UUID id, @RequestBody @Valid Reward reward) {
+        return ResponseEntity.ok(rewardService.updateReward(id, reward));
+    }
+
+    @GetMapping("/search/{name}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<List<Reward>> listRewardsByName(@PathVariable String name) {
+        List<Reward> rewards = rewardService.findRewardByName(name);
+        return ResponseEntity.ok(rewards);
+    }
+    // 6. Remove recompensa (requer ADMIN)
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Void> deleteReward(@PathVariable UUID id) {
+        rewardService.deleteReward(id);
+        return ResponseEntity.noContent().build();
     }
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from "./pages/Home.jsx";
 import CadastroProdutos from "./pages/CadastroProdutos";
@@ -19,56 +19,39 @@ import LoginCadastro from './Components/LoginCadastro';
 
 import "../src/index.css";
 import "../src/App.css"
+
 import ProtectedRoute from "./Components/ProtectedRoute.jsx";
 import Unauthorized from "./pages/Unauthorized.jsx";
-
+import PrivateRoute from "./Components/PrivateRoute.jsx";
 
 function App() {
-  return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Cadastro" element={<Cadastro />} />
-          <Route path="/Contato" element={<Contato />} />
-          <Route path="/Doar" element={<Doar />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Loja" element={<Loja />} />
-          <Route path="/Perfil" element={<Perfil />} />
-          <Route path="/Sobre" element={<Sobre />} />
-          <Route path="/EditarPerfil" element={<EditarPerfil />} />
-          <Route path="/SubmeterComprovante" element={<SubmeterComprovante />} />
-          <Route path="/Recompensa/:id" element={<DetalhesRecompensa />} />
-          <Route path="/LoginCadastro" element={<LoginCadastro />} />
-          <Route path="/unauthorized" element={<Unauthorized />} />
+    return (
+        <BrowserRouter>
+            <Routes>
+                {/* Públicas */}
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Cadastro" element={<Cadastro />} />
+                <Route path="/unauthorized" element={<Unauthorized />} />
+                <Route path="/LoginCadastro" element={<LoginCadastro />} />
 
-          {/* 🔐 ROTAS PROTEGIDAS */}
-          <Route
-              path="/CadastroProdutos"
-              element={
-                <ProtectedRoute>
-                  <CadastroProdutos />
-                </ProtectedRoute>
-              }
-          />
-          <Route
-              path="/ListagemProdutos"
-              element={
-                <ProtectedRoute>
-                  <ListagemProdutos />
-                </ProtectedRoute>
-              }
-          />
-          <Route
-              path="/ValidarComprovante"
-              element={
-                <ProtectedRoute>
-                  <ValidarComprovante />
-                </ProtectedRoute>
-              }
-          />
-        </Routes>
-      </BrowserRouter>
-  );
+                {/* Privadas (qualquer usuário logado) */}
+                <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+                <Route path="/Contato" element={<PrivateRoute><Contato /></PrivateRoute>} />
+                <Route path="/Doar" element={<PrivateRoute><Doar /></PrivateRoute>} />
+                <Route path="/Loja" element={<PrivateRoute><Loja /></PrivateRoute>} />
+                <Route path="/Perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
+                <Route path="/Sobre" element={<PrivateRoute><Sobre /></PrivateRoute>} />
+                <Route path="/EditarPerfil" element={<PrivateRoute><EditarPerfil /></PrivateRoute>} />
+                <Route path="/SubmeterComprovante" element={<PrivateRoute><SubmeterComprovante /></PrivateRoute>} />
+                <Route path="/Recompensa/:id" element={<PrivateRoute><DetalhesRecompensa /></PrivateRoute>} />
+
+                {/* Privadas (apenas ADMIN) */}
+                <Route path="/CadastroProdutos" element={<ProtectedRoute><CadastroProdutos /></ProtectedRoute>} />
+                <Route path="/ListagemProdutos" element={<ProtectedRoute><ListagemProdutos /></ProtectedRoute>} />
+                <Route path="/ValidarComprovante" element={<ProtectedRoute><ValidarComprovante /></ProtectedRoute>} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

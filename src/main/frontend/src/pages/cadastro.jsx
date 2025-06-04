@@ -31,7 +31,7 @@ export default function Cadastro() {
             const data = await response.json();
             localStorage.setItem('token', data.token);
             localStorage.setItem('userEmail', formData.email); // 👈 Adicionado aqui
-            navigate('/');
+            navigate('/Login');
         } else {
             alert('Erro ao registrar. Verifique os dados.');
         }

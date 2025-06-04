@@ -1,67 +1,86 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/TabelaProdutos.css";
+import ModalEdicao from "./ModalEdicao";
 
-export const TabelaProdutos = () => {
+const TabelaProdutos = ({ recompensas }) => {
+    const [recompensaSelecionada, setRecompensaSelecionada] = useState(null);
+    const [mostrarModal, setMostrarModal] = useState(false);
 
-  return (
-      <div style={{ padding: '20px' }}>
-      <table style={{
-        width: '100%',
-        borderCollapse: 'collapse',
-        borderRadius: '8px',
-        overflow: 'hidden',
-        boxShadow: '0 0 10px rgba(0,0,0,0.1)'
-      }}>
-        <thead>
-          <tr style={{ background: '#d9d9d9' }}>
-            <th style={{ padding: '12px', textAlign: 'left' }}>Nome do Produto</th>
-            <th style={{ padding: '12px', textAlign: 'left' }}>Categoria</th>
-            <th style={{ padding: '12px', textAlign: 'left' }}>Preço</th>
-            <th style={{ padding: '12px', textAlign: 'left' }}>Estoque</th>
-            <th style={{ padding: '12px', textAlign: 'left' }}>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Avatar Personalizado</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Personalização</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>500 pts</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>20</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>
-              <a href="#" style={{ color: 'red', textDecoration: 'none' }}>✏️ Editar</a>
-            </td>
-          </tr>
-          <tr>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Medalhas</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Conquista</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>300 pts</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>50</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>
-              <a href="#" style={{ color: 'red', textDecoration: 'none' }}>✏️ Editar</a>
-            </td>
-          </tr>
-          <tr>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Título</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Conquista</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>400 pts</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>30</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>
-              <a href="#" style={{ color: 'red', textDecoration: 'none' }}>✏️ Editar</a>
-            </td>
-          </tr>
-          <tr>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Nome no Mural de Doadores</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>Experiência Exclusiva</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>1500 pts</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>10</td>
-            <td style={{ padding: '12px', borderTop: '1px solid #eee' }}>
-              <a href="#" style={{ color: 'red', textDecoration: 'none' }}>✏️ Editar</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+    const abrirModalEdicao = (recompensa) => {
+        setRecompensaSelecionada(recompensa);
+        setMostrarModal(true);
+    };
+
+    const fecharModal = () => {
+        setMostrarModal(false);
+        setRecompensaSelecionada(null);
+    };
+
+    return (
+        <div className="tabela-produtos">
+            <table>
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Pontos Necessários</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                {recompensas.map((reward) => (
+                    <tr key={reward.id}>
+                        <td>{reward.name}</td>
+                        <td>{reward.description}</td>
+                        <td>{reward.pointsRequired}</td>
+                        <td>
+                                <span
+                                    onClick={() => abrirModalEdicao(reward)}
+                                    style={{ cursor: "pointer", marginRight: "1rem" }}
+                                >
+                                    ✏️
+                                </span>
+                            <span
+                                onClick={async () => {
+                                    const confirmacao = window.confirm("Tem certeza que deseja excluir?");
+                                    if (confirmacao) {
+                                        try {
+                                            const token = localStorage.getItem('token');
+                                            const response = await fetch(`http://localhost:8083/rewards/${reward.id}`, {
+                                                method: 'DELETE',
+                                                headers: {
+                                                    'Authorization': `Bearer ${token}`
+                                                }
+                                            });
+                                            if (response.ok) {
+                                                alert("Recompensa excluída com sucesso!");
+                                                window.location.reload();
+                                            } else {
+                                                alert("Erro ao excluir recompensa");
+                                            }
+                                        } catch (error) {
+                                            console.error("Erro ao excluir recompensa", error);
+                                        }
+                                    }
+                                }}
+                                style={{ cursor: "pointer" }}
+                            >
+    ❌
+</span>
+                        </td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+
+            {mostrarModal && recompensaSelecionada && (
+                <ModalEdicao
+                    recompensa={recompensaSelecionada}
+                    onClose={fecharModal}
+                />
+            )}
+        </div>
+    );
 };
 
 export default TabelaProdutos;

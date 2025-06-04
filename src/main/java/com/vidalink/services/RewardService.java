@@ -64,4 +64,25 @@ public class RewardService {
         return rewardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Recompensa não encontrada com ID: " + id));
     }
+
+    public List<Reward> findRewardByName(String name) {
+        List<Reward> rewards = rewardRepository.findByNameContainingIgnoreCase(name);
+        if(rewards.isEmpty()) {
+            throw new RuntimeException("Não há nenhuma recompensa!");
+        }
+        return rewards;
+    }
+
+    public Reward updateReward(UUID id, Reward updatedReward) {
+        Reward existing = getById(id);
+        existing.setName(updatedReward.getName());
+        existing.setDescription(updatedReward.getDescription());
+        existing.setPointsRequired(updatedReward.getPointsRequired());
+        return rewardRepository.save(existing);
+    }
+
+    public void deleteReward(UUID id) {
+        Reward existing = getById(id);
+        rewardRepository.delete(existing);
+    }
 }

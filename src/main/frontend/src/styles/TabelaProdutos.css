@@ -24,12 +24,19 @@
     padding: 1rem;
     border-top: 1px solid #eee;
   }
-  
-  .acoes {
-    color: #ff4343;
-    cursor: pointer;
-  }
-  
-  .acoes .deletar:hover {
-    text-decoration: underline;
-  }
+
+.acoes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.acoes .editar:hover {
+  color: #007bff;
+}
+
+.acoes .excluir:hover {
+  color: #ef2558;
+}

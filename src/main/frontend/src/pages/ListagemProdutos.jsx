@@ -1,39 +1,103 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import AdmHeader from "../Components/AdmHeader";
 import TabelaProdutos from "../Components/TabelaProdutos";
+import FormCadastroRecompensa from "../Components/FormCadastroRecompensa"; // novo
 
-import "../styles/ListagemProdutos.css"
+import "../styles/ListagemProdutos.css";
 
 export const ListagemProdutos = () => {
+    const [recompensas, setRecompensas] = useState([]);
+    const [mostrarModal, setMostrarModal] = useState(false);
+    const [termoBusca, setTermoBusca] = useState(""); // <- novo
+
+    const fetchRecompensas = async () => {
+        try {
+            const token = localStorage.getItem("token");
+            const response = await fetch("http://localhost:8083/rewards/available", {
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setRecompensas(data);
+            } else {
+                console.error("Erro ao buscar recompensas", response.status);
+            }
+        } catch (error) {
+            console.error("Erro na requisição", error);
+        }
+    };
+
+    const buscarRecompensasPorNome = async () => {
+        if (!termoBusca.trim()) {
+            // se vazio, busca tudo de novo
+            return fetchRecompensas();
+        }
+
+        try {
+            const token = localStorage.getItem("token");
+            const response = await fetch(`http://localhost:8083/rewards/search/${termoBusca}`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setRecompensas(data);
+            } else {
+                console.error("Erro ao buscar recompensa por nome", response.status);
+                alert("Nenhuma recompensa encontrada.");
+            }
+        } catch (error) {
+            console.error("Erro na busca:", error);
+        }
+    };
+
+    useEffect(() => {
+        fetchRecompensas();
+    }, []);
 
     return (
-        
         <div className="listagemProdutosContent">
             <AdmHeader />
-
             <div className="containerListagemProdutos">
-                <h1>Listagem de produtos</h1>
+                <h1>Listagem de Recompensas</h1>
                 <br />
 
                 <div className="botoes">
                     <div className="buscador">
-                        <input type="text" placeholder="Buscar..."/>
-                        <button>Buscar</button>
+                        <input
+                            type="text"
+                            placeholder="Buscar..."
+                            value={termoBusca}
+                            onChange={(e) => setTermoBusca(e.target.value)}
+                            onKeyDown={(e) => e.key === "Enter" && buscarRecompensasPorNome()}
+                        />
+                        <button onClick={buscarRecompensasPorNome}>Buscar</button>
                     </div>
-                    <Link to="/CadastroProdutos">
-                        <button>Novo Produto</button>
-                    </Link>
+                    <button onClick={() => setMostrarModal(true)}>Nova Recompensa</button>
                 </div>
 
                 <br /><br />
 
-
-                <TabelaProdutos></TabelaProdutos>
-
+                <TabelaProdutos
+                    recompensas={recompensas}
+                    // ... onEdit e onDelete mantêm os mesmos
+                />
             </div>
+
+            {mostrarModal && (
+                <FormCadastroRecompensa
+                    onClose={() => setMostrarModal(false)}
+                    onSuccess={fetchRecompensas}
+                />
+            )}
         </div>
     );
-}
+};
+
 
 export default ListagemProdutos;

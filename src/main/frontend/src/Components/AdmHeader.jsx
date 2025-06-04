@@ -9,7 +9,6 @@ export const AdmHeader = () => {
                 <ul>
                     <li><Link to="/ValidarComprovante">Validação</Link></li>
                     <li><Link to="/ListagemProdutos">Listagem</Link></li>
-                    <li><Link to="/CadastroProdutos">Cadastro</Link></li>
                 </ul>
                 
             </nav>

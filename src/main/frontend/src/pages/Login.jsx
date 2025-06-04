@@ -29,8 +29,14 @@ function Login() {
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('token', data.token);
-            localStorage.setItem('userEmail', credentials.email); // 👈 Adicionado aqui
-            navigate('/Perfil');
+            localStorage.setItem('userEmail', credentials.email);
+
+            // Redirecionamento baseado no domínio do e-mail
+            if (credentials.email.endsWith('@vidalink.com.br')) {
+                navigate('/ListagemProdutos');
+            } else {
+                navigate('/Perfil');
+            }
         } else {
             alert('Credenciais inválidas');
         }

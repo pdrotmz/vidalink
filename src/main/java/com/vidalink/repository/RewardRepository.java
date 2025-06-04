@@ -11,6 +11,8 @@ import java.util.UUID;
 public interface RewardRepository extends JpaRepository<Reward, UUID> {
     List<Reward> findByActiveTrue();
 
+    List<Reward> findByNameContainingIgnoreCase(String name);
+
     List<Reward> findByPointsRequiredLessThanEqualAndActiveTrue(Integer points);
 
     List<Reward> findByActiveTrueOrderByPointsRequiredAsc();
