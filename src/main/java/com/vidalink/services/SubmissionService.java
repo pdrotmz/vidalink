@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -59,15 +60,22 @@ public class SubmissionService {
         submissionRepository.save(submission);
 
         User author = submission.getAuthor();
-        User referenced = submission.getReferencedUser();
-
         author.addPoints(1);
-        referenced.addPoints(1);
 
-        userRepository.saveAll(List.of(author, referenced));
+        if (submission.getReferencedEmail() != null && !submission.getReferencedEmail().isBlank()) {
+            Optional<User> optionalReferenced = userRepository.findByEmail(submission.getReferencedEmail());
+            if (optionalReferenced.isPresent()) {
+                User referenced = optionalReferenced.get();
+                referenced.addPoints(1);
+                userRepository.save(referenced);
+                checkAndApplyRewards(referenced);
+            } else {
+                throw new RuntimeException("Erro ao achar usuário por email");
+            }
+        }
 
+        userRepository.save(author);
         checkAndApplyRewards(author);
-        checkAndApplyRewards(referenced);
     }
 
     public void reject(UUID submissionId) {

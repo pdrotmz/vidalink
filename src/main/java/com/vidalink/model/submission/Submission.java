@@ -26,9 +26,8 @@ public class Submission {
     @JoinColumn(name = "author_id")
     private User author; // quem fez o upload
 
-    @ManyToOne
-    @JoinColumn(name = "referenced_user_id")
-    private User referencedUser; // user referenciado no ID enviado
+    @Column(name = "referenced_email")
+    private String referencedEmail; // email de quem indicou
 
     private String filePath;
 
@@ -37,4 +36,3 @@ public class Submission {
 
     private LocalDateTime createdAt;
 }
-
