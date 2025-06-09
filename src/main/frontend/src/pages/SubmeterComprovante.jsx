@@ -5,7 +5,7 @@ import uploadIcon from "../Assets/images/uploadIcon.png";
 import logo from "../Assets/images/logoVidaLink.png";
 
 const SubmeterComprovante = () => {
-    const [donorId, setDonorId] = useState("");
+    const [emailAuthor, setEmailAuthor] = useState("");
     const [file, setFile] = useState(null);
 
     const handleFileChange = (e) => {
@@ -16,33 +16,44 @@ const SubmeterComprovante = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!file || !donorId) {
+        if (!file || !emailAuthor) {
             alert("Preencha todos os campos");
             return;
         }
 
         const formData = new FormData();
-        formData.append("donorId", donorId);
         formData.append("file", file);
+        formData.append("emailAuthor", emailAuthor);
 
         try {
+            const token = localStorage.getItem("token");
+
             const response = await fetch("http://localhost:8083/submissions", {
                 method: "POST",
-                body: formData
+                body: formData,
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+                // NÃO usar credentials: "include" se JWT tá em header, não cookie
             });
 
+            const text = await response.text(); // Para log completo
+
+            console.log("Status:", response.status);
+            console.log("Resposta:", text);
+
             if (!response.ok) {
-                throw new Error("Erro no envio");
+                alert("Erro ao enviar comprovante.");
+                return;
             }
 
-            const data = await response.json();
             alert("Comprovante enviado com sucesso!");
-            console.log(data);
         } catch (error) {
+            console.error("Erro de rede:", error);
             alert("Erro ao enviar comprovante.");
-            console.error(error);
         }
     };
+
 
     return (
         <div>
@@ -73,12 +84,12 @@ const SubmeterComprovante = () => {
                     )}
 
                     <div className="inputGroup">
-                        <label htmlFor="donorId">ID do Usuário:</label>
+                        <label htmlFor="emailAuthor">Email do Autor:</label>
                         <input
-                            type="text"
-                            id="donorId"
-                            value={donorId}
-                            onChange={(e) => setDonorId(e.target.value)}
+                            type="email"
+                            id="emailAuthor"
+                            value={emailAuthor}
+                            onChange={(e) => setEmailAuthor(e.target.value)}
                         />
                     </div>
 

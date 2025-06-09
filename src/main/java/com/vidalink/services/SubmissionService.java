@@ -31,18 +31,14 @@ public class SubmissionService {
     private final RewardRepository rewardRepository;
     private final RewardRedemptionRepository rewardRedemptionRepository;
 
-    public void submit(MultipartFile file, UUID referencedUserId, String emailAuthor) {
+    public void submit(MultipartFile file, String emailAuthor) {
         User author = userRepository.findByEmail(emailAuthor)
                 .orElseThrow(() -> new RuntimeException("Autor não encontrado"));
-
-        User referenced = userRepository.findById(referencedUserId)
-                .orElseThrow(() -> new RuntimeException("Referenciado não encontrado"));
 
         String path = storageService.saveFile(file);
 
         Submission submission = Submission.builder()
                 .author(author)
-                .referencedUser(referenced)
                 .filePath(path)
                 .status(SubmissionStatus.EM_ANALISE)
                 .createdAt(LocalDateTime.now())

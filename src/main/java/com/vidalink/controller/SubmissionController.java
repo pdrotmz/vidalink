@@ -21,13 +21,11 @@ public class SubmissionController {
 
     @PostMapping
     @PreAuthorize("hasRole('USER')")
-    public ResponseEntity<?> submit(
+    public void submit(
             @RequestParam("file") MultipartFile file,
-            @RequestParam("referencedUserId") UUID referencedUserId,
-            Principal principal
+            @RequestParam("emailAuthor") String emailAuthor
     ) {
-        submissionService.submit(file, referencedUserId, principal.getName());
-        return ResponseEntity.ok("Submissão enviada");
+        submissionService.submit(file, emailAuthor);
     }
 
     @GetMapping("/pending")
