@@ -47,3 +47,7 @@
 .infoPerfilContainer .perfil .textos{
   color: white;
 }
+
+.edit-button {
+    cursor: pointer;
+}

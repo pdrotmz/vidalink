@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { Header } from "../Components/Header";
 
-
-import { recompensas } from "../Data/ListaRecompensas";
-
 import "../styles/DetalhesRecompensa.css"
 
 
@@ -41,8 +38,8 @@ function DetalhesRecompensa() {
                         <button>Comprar</button>
                     </div>
                 </div>
-            </div>    
-        
+            </div>
+
         </div>
     );
 }
