@@ -1,13 +1,17 @@
 package com.vidalink.controller;
 
+import com.vidalink.dto.profile.UserProfileMultipartDTO;
+import com.vidalink.dto.user.UserResponseDTO;
 import com.vidalink.model.user.User;
 import com.vidalink.services.UserService;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -32,14 +36,15 @@ public class AdminController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<User> updateUserEmail(@PathVariable UUID id, @RequestBody @Valid User updatedUser) {
-        try {
-            User user = userService.updateLabelById(id, updatedUser);
-            return ResponseEntity.ok(user);
-        } catch (EntityNotFoundException e) {
-            return ResponseEntity.notFound().build();
-        }
+
+    @PutMapping(value = "/{id}/edit-profile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<UserResponseDTO> updateUserProfile(
+            @PathVariable UUID id,
+            @RequestPart("user") @Valid UserProfileMultipartDTO updateDTO,
+            @RequestPart(value = "profileImage", required = false) MultipartFile profileImage
+    ) throws IOException {
+        User updatedUser = userService.editionProfile(id, updateDTO, profileImage);
+        return ResponseEntity.ok(UserResponseDTO.from(updatedUser));
     }
 
     @DeleteMapping("/{id}")

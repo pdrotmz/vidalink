@@ -35,6 +35,9 @@ public class User implements UserDetails {
 
     private int points;
 
+    @Lob
+    private String profileImage;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(() -> "ROLE_" + this.role.name());
