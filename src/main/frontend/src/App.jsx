@@ -11,7 +11,6 @@ import Sobre from "./pages/Sobre";
 import DetalhesRecompensa from './pages/DetalhesRecompensa';
 import Cadastro from './pages/cadastro';
 import ValidarComprovante from './pages/validarcomprovante';
-import EditarPerfil from './pages/EditarPerfil';
 import SubmeterComprovante from './pages/SubmeterComprovante';
 
 import LoginCadastro from './Components/LoginCadastro';
@@ -40,7 +39,6 @@ function App() {
                 <Route path="/Loja" element={<PrivateRoute><Loja /></PrivateRoute>} />
                 <Route path="/Perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
                 <Route path="/Sobre" element={<PrivateRoute><Sobre /></PrivateRoute>} />
-                <Route path="/EditarPerfil" element={<PrivateRoute><EditarPerfil /></PrivateRoute>} />
                 <Route path="/SubmeterComprovante" element={<PrivateRoute><SubmeterComprovante /></PrivateRoute>} />
                 <Route path="/Recompensa/:id" element={<PrivateRoute><DetalhesRecompensa /></PrivateRoute>} />
 

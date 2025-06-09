@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/validarcomprovante.css';
 import ModalComprovante from "../Components/ModalComprovante";
 import AdmHeader from "../Components/AdmHeader.jsx";
 
-const ValidarComprovante = ({ comprovantes }) => {
+const ValidarComprovante = () => {
+  const [comprovantes, setComprovantes] = useState([]);
   const [comprovanteSelecionado, setComprovanteSelecionado] = useState(null);
 
   const abrirModal = (comprovante) => {
@@ -14,10 +15,33 @@ const ValidarComprovante = ({ comprovantes }) => {
     setComprovanteSelecionado(null);
   };
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    fetch("http://localhost:8083/submissions/pending", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+        .then(res => res.json())
+        .then(data => {
+          const adaptado = data.map((item) => ({
+            id: item.id,
+            userId: item.author?.id,
+            userName: item.author?.username,
+            submissionDate: item.createdAt,
+            filePath: item.filePath,
+          }));
+
+          setComprovantes(adaptado);
+        })
+
+        .catch(err => console.error("Erro ao buscar comprovantes pendentes", err));
+  }, []);
+
   return (
       <div className="admin-container">
         <AdmHeader />
-
         <div className="comprovantes-content">
           <div className="tabela-comprovantes-container">
             <h2>Comprovantes Submetidos</h2>
@@ -32,21 +56,15 @@ const ValidarComprovante = ({ comprovantes }) => {
                 </tr>
                 </thead>
                 <tbody>
-                {(comprovantes || []).map((c) => (
+                {comprovantes.map((c) => (
                     <tr key={c.id}>
-                      <td
-                          onClick={() => abrirModal(c)}
-                          className="user-name-cell"
-                      >
+                      <td onClick={() => abrirModal(c)} className="user-name-cell">
                         {c.userName}
                       </td>
                       <td>{c.userId}</td>
                       <td>{new Date(c.submissionDate).toLocaleDateString()}</td>
                       <td>
-                        <button
-                            onClick={() => abrirModal(c)}
-                            className="ver-detalhes-btn"
-                        >
+                        <button onClick={() => abrirModal(c)} className="ver-detalhes-btn">
                           Ver Detalhes
                         </button>
                       </td>
@@ -58,10 +76,7 @@ const ValidarComprovante = ({ comprovantes }) => {
           </div>
 
           {comprovanteSelecionado && (
-              <ModalComprovante
-                  comprovante={comprovanteSelecionado}
-                  onClose={fecharModal}
-              />
+              <ModalComprovante comprovante={comprovanteSelecionado} onClose={fecharModal} />
           )}
         </div>
       </div>

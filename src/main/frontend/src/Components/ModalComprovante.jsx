@@ -6,17 +6,18 @@ const ModalComprovante = ({ comprovante, onClose }) => {
 
     const aprovarComprovante = async () => {
         try {
-            const response = await fetch(`http://localhost:8083/submissions/${comprovante.id}/approve`, {
-                method: "POST",
+            const response = await fetch(`http://localhost:8083/submissions/${comprovante.id}/validate`, {
+                method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
                 },
             });
 
             if (response.ok) {
                 alert("Comprovante aprovado com sucesso!");
-                onClose(); // fecha modal
-                window.location.reload(); // recarrega lista
+                onClose();
+                window.location.reload();
             } else {
                 alert("Erro ao aprovar comprovante");
             }
@@ -53,7 +54,17 @@ const ModalComprovante = ({ comprovante, onClose }) => {
         <div className="modal-comprovante-backdrop" onClick={onClose}>
             <div className="modal-comprovante" onClick={(e) => e.stopPropagation()}>
                 <h2>{comprovante.userName}</h2>
-                <img src={`data:image/png;base64,${comprovante.imageBase64}`} alt="Comprovante" />
+
+                {comprovante.filePath ? (
+                    <img
+                        src={`http://localhost:8083/${comprovante.filePath}`}
+                        alt="Comprovante"
+                        style={{ maxWidth: "100%", maxHeight: "400px" }}
+                    />
+                ) : (
+                    <p>Imagem do comprovante não disponível.</p>
+                )}
+
                 <div className="buttons">
                     <button className="reprovar" onClick={reprovarComprovante}>Reprovar</button>
                     <button className="aprovar" onClick={aprovarComprovante}>Aprovar</button>

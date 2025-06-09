@@ -1,9 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/TabelaComprovantes.css";
 import ModalComprovante from "./ModalComprovante";
 
-const TabelaComprovantes = ({ comprovantes }) => {
+const TabelaComprovantes = () => {
+    const [comprovantes, setComprovantes] = useState([]);
     const [comprovanteSelecionado, setComprovanteSelecionado] = useState(null);
+
+    const token = localStorage.getItem("token");
+
+    useEffect(() => {
+        const buscarComprovantes = async () => {
+            try {
+                const response = await fetch("http://localhost:8083/submissions/pending", {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    // Adapta os dados para o formato que a tabela espera
+                    const adaptado = data.map((item) => ({
+                        id: item.id,
+                        userId: item.author.id,
+                        userName: item.author.username,
+                        submissionDate: item.createdAt,
+                        filePath: item.filePath,
+                    }));
+
+                    setComprovantes(adaptado);
+                } else {
+                    console.error("Erro ao buscar comprovantes");
+                }
+            } catch (err) {
+                console.error("Erro:", err);
+            }
+        };
+
+        buscarComprovantes();
+    }, [token]);
 
     const abrirModal = (comprovante) => {
         setComprovanteSelecionado(comprovante);
@@ -11,6 +47,15 @@ const TabelaComprovantes = ({ comprovantes }) => {
 
     const fecharModal = () => {
         setComprovanteSelecionado(null);
+    };
+
+    const formatarData = (dataString) => {
+        try {
+            const data = new Date(dataString);
+            return isNaN(data) ? "Data inválida" : data.toLocaleDateString("pt-BR");
+        } catch (err) {
+            return "Data inválida";
+        }
     };
 
     return (
@@ -33,7 +78,7 @@ const TabelaComprovantes = ({ comprovantes }) => {
                             {c.userName}
                         </td>
                         <td>{c.userId}</td>
-                        <td>{c.submissionDate}</td>
+                        <td>{formatarData(c.submissionDate)}</td>
                     </tr>
                 ))}
                 </tbody>
