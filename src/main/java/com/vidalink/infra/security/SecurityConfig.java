@@ -86,6 +86,12 @@ public class SecurityConfig {
                         // 🔐 ADMIN pode rejeitar (deletar) submissão
                         .requestMatchers(HttpMethod.DELETE, "/submissions/{id}").hasRole("ADMIN")
 
+                        .requestMatchers("/uploads/**").permitAll()
+
+                        .requestMatchers(HttpMethod.GET, "api/user/**").hasRole("USER")
+                        .requestMatchers(HttpMethod.GET, "/api/users/me").hasRole("USER")
+                        .requestMatchers(HttpMethod.PUT, "/api/users/{id}/edit-profile").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers(HttpMethod.PUT, "/user/**").hasRole("USER")
 
                         // 🎁 Recompensas
 
