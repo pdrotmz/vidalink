@@ -17,8 +17,8 @@ public class Reward {
 
     private String name;
     private String description;
-    private Integer pointsRequired; // Ex: 10 doações = 10 pontos
-
+    private Integer pointsRequired;
     private boolean active;
+    private String imageUrl;
 }
 

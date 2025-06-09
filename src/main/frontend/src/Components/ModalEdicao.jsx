@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import "../styles/Modal.css"; // Aponta pro CSS acima
+import "../styles/Modal.css";
 
-const ModalEdicao = ({ recompensa, onClose }) => {
+const ModalEdicao = ({ recompensa, onClose, onSuccess }) => {
     const [formData, setFormData] = useState({
         name: recompensa.name,
         description: recompensa.description,
         pointsRequired: recompensa.pointsRequired,
+        file: null
     });
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleFileChange = (e) => {
+        setFormData({ ...formData, file: e.target.files[0] });
     };
 
     const handleSubmit = async (e) => {
@@ -17,24 +22,33 @@ const ModalEdicao = ({ recompensa, onClose }) => {
 
         try {
             const token = localStorage.getItem('token');
+            const formDataToSend = new FormData();
+
+            formDataToSend.append('name', formData.name);
+            formDataToSend.append('description', formData.description);
+            formDataToSend.append('pointsRequired', formData.pointsRequired);
+            if (formData.file) {
+                formDataToSend.append('file', formData.file);
+            }
+
             const response = await fetch(`http://localhost:8083/rewards/${recompensa.id}`, {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify(formData)
+                body: formDataToSend
             });
 
             if (response.ok) {
                 alert("Recompensa atualizada com sucesso!");
+                onSuccess();
                 onClose();
-                window.location.reload();
             } else {
                 alert("Erro ao atualizar recompensa");
             }
         } catch (err) {
             console.error("Erro ao editar recompensa", err);
+            alert("Erro ao editar recompensa");
         }
     };
 
@@ -65,6 +79,24 @@ const ModalEdicao = ({ recompensa, onClose }) => {
                         placeholder="Pontos Necessários"
                         required
                     />
+
+                    <div className="file-upload-container">
+                        <label className={`file-upload-label ${formData.file ? 'has-file' : ''}`}>
+                            {formData.file ? formData.file.name : "Alterar Imagem"}
+                            <input
+                                type="file"
+                                onChange={handleFileChange}
+                                className="file-upload-input"
+                                accept="image/*"
+                            />
+                        </label>
+                        {!formData.file && recompensa.imageUrl && (
+                            <div className="current-image-info">
+                                <span>Imagem atual mantida</span>
+                            </div>
+                        )}
+                    </div>
+
                     <div className="botoes-modal">
                         <button type="submit">Salvar</button>
                         <button type="button" onClick={onClose}>Cancelar</button>

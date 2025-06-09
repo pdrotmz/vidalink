@@ -1,0 +1,1909 @@
+[2025-06-08 21:04:16] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-08 21:04:16] INFO: Header: host = localhost:8083
+[2025-06-08 21:04:16] INFO: Header: connection = keep-alive
+[2025-06-08 21:04:16] INFO: Header: content-length = 75
+[2025-06-08 21:04:16] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:04:16] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:04:16] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:04:16] INFO: Header: content-type = application/json
+[2025-06-08 21:04:16] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:04:16] INFO: Header: accept = */*
+[2025-06-08 21:04:16] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:04:16] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:04:16] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:04:16] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:04:16] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:04:16] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:04:16] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:04:49] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-08 21:04:49] INFO: Header: host = localhost:8083
+[2025-06-08 21:04:49] INFO: Header: connection = keep-alive
+[2025-06-08 21:04:49] INFO: Header: content-length = 60
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:04:49] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:04:49] INFO: Header: content-type = application/json
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:04:49] INFO: Header: accept = */*
+[2025-06-08 21:04:49] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:04:49] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:04:49] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:04:49] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:04:49] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:04:49] INFO: Header: host = localhost:8083
+[2025-06-08 21:04:49] INFO: Header: connection = keep-alive
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:04:49] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:04:49] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:04:49] INFO: Header: accept = */*
+[2025-06-08 21:04:49] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:04:49] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:04:49] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:04:49] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:04:49] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:04:49] INFO: Header: host = localhost:8083
+[2025-06-08 21:04:49] INFO: Header: connection = keep-alive
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:04:49] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:04:49] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:04:49] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:04:49] INFO: Header: accept = */*
+[2025-06-08 21:04:49] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:04:49] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:04:49] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:04:49] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:04:49] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:17:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:17:04] INFO: Header: host = localhost:8083
+[2025-06-08 21:17:04] INFO: Header: connection = keep-alive
+[2025-06-08 21:17:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:17:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:17:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:17:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:17:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:17:04] INFO: Header: accept = */*
+[2025-06-08 21:17:04] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:17:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:17:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:17:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:17:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:17:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:17:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:17:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:17:04] INFO: Header: host = localhost:8083
+[2025-06-08 21:17:04] INFO: Header: connection = keep-alive
+[2025-06-08 21:17:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:17:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:17:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:17:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:17:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:17:04] INFO: Header: accept = */*
+[2025-06-08 21:17:04] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:17:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:17:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:17:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:17:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:17:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:17:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:17:14] INFO: Request: http://localhost:8083/rewards
+[2025-06-08 21:17:14] INFO: Header: host = localhost:8083
+[2025-06-08 21:17:14] INFO: Header: connection = keep-alive
+[2025-06-08 21:17:14] INFO: Header: content-length = 72
+[2025-06-08 21:17:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:17:14] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:17:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:17:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:17:14] INFO: Header: content-type = application/json
+[2025-06-08 21:17:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:17:14] INFO: Header: accept = */*
+[2025-06-08 21:17:14] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:17:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:17:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:17:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:17:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:17:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:17:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:17:16] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:17:16] INFO: Header: host = localhost:8083
+[2025-06-08 21:17:16] INFO: Header: connection = keep-alive
+[2025-06-08 21:17:16] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:17:16] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:17:16] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:17:16] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:17:16] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:17:16] INFO: Header: accept = */*
+[2025-06-08 21:17:16] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:17:16] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:17:16] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:17:16] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:17:16] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:17:16] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:17:16] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:19:50] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:19:50] INFO: Header: host = localhost:8083
+[2025-06-08 21:19:50] INFO: Header: connection = keep-alive
+[2025-06-08 21:19:50] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:19:50] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:19:50] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:19:50] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:19:50] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:19:50] INFO: Header: accept = */*
+[2025-06-08 21:19:50] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:19:50] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:19:50] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:19:50] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:19:50] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:19:50] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:19:50] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:19:50] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:19:50] INFO: Header: host = localhost:8083
+[2025-06-08 21:19:50] INFO: Header: connection = keep-alive
+[2025-06-08 21:19:50] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:19:50] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:19:50] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:19:50] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:19:50] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:19:50] INFO: Header: accept = */*
+[2025-06-08 21:19:50] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:19:50] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:19:50] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:19:50] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:19:50] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:19:50] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:19:50] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:20:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:20:04] INFO: Header: host = localhost:8083
+[2025-06-08 21:20:04] INFO: Header: connection = keep-alive
+[2025-06-08 21:20:04] INFO: Header: pragma = no-cache
+[2025-06-08 21:20:04] INFO: Header: cache-control = no-cache
+[2025-06-08 21:20:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:20:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:20:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:20:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:20:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:20:04] INFO: Header: accept = */*
+[2025-06-08 21:20:04] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:20:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:20:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:20:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:20:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:20:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:20:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:20:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:20:04] INFO: Header: host = localhost:8083
+[2025-06-08 21:20:04] INFO: Header: connection = keep-alive
+[2025-06-08 21:20:04] INFO: Header: pragma = no-cache
+[2025-06-08 21:20:04] INFO: Header: cache-control = no-cache
+[2025-06-08 21:20:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:20:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:20:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:20:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:20:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:20:04] INFO: Header: accept = */*
+[2025-06-08 21:20:04] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:20:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:20:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:20:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:20:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:20:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:20:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:27:13] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:27:13] INFO: Header: host = localhost:8083
+[2025-06-08 21:27:13] INFO: Header: connection = keep-alive
+[2025-06-08 21:27:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:27:13] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:27:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:27:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:27:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:27:13] INFO: Header: accept = */*
+[2025-06-08 21:27:13] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:27:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:27:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:27:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:27:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:27:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:27:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:27:13] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:27:13] INFO: Header: host = localhost:8083
+[2025-06-08 21:27:13] INFO: Header: connection = keep-alive
+[2025-06-08 21:27:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:27:13] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:27:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:27:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:27:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:27:13] INFO: Header: accept = */*
+[2025-06-08 21:27:13] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:27:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:27:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:27:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:27:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:27:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:27:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:27:31] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:27:31] INFO: Header: host = localhost:8083
+[2025-06-08 21:27:31] INFO: Header: connection = keep-alive
+[2025-06-08 21:27:31] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:27:31] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:27:31] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:27:31] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:27:31] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:27:31] INFO: Header: accept = */*
+[2025-06-08 21:27:31] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:27:31] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:27:31] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:27:31] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:27:31] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:27:31] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:27:31] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:27:31] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:27:31] INFO: Header: host = localhost:8083
+[2025-06-08 21:27:31] INFO: Header: connection = keep-alive
+[2025-06-08 21:27:31] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:27:31] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:27:31] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:27:31] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:27:31] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:27:31] INFO: Header: accept = */*
+[2025-06-08 21:27:31] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:27:31] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:27:31] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:27:31] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:27:31] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:27:31] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:27:31] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:41:27] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:41:27] INFO: Header: host = localhost:8083
+[2025-06-08 21:41:27] INFO: Header: connection = keep-alive
+[2025-06-08 21:41:27] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:41:27] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:41:27] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:41:27] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:41:27] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:41:27] INFO: Header: accept = */*
+[2025-06-08 21:41:27] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:41:27] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:41:27] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:41:27] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:41:27] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:41:27] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:41:27] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:41:27] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:41:27] INFO: Header: host = localhost:8083
+[2025-06-08 21:41:27] INFO: Header: connection = keep-alive
+[2025-06-08 21:41:27] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:41:27] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:41:27] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:41:27] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:41:27] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:41:27] INFO: Header: accept = */*
+[2025-06-08 21:41:27] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:41:27] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:41:27] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:41:27] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:41:27] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:41:27] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:41:27] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:41:32] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:41:32] INFO: Header: host = localhost:8083
+[2025-06-08 21:41:32] INFO: Header: connection = keep-alive
+[2025-06-08 21:41:32] INFO: Header: pragma = no-cache
+[2025-06-08 21:41:32] INFO: Header: cache-control = no-cache
+[2025-06-08 21:41:32] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:41:32] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:41:32] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:41:32] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:41:32] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:41:32] INFO: Header: accept = */*
+[2025-06-08 21:41:32] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:41:32] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:41:32] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:41:32] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:41:32] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:41:32] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:41:32] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:41:32] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:41:32] INFO: Header: host = localhost:8083
+[2025-06-08 21:41:32] INFO: Header: connection = keep-alive
+[2025-06-08 21:41:32] INFO: Header: pragma = no-cache
+[2025-06-08 21:41:32] INFO: Header: cache-control = no-cache
+[2025-06-08 21:41:32] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:41:32] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:41:32] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:41:32] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:41:32] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:41:32] INFO: Header: accept = */*
+[2025-06-08 21:41:32] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:41:32] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:41:32] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:41:32] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:41:32] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:41:32] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:41:32] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:42:18] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:42:18] INFO: Header: host = localhost:8083
+[2025-06-08 21:42:18] INFO: Header: connection = keep-alive
+[2025-06-08 21:42:18] INFO: Header: pragma = no-cache
+[2025-06-08 21:42:18] INFO: Header: cache-control = no-cache
+[2025-06-08 21:42:18] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:42:18] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:42:18] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:42:18] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:42:18] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:42:18] INFO: Header: accept = */*
+[2025-06-08 21:42:18] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:42:18] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:42:18] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:42:18] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:42:18] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:42:18] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:42:18] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:42:18] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:42:18] INFO: Header: host = localhost:8083
+[2025-06-08 21:42:18] INFO: Header: connection = keep-alive
+[2025-06-08 21:42:18] INFO: Header: pragma = no-cache
+[2025-06-08 21:42:18] INFO: Header: cache-control = no-cache
+[2025-06-08 21:42:18] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:42:18] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:42:18] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:42:18] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:42:18] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:42:18] INFO: Header: accept = */*
+[2025-06-08 21:42:18] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:42:18] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:42:18] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:42:18] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:42:18] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:42:18] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:42:18] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:42:20] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:42:20] INFO: Header: host = localhost:8083
+[2025-06-08 21:42:20] INFO: Header: connection = keep-alive
+[2025-06-08 21:42:20] INFO: Header: pragma = no-cache
+[2025-06-08 21:42:20] INFO: Header: cache-control = no-cache
+[2025-06-08 21:42:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:42:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:42:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:42:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:42:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:42:20] INFO: Header: accept = */*
+[2025-06-08 21:42:20] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:42:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:42:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:42:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:42:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:42:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:42:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:42:20] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:42:20] INFO: Header: host = localhost:8083
+[2025-06-08 21:42:20] INFO: Header: connection = keep-alive
+[2025-06-08 21:42:20] INFO: Header: pragma = no-cache
+[2025-06-08 21:42:20] INFO: Header: cache-control = no-cache
+[2025-06-08 21:42:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:42:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:42:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:42:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:42:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:42:20] INFO: Header: accept = */*
+[2025-06-08 21:42:20] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:42:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:42:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:42:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:42:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:42:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:42:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:46:13] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:46:13] INFO: Header: host = localhost:8083
+[2025-06-08 21:46:13] INFO: Header: connection = keep-alive
+[2025-06-08 21:46:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:46:13] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:46:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:46:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:46:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:46:13] INFO: Header: accept = */*
+[2025-06-08 21:46:13] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:46:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:46:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:46:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:46:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:46:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:46:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:46:13] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:46:13] INFO: Header: host = localhost:8083
+[2025-06-08 21:46:13] INFO: Header: connection = keep-alive
+[2025-06-08 21:46:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:46:13] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:46:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:46:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:46:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:46:13] INFO: Header: accept = */*
+[2025-06-08 21:46:13] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:46:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:46:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:46:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:46:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:46:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:46:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:50:14] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:50:14] INFO: Header: host = localhost:8083
+[2025-06-08 21:50:14] INFO: Header: connection = keep-alive
+[2025-06-08 21:50:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:50:14] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:50:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:50:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:50:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:50:14] INFO: Header: accept = */*
+[2025-06-08 21:50:14] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:50:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:50:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:50:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:50:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:50:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:50:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 21:50:14] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 21:50:14] INFO: Header: host = localhost:8083
+[2025-06-08 21:50:14] INFO: Header: connection = keep-alive
+[2025-06-08 21:50:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 21:50:14] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MTY2ODksImV4cCI6MTc0OTUwMzA4OX0.2-dwYRGRmyqNLHRMYepaZ4QBqSAN2SkPi_7iUem3AhQ
+[2025-06-08 21:50:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 21:50:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 21:50:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 21:50:14] INFO: Header: accept = */*
+[2025-06-08 21:50:14] INFO: Header: origin = http://localhost:5173
+[2025-06-08 21:50:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 21:50:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 21:50:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 21:50:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 21:50:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 21:50:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:20:02] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-08 22:20:02] INFO: Header: host = localhost:8083
+[2025-06-08 22:20:02] INFO: Header: connection = keep-alive
+[2025-06-08 22:20:02] INFO: Header: content-length = 75
+[2025-06-08 22:20:02] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:20:02] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:20:02] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:20:02] INFO: Header: content-type = application/json
+[2025-06-08 22:20:02] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:20:02] INFO: Header: accept = */*
+[2025-06-08 22:20:02] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:20:02] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:20:02] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:20:02] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:20:02] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:20:02] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:20:02] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:20:03] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-08 22:20:03] INFO: Header: host = localhost:8083
+[2025-06-08 22:20:03] INFO: Header: connection = keep-alive
+[2025-06-08 22:20:03] INFO: Header: content-length = 60
+[2025-06-08 22:20:03] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:20:03] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:20:03] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:20:03] INFO: Header: content-type = application/json
+[2025-06-08 22:20:03] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:20:03] INFO: Header: accept = */*
+[2025-06-08 22:20:03] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:20:03] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:20:03] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:20:03] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:20:03] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:20:03] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:20:03] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:20:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:20:04] INFO: Header: host = localhost:8083
+[2025-06-08 22:20:04] INFO: Header: connection = keep-alive
+[2025-06-08 22:20:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:20:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjEyMDMsImV4cCI6MTc0OTUwNzYwM30.m1JuRhbxfiy-_Y3my73UW7SuMuGbZpwvtl5aesrTsLc
+[2025-06-08 22:20:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:20:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:20:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:20:04] INFO: Header: accept = */*
+[2025-06-08 22:20:04] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:20:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:20:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:20:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:20:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:20:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:20:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:20:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:20:04] INFO: Header: host = localhost:8083
+[2025-06-08 22:20:04] INFO: Header: connection = keep-alive
+[2025-06-08 22:20:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:20:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjEyMDMsImV4cCI6MTc0OTUwNzYwM30.m1JuRhbxfiy-_Y3my73UW7SuMuGbZpwvtl5aesrTsLc
+[2025-06-08 22:20:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:20:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:20:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:20:04] INFO: Header: accept = */*
+[2025-06-08 22:20:04] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:20:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:20:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:20:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:20:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:20:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:20:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:20:39] INFO: Request: http://localhost:8083/rewards
+[2025-06-08 22:20:39] INFO: Header: host = localhost:8083
+[2025-06-08 22:20:39] INFO: Header: connection = keep-alive
+[2025-06-08 22:20:39] INFO: Header: content-length = 125596
+[2025-06-08 22:20:39] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:20:39] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjEyMDMsImV4cCI6MTc0OTUwNzYwM30.m1JuRhbxfiy-_Y3my73UW7SuMuGbZpwvtl5aesrTsLc
+[2025-06-08 22:20:39] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:20:39] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:20:39] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundarypN6LxWVrqLpBEOk9
+[2025-06-08 22:20:39] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:20:39] INFO: Header: accept = */*
+[2025-06-08 22:20:39] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:20:39] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:20:39] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:20:39] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:20:39] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:20:39] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:20:39] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:20:40] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:20:40] INFO: Header: host = localhost:8083
+[2025-06-08 22:20:40] INFO: Header: connection = keep-alive
+[2025-06-08 22:20:40] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:20:40] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjEyMDMsImV4cCI6MTc0OTUwNzYwM30.m1JuRhbxfiy-_Y3my73UW7SuMuGbZpwvtl5aesrTsLc
+[2025-06-08 22:20:40] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:20:40] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:20:40] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:20:40] INFO: Header: accept = */*
+[2025-06-08 22:20:40] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:20:40] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:20:40] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:20:40] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:20:40] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:20:40] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:20:40] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:25:08] INFO: Request: http://localhost:8083/rewards/2dca35c8-b92f-4757-855b-30e582480cd3
+[2025-06-08 22:25:08] INFO: Header: host = localhost:8083
+[2025-06-08 22:25:08] INFO: Header: connection = keep-alive
+[2025-06-08 22:25:08] INFO: Header: content-length = 44754
+[2025-06-08 22:25:08] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:25:08] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjEyMDMsImV4cCI6MTc0OTUwNzYwM30.m1JuRhbxfiy-_Y3my73UW7SuMuGbZpwvtl5aesrTsLc
+[2025-06-08 22:25:08] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:25:08] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:25:08] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundaryeBmNfbvHPjpAzjbo
+[2025-06-08 22:25:08] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:25:08] INFO: Header: accept = */*
+[2025-06-08 22:25:08] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:25:08] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:25:08] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:25:08] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:25:08] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:25:08] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:25:08] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:26:22] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-08 22:26:22] INFO: Header: host = localhost:8083
+[2025-06-08 22:26:22] INFO: Header: connection = keep-alive
+[2025-06-08 22:26:22] INFO: Header: content-length = 86
+[2025-06-08 22:26:22] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:26:22] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:26:22] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:26:22] INFO: Header: content-type = application/json
+[2025-06-08 22:26:22] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:26:22] INFO: Header: accept = */*
+[2025-06-08 22:26:22] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:26:22] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:26:22] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:26:22] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:26:22] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:26:22] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:26:22] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:26:23] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-08 22:26:23] INFO: Header: host = localhost:8083
+[2025-06-08 22:26:23] INFO: Header: connection = keep-alive
+[2025-06-08 22:26:23] INFO: Header: content-length = 62
+[2025-06-08 22:26:23] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:26:23] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:26:23] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:26:23] INFO: Header: content-type = application/json
+[2025-06-08 22:26:23] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:26:23] INFO: Header: accept = */*
+[2025-06-08 22:26:23] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:26:23] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:26:23] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:26:23] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:26:23] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:26:23] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:26:23] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:33:23] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-08 22:33:23] INFO: Header: host = localhost:8083
+[2025-06-08 22:33:23] INFO: Header: connection = keep-alive
+[2025-06-08 22:33:23] INFO: Header: content-length = 75
+[2025-06-08 22:33:23] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:33:23] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:33:23] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:33:23] INFO: Header: content-type = application/json
+[2025-06-08 22:33:23] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:33:23] INFO: Header: accept = */*
+[2025-06-08 22:33:23] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:33:23] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:33:23] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:33:23] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:33:23] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:33:23] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:33:23] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:33:25] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-08 22:33:25] INFO: Header: host = localhost:8083
+[2025-06-08 22:33:25] INFO: Header: connection = keep-alive
+[2025-06-08 22:33:25] INFO: Header: content-length = 60
+[2025-06-08 22:33:25] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:33:25] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:33:25] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:33:25] INFO: Header: content-type = application/json
+[2025-06-08 22:33:25] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:33:25] INFO: Header: accept = */*
+[2025-06-08 22:33:25] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:33:25] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:33:25] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:33:25] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:33:25] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:33:25] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:33:25] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:33:51] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-08 22:33:51] INFO: Header: host = localhost:8083
+[2025-06-08 22:33:51] INFO: Header: connection = keep-alive
+[2025-06-08 22:33:51] INFO: Header: content-length = 75
+[2025-06-08 22:33:51] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:33:51] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:33:51] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:33:51] INFO: Header: content-type = application/json
+[2025-06-08 22:33:51] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:33:51] INFO: Header: accept = */*
+[2025-06-08 22:33:51] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:33:51] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:33:51] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:33:51] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:33:51] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:33:51] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:33:51] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:33:52] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-08 22:33:52] INFO: Header: host = localhost:8083
+[2025-06-08 22:33:52] INFO: Header: connection = keep-alive
+[2025-06-08 22:33:52] INFO: Header: content-length = 60
+[2025-06-08 22:33:52] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:33:52] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:33:52] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:33:52] INFO: Header: content-type = application/json
+[2025-06-08 22:33:52] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:33:52] INFO: Header: accept = */*
+[2025-06-08 22:33:52] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:33:52] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:33:52] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:33:52] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:33:52] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:33:52] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:33:52] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:33:53] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:33:53] INFO: Header: host = localhost:8083
+[2025-06-08 22:33:53] INFO: Header: connection = keep-alive
+[2025-06-08 22:33:53] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:33:53] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:33:53] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:33:53] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:33:53] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:33:53] INFO: Header: accept = */*
+[2025-06-08 22:33:53] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:33:53] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:33:53] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:33:53] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:33:53] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:33:53] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:33:53] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:33:53] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:33:53] INFO: Header: host = localhost:8083
+[2025-06-08 22:33:53] INFO: Header: connection = keep-alive
+[2025-06-08 22:33:53] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:33:53] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:33:53] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:33:53] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:33:53] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:33:53] INFO: Header: accept = */*
+[2025-06-08 22:33:53] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:33:53] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:33:53] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:33:53] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:33:53] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:33:53] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:33:53] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:34:20] INFO: Request: http://localhost:8083/rewards
+[2025-06-08 22:34:20] INFO: Header: host = localhost:8083
+[2025-06-08 22:34:20] INFO: Header: connection = keep-alive
+[2025-06-08 22:34:20] INFO: Header: content-length = 44768
+[2025-06-08 22:34:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:34:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:34:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:34:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:34:20] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundaryTKE3XMW5AUhe0aQF
+[2025-06-08 22:34:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:34:20] INFO: Header: accept = */*
+[2025-06-08 22:34:20] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:34:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:34:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:34:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:34:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:34:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:34:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:34:23] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:34:23] INFO: Header: host = localhost:8083
+[2025-06-08 22:34:23] INFO: Header: connection = keep-alive
+[2025-06-08 22:34:23] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:34:23] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:34:23] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:34:23] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:34:23] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:34:23] INFO: Header: accept = */*
+[2025-06-08 22:34:23] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:34:23] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:34:23] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:34:23] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:34:23] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:34:23] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:34:23] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:34:59] INFO: Request: http://localhost:8083/rewards/2dca35c8-b92f-4757-855b-30e582480cd3
+[2025-06-08 22:34:59] INFO: Header: host = localhost:8083
+[2025-06-08 22:34:59] INFO: Header: connection = keep-alive
+[2025-06-08 22:34:59] INFO: Header: content-length = 125596
+[2025-06-08 22:34:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:34:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:34:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:34:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:34:59] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundaryH4xHQOwjpSVnkIq4
+[2025-06-08 22:34:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:34:59] INFO: Header: accept = */*
+[2025-06-08 22:34:59] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:34:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:34:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:34:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:34:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:34:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:34:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:35:20] INFO: Request: http://localhost:8083/rewards
+[2025-06-08 22:35:20] INFO: Header: host = localhost:8083
+[2025-06-08 22:35:20] INFO: Header: connection = keep-alive
+[2025-06-08 22:35:20] INFO: Header: content-length = 1812458
+[2025-06-08 22:35:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:35:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:35:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:35:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:35:20] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundarynXVUnXQL6QZ3j9Ae
+[2025-06-08 22:35:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:35:20] INFO: Header: accept = */*
+[2025-06-08 22:35:20] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:35:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:35:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:35:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:35:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:35:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:35:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:35:31] INFO: Request: http://localhost:8083/rewards
+[2025-06-08 22:35:31] INFO: Header: host = localhost:8083
+[2025-06-08 22:35:31] INFO: Header: connection = keep-alive
+[2025-06-08 22:35:31] INFO: Header: content-length = 104067
+[2025-06-08 22:35:31] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:35:31] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:35:31] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:35:31] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:35:31] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundaryKbxY9S9HsTqTEP4k
+[2025-06-08 22:35:31] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:35:31] INFO: Header: accept = */*
+[2025-06-08 22:35:31] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:35:31] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:35:31] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:35:31] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:35:31] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:35:31] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:35:31] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:35:33] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:35:33] INFO: Header: host = localhost:8083
+[2025-06-08 22:35:33] INFO: Header: connection = keep-alive
+[2025-06-08 22:35:33] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:35:33] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:35:33] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:35:33] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:35:33] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:35:33] INFO: Header: accept = */*
+[2025-06-08 22:35:33] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:35:33] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:35:33] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:35:33] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:35:33] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:35:33] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:35:33] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:35:48] INFO: Request: http://localhost:8083/rewards/search/g
+[2025-06-08 22:35:48] INFO: Header: host = localhost:8083
+[2025-06-08 22:35:48] INFO: Header: connection = keep-alive
+[2025-06-08 22:35:48] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:35:48] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:35:48] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:35:48] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:35:48] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:35:48] INFO: Header: accept = */*
+[2025-06-08 22:35:48] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:35:48] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:35:48] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:35:48] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:35:48] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:35:48] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:35:48] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:35:56] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:35:56] INFO: Header: host = localhost:8083
+[2025-06-08 22:35:56] INFO: Header: connection = keep-alive
+[2025-06-08 22:35:56] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:35:56] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:35:56] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:35:56] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:35:56] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:35:56] INFO: Header: accept = */*
+[2025-06-08 22:35:56] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:35:56] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:35:56] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:35:56] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:35:56] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:35:56] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:35:56] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:01] INFO: Request: http://localhost:8083/rewards/fb73f6cf-1a0e-4a06-b164-fe5bb1462686
+[2025-06-08 22:36:01] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:01] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:01] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:01] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:36:01] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:01] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:01] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:01] INFO: Header: accept = */*
+[2025-06-08 22:36:01] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:01] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:01] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:01] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:01] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:01] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:01] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:02] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:36:02] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:02] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:02] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:02] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:36:02] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:02] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:02] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:02] INFO: Header: accept = */*
+[2025-06-08 22:36:02] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:02] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:02] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:02] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:02] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:02] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:02] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:02] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:36:02] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:02] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:02] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:02] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:36:02] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:02] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:02] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:02] INFO: Header: accept = */*
+[2025-06-08 22:36:02] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:02] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:02] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:02] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:02] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:02] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:02] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:12] INFO: Request: http://localhost:8083/rewards/2dca35c8-b92f-4757-855b-30e582480cd3
+[2025-06-08 22:36:12] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:12] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:12] INFO: Header: content-length = 400
+[2025-06-08 22:36:12] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:12] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:36:12] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:12] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:12] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundary7l5AfvBTA7DEvhLg
+[2025-06-08 22:36:12] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:12] INFO: Header: accept = */*
+[2025-06-08 22:36:12] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:12] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:12] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:12] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:12] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:12] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:12] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:28] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:36:28] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:28] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:28] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:28] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:36:28] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:28] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:28] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:28] INFO: Header: accept = */*
+[2025-06-08 22:36:28] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:28] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:28] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:28] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:28] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:28] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:28] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:28] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-08 22:36:28] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:28] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:28] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:28] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MjIwMzIsImV4cCI6MTc0OTUwODQzMn0.2b6XaT-2REz16VYV4sFydO1FYeGuoEvsrAWBp_7vs5I
+[2025-06-08 22:36:28] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:28] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:28] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:28] INFO: Header: accept = */*
+[2025-06-08 22:36:28] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:28] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:28] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:28] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:28] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:28] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:28] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:40] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-08 22:36:40] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:40] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:40] INFO: Header: content-length = 86
+[2025-06-08 22:36:40] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:40] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:40] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:40] INFO: Header: content-type = application/json
+[2025-06-08 22:36:40] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:40] INFO: Header: accept = */*
+[2025-06-08 22:36:40] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:40] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:40] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:40] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:40] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:40] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:40] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-08 22:36:42] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-08 22:36:42] INFO: Header: host = localhost:8083
+[2025-06-08 22:36:42] INFO: Header: connection = keep-alive
+[2025-06-08 22:36:42] INFO: Header: content-length = 62
+[2025-06-08 22:36:42] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-08 22:36:42] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-08 22:36:42] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-08 22:36:42] INFO: Header: content-type = application/json
+[2025-06-08 22:36:42] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-08 22:36:42] INFO: Header: accept = */*
+[2025-06-08 22:36:42] INFO: Header: origin = http://localhost:5173
+[2025-06-08 22:36:42] INFO: Header: sec-fetch-site = same-site
+[2025-06-08 22:36:42] INFO: Header: sec-fetch-mode = cors
+[2025-06-08 22:36:42] INFO: Header: sec-fetch-dest = empty
+[2025-06-08 22:36:42] INFO: Header: referer = http://localhost:5173/
+[2025-06-08 22:36:42] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-08 22:36:42] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 00:17:32] INFO: Request: http://localhost:8083/rewards/redeemed
+[2025-06-09 00:17:32] INFO: Header: host = localhost:8083
+[2025-06-09 00:17:32] INFO: Header: connection = keep-alive
+[2025-06-09 00:17:32] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 00:17:32] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6OTE4QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDk0MjIyMDIsImV4cCI6MTc0OTUwODYwMn0.4dmVJqjKELQ_rzNsA--UvF__llS0a2ju8762MTRgLAE
+[2025-06-09 00:17:32] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 00:17:32] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 00:17:32] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 00:17:32] INFO: Header: accept = */*
+[2025-06-09 00:17:32] INFO: Header: origin = http://localhost:5173
+[2025-06-09 00:17:32] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 00:17:32] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 00:17:32] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 00:17:32] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 00:17:32] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 00:17:32] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:18] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-09 01:08:18] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:18] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:18] INFO: Header: content-length = 75
+[2025-06-09 01:08:18] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:18] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:18] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:18] INFO: Header: content-type = application/json
+[2025-06-09 01:08:18] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:18] INFO: Header: accept = */*
+[2025-06-09 01:08:18] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:18] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:18] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:18] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:18] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:18] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:18] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:20] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 01:08:20] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:20] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:20] INFO: Header: content-length = 60
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:20] INFO: Header: content-type = application/json
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:20] INFO: Header: accept = */*
+[2025-06-09 01:08:20] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:20] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 01:08:20] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:20] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:20] INFO: Header: accept = */*
+[2025-06-09 01:08:20] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:20] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 01:08:20] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:20] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:20] INFO: Header: accept = */*
+[2025-06-09 01:08:20] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:44] INFO: Request: http://localhost:8083/rewards
+[2025-06-09 01:08:44] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:44] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:44] INFO: Header: content-length = 125624
+[2025-06-09 01:08:44] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:44] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:44] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:44] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:44] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundarywfOoBL9Z5fLtfjux
+[2025-06-09 01:08:44] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:44] INFO: Header: accept = */*
+[2025-06-09 01:08:44] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:44] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:44] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:44] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:44] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:44] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:44] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:45] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 01:08:45] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:45] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:45] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:45] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:45] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:45] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:45] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:45] INFO: Header: accept = */*
+[2025-06-09 01:08:45] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:45] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:45] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:45] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:45] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:45] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:45] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:56] INFO: Request: http://localhost:8083/rewards/b626d23b-70dc-4e7c-9e8c-0a81af894e43
+[2025-06-09 01:08:56] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:56] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:56] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:56] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:56] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:56] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:56] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:56] INFO: Header: accept = */*
+[2025-06-09 01:08:56] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:56] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:56] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:56] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:56] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:56] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:56] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:58] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 01:08:58] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:58] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:58] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:58] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:58] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:58] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:58] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:58] INFO: Header: accept = */*
+[2025-06-09 01:08:58] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:58] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:58] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:58] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:58] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:58] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:58] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:08:58] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 01:08:58] INFO: Header: host = localhost:8083
+[2025-06-09 01:08:58] INFO: Header: connection = keep-alive
+[2025-06-09 01:08:58] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:08:58] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:08:58] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:08:58] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:08:58] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:08:58] INFO: Header: accept = */*
+[2025-06-09 01:08:58] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:08:58] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:08:58] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:08:58] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:08:58] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:08:58] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:08:58] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:09:14] INFO: Request: http://localhost:8083/rewards
+[2025-06-09 01:09:14] INFO: Header: host = localhost:8083
+[2025-06-09 01:09:14] INFO: Header: connection = keep-alive
+[2025-06-09 01:09:14] INFO: Header: content-length = 125624
+[2025-06-09 01:09:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:09:14] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:09:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:09:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:09:14] INFO: Header: content-type = multipart/form-data; boundary=----WebKitFormBoundaryUremRyJA18zoafJX
+[2025-06-09 01:09:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:09:14] INFO: Header: accept = */*
+[2025-06-09 01:09:14] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:09:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:09:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:09:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:09:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:09:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:09:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 01:09:15] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 01:09:15] INFO: Header: host = localhost:8083
+[2025-06-09 01:09:15] INFO: Header: connection = keep-alive
+[2025-06-09 01:09:15] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 01:09:15] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzEzMDAsImV4cCI6MTc0OTUxNzcwMH0.iXh9xY7CLVEoqV7xJ22fxr1-bhA35r07AycaQ_pTNMQ
+[2025-06-09 01:09:15] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 01:09:15] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 01:09:15] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 01:09:15] INFO: Header: accept = */*
+[2025-06-09 01:09:15] INFO: Header: origin = http://localhost:5173
+[2025-06-09 01:09:15] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 01:09:15] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 01:09:15] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 01:09:15] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 01:09:15] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 01:09:15] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:13:45] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-09 02:13:45] INFO: Header: host = localhost:8083
+[2025-06-09 02:13:45] INFO: Header: connection = keep-alive
+[2025-06-09 02:13:45] INFO: Header: content-length = 75
+[2025-06-09 02:13:45] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:13:45] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:13:45] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:13:45] INFO: Header: content-type = application/json
+[2025-06-09 02:13:45] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:13:45] INFO: Header: accept = */*
+[2025-06-09 02:13:45] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:13:45] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:13:45] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:13:45] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:13:45] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:13:45] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:13:45] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:13:47] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 02:13:47] INFO: Header: host = localhost:8083
+[2025-06-09 02:13:47] INFO: Header: connection = keep-alive
+[2025-06-09 02:13:47] INFO: Header: content-length = 60
+[2025-06-09 02:13:47] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:13:47] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:13:47] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:13:47] INFO: Header: content-type = application/json
+[2025-06-09 02:13:47] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:13:47] INFO: Header: accept = */*
+[2025-06-09 02:13:47] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:13:47] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:13:47] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:13:47] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:13:47] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:13:47] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:13:47] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:15:59] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:15:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:15:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:15:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:15:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:15:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:15:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:15:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:15:59] INFO: Header: accept = */*
+[2025-06-09 02:15:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:15:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:15:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:15:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:15:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:15:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:15:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:15:59] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:15:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:15:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:15:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:15:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:15:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:15:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:15:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:15:59] INFO: Header: accept = */*
+[2025-06-09 02:15:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:15:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:15:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:15:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:15:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:15:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:15:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:20:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:20:04] INFO: Header: host = localhost:8083
+[2025-06-09 02:20:04] INFO: Header: connection = keep-alive
+[2025-06-09 02:20:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:20:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:20:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:20:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:20:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:20:04] INFO: Header: accept = */*
+[2025-06-09 02:20:04] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:20:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:20:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:20:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:20:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:20:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:20:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:20:04] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:20:04] INFO: Header: host = localhost:8083
+[2025-06-09 02:20:04] INFO: Header: connection = keep-alive
+[2025-06-09 02:20:04] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:20:04] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:20:04] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:20:04] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:20:04] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:20:04] INFO: Header: accept = */*
+[2025-06-09 02:20:04] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:20:04] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:20:04] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:20:04] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:20:04] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:20:04] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:20:04] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:24:32] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:24:32] INFO: Header: host = localhost:8083
+[2025-06-09 02:24:32] INFO: Header: connection = keep-alive
+[2025-06-09 02:24:32] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:24:32] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:24:32] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:24:32] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:24:32] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:24:32] INFO: Header: accept = */*
+[2025-06-09 02:24:32] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:24:32] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:24:32] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:24:32] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:24:32] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:24:32] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:24:32] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:24:32] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:24:32] INFO: Header: host = localhost:8083
+[2025-06-09 02:24:32] INFO: Header: connection = keep-alive
+[2025-06-09 02:24:32] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:24:32] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:24:32] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:24:32] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:24:32] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:24:32] INFO: Header: accept = */*
+[2025-06-09 02:24:32] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:24:32] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:24:32] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:24:32] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:24:32] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:24:32] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:24:32] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:24:59] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:24:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:24:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:24:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:24:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:24:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:24:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:24:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:24:59] INFO: Header: accept = */*
+[2025-06-09 02:24:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:24:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:24:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:24:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:24:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:24:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:24:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:24:59] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:24:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:24:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:24:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:24:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:24:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:24:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:24:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:24:59] INFO: Header: accept = */*
+[2025-06-09 02:24:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:24:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:24:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:24:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:24:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:24:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:24:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:40:05] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:40:05] INFO: Header: host = localhost:8083
+[2025-06-09 02:40:05] INFO: Header: connection = keep-alive
+[2025-06-09 02:40:05] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:40:05] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:40:05] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:40:05] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:40:05] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:40:05] INFO: Header: accept = */*
+[2025-06-09 02:40:05] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:40:05] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:40:05] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:40:05] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:40:05] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:40:05] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:40:05] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:40:05] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:40:05] INFO: Header: host = localhost:8083
+[2025-06-09 02:40:05] INFO: Header: connection = keep-alive
+[2025-06-09 02:40:05] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:40:05] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:40:05] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:40:05] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:40:05] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:40:05] INFO: Header: accept = */*
+[2025-06-09 02:40:05] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:40:05] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:40:05] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:40:05] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:40:05] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:40:05] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:40:05] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:40:07] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:40:07] INFO: Header: host = localhost:8083
+[2025-06-09 02:40:07] INFO: Header: connection = keep-alive
+[2025-06-09 02:40:07] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:40:07] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:40:07] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:40:07] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:40:07] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:40:07] INFO: Header: accept = */*
+[2025-06-09 02:40:07] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:40:07] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:40:07] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:40:07] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:40:07] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:40:07] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:40:07] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:40:07] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:40:07] INFO: Header: host = localhost:8083
+[2025-06-09 02:40:07] INFO: Header: connection = keep-alive
+[2025-06-09 02:40:07] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:40:07] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzUyMjcsImV4cCI6MTc0OTUyMTYyN30.NEIgQ1oGMbrXgtYOMCbZZtcxTAZ9tRkzTNm9P4iPGNQ
+[2025-06-09 02:40:07] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:40:07] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:40:07] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:40:07] INFO: Header: accept = */*
+[2025-06-09 02:40:07] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:40:07] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:40:07] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:40:07] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:40:07] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:40:07] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:40:07] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:42:57] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-09 02:42:57] INFO: Header: host = localhost:8083
+[2025-06-09 02:42:57] INFO: Header: connection = keep-alive
+[2025-06-09 02:42:57] INFO: Header: content-length = 75
+[2025-06-09 02:42:57] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:42:57] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:42:57] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:42:57] INFO: Header: content-type = application/json
+[2025-06-09 02:42:57] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:42:57] INFO: Header: accept = */*
+[2025-06-09 02:42:57] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:42:57] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:42:57] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:42:57] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:42:57] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:42:57] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:42:57] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:42:59] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 02:42:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:42:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:42:59] INFO: Header: content-length = 60
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:42:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:42:59] INFO: Header: content-type = application/json
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:42:59] INFO: Header: accept = */*
+[2025-06-09 02:42:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:42:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:42:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:42:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:42:59] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:42:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:42:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:42:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzY5NzksImV4cCI6MTc0OTUyMzM3OX0.X2_sC-8E4NPvEEzACGnM3X3mKqnoibkvGs41bHY8ZGU
+[2025-06-09 02:42:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:42:59] INFO: Header: accept = */*
+[2025-06-09 02:42:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:42:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:42:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:42:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:42:59] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:42:59] INFO: Header: host = localhost:8083
+[2025-06-09 02:42:59] INFO: Header: connection = keep-alive
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:42:59] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzY5NzksImV4cCI6MTc0OTUyMzM3OX0.X2_sC-8E4NPvEEzACGnM3X3mKqnoibkvGs41bHY8ZGU
+[2025-06-09 02:42:59] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:42:59] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:42:59] INFO: Header: accept = */*
+[2025-06-09 02:42:59] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:42:59] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:42:59] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:42:59] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:42:59] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:43:12] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-09 02:43:12] INFO: Header: host = localhost:8083
+[2025-06-09 02:43:12] INFO: Header: connection = keep-alive
+[2025-06-09 02:43:12] INFO: Header: content-length = 86
+[2025-06-09 02:43:12] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:43:12] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:43:12] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:43:12] INFO: Header: content-type = application/json
+[2025-06-09 02:43:12] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:43:12] INFO: Header: accept = */*
+[2025-06-09 02:43:12] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:43:12] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:43:12] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:43:12] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:43:12] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:43:12] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:43:12] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:43:13] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 02:43:13] INFO: Header: host = localhost:8083
+[2025-06-09 02:43:13] INFO: Header: connection = keep-alive
+[2025-06-09 02:43:13] INFO: Header: content-length = 62
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:43:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:43:13] INFO: Header: content-type = application/json
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:43:13] INFO: Header: accept = */*
+[2025-06-09 02:43:13] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:43:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:43:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:43:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:43:13] INFO: Request: http://localhost:8083/rewards/my-rewards
+[2025-06-09 02:43:13] INFO: Header: host = localhost:8083
+[2025-06-09 02:43:13] INFO: Header: connection = keep-alive
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:43:13] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6OTE4QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDk0MzY5OTMsImV4cCI6MTc0OTUyMzM5M30.Iokn185LRvDI7Sk7ji_UxTrwRMPEDje82uECyt329o8
+[2025-06-09 02:43:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:43:13] INFO: Header: accept = */*
+[2025-06-09 02:43:13] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:43:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:43:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:43:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:43:13] INFO: Request: http://localhost:8083/rewards/my-rewards
+[2025-06-09 02:43:13] INFO: Header: host = localhost:8083
+[2025-06-09 02:43:13] INFO: Header: connection = keep-alive
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:43:13] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6OTE4QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDk0MzY5OTMsImV4cCI6MTc0OTUyMzM5M30.Iokn185LRvDI7Sk7ji_UxTrwRMPEDje82uECyt329o8
+[2025-06-09 02:43:13] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:43:13] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:43:13] INFO: Header: accept = */*
+[2025-06-09 02:43:13] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:43:13] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:43:13] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:43:13] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:43:13] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:55:16] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 02:55:16] INFO: Header: host = localhost:8083
+[2025-06-09 02:55:16] INFO: Header: connection = keep-alive
+[2025-06-09 02:55:16] INFO: Header: content-length = 62
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:55:16] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:55:16] INFO: Header: content-type = application/json
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:55:16] INFO: Header: accept = */*
+[2025-06-09 02:55:16] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:55:16] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:55:16] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:55:16] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:55:16] INFO: Request: http://localhost:8083/rewards/my-rewards
+[2025-06-09 02:55:16] INFO: Header: host = localhost:8083
+[2025-06-09 02:55:16] INFO: Header: connection = keep-alive
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:55:16] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6OTE4QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDk0Mzc3MTYsImV4cCI6MTc0OTUyNDExNn0.KWR_aRqmvh0DSptl3fJxvUlerVAlnLXPXH7zByGCIcI
+[2025-06-09 02:55:16] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:55:16] INFO: Header: accept = */*
+[2025-06-09 02:55:16] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:55:16] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:55:16] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:55:16] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:55:16] INFO: Request: http://localhost:8083/rewards/my-rewards
+[2025-06-09 02:55:16] INFO: Header: host = localhost:8083
+[2025-06-09 02:55:16] INFO: Header: connection = keep-alive
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:55:16] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6OTE4QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDk0Mzc3MTYsImV4cCI6MTc0OTUyNDExNn0.KWR_aRqmvh0DSptl3fJxvUlerVAlnLXPXH7zByGCIcI
+[2025-06-09 02:55:16] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:55:16] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:55:16] INFO: Header: accept = */*
+[2025-06-09 02:55:16] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:55:16] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:55:16] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:55:16] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:55:16] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:57:02] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-09 02:57:02] INFO: Header: content-type = application/json
+[2025-06-09 02:57:02] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 02:57:02] INFO: Header: accept = */*
+[2025-06-09 02:57:02] INFO: Header: postman-token = af8bd7f6-0aaa-4476-bc24-9a81629dd705
+[2025-06-09 02:57:02] INFO: Header: host = localhost:8083
+[2025-06-09 02:57:02] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 02:57:02] INFO: Header: connection = keep-alive
+[2025-06-09 02:57:02] INFO: Header: content-length = 91
+[2025-06-09 02:57:26] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 02:57:26] INFO: Header: content-type = application/json
+[2025-06-09 02:57:26] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 02:57:26] INFO: Header: accept = */*
+[2025-06-09 02:57:26] INFO: Header: postman-token = cf6a2b9a-d1a7-432a-abe2-57a2e82f3eee
+[2025-06-09 02:57:26] INFO: Header: host = localhost:8083
+[2025-06-09 02:57:26] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 02:57:26] INFO: Header: connection = keep-alive
+[2025-06-09 02:57:26] INFO: Header: content-length = 66
+[2025-06-09 02:58:28] INFO: Request: http://localhost:8083/submissions
+[2025-06-09 02:58:28] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb0BnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ5NDM3ODQ2LCJleHAiOjE3NDk1MjQyNDZ9.ufy3jO1SJPYTxUet88a9aTklqUW_sGPJHE9YdlQZNe0
+[2025-06-09 02:58:28] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 02:58:28] INFO: Header: accept = */*
+[2025-06-09 02:58:28] INFO: Header: postman-token = 6c33a811-595d-4d4b-b3f0-a4ca9bbac322
+[2025-06-09 02:58:28] INFO: Header: host = localhost:8083
+[2025-06-09 02:58:28] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 02:58:28] INFO: Header: connection = keep-alive
+[2025-06-09 02:58:28] INFO: Header: content-type = multipart/form-data; boundary=--------------------------229014744138893437453289
+[2025-06-09 02:58:28] INFO: Header: content-length = 5964
+[2025-06-09 02:58:47] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 02:58:47] INFO: Header: host = localhost:8083
+[2025-06-09 02:58:47] INFO: Header: connection = keep-alive
+[2025-06-09 02:58:47] INFO: Header: content-length = 60
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:58:47] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:58:47] INFO: Header: content-type = application/json
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:58:47] INFO: Header: accept = */*
+[2025-06-09 02:58:47] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:58:47] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:58:47] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:58:47] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:58:47] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:58:47] INFO: Header: host = localhost:8083
+[2025-06-09 02:58:47] INFO: Header: connection = keep-alive
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:58:47] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:58:47] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:58:47] INFO: Header: accept = */*
+[2025-06-09 02:58:47] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:58:47] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:58:47] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:58:47] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:58:47] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:58:47] INFO: Header: host = localhost:8083
+[2025-06-09 02:58:47] INFO: Header: connection = keep-alive
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:58:47] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:58:47] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:58:47] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:58:47] INFO: Header: accept = */*
+[2025-06-09 02:58:47] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:58:47] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:58:47] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:58:47] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:58:47] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:20] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:20] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:20] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:20] INFO: Header: accept = */*
+[2025-06-09 02:59:20] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:20] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:20] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:20] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:20] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:20] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:20] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:20] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:20] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:20] INFO: Header: accept = */*
+[2025-06-09 02:59:20] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:20] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:20] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:20] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:20] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:20] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:20] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:43] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:43] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:43] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:43] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:43] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:43] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:43] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:43] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:43] INFO: Header: accept = */*
+[2025-06-09 02:59:43] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:43] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:43] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:43] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:43] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:43] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:43] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:43] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:43] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:43] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:43] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:43] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:43] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:43] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:43] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:43] INFO: Header: accept = */*
+[2025-06-09 02:59:43] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:43] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:43] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:43] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:43] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:43] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:43] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:48] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:48] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:48] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:48] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:48] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:48] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:48] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:48] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:48] INFO: Header: accept = */*
+[2025-06-09 02:59:48] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:48] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:48] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:48] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:48] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:48] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:48] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:48] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:48] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:48] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:48] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:48] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:48] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:48] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:48] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:48] INFO: Header: accept = */*
+[2025-06-09 02:59:48] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:48] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:48] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:48] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:48] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:48] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:48] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:54] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:54] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:54] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:54] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:54] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:54] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:54] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:54] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:54] INFO: Header: accept = */*
+[2025-06-09 02:59:54] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:54] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:54] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:54] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:54] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:54] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:54] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 02:59:54] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 02:59:54] INFO: Header: host = localhost:8083
+[2025-06-09 02:59:54] INFO: Header: connection = keep-alive
+[2025-06-09 02:59:54] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 02:59:54] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0Mzc5MjcsImV4cCI6MTc0OTUyNDMyN30.RxwEDm-vdUcWxPWrBy03hTWEdEuLnUt9QgE_QhnORL0
+[2025-06-09 02:59:54] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 02:59:54] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 02:59:54] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 02:59:54] INFO: Header: accept = */*
+[2025-06-09 02:59:54] INFO: Header: origin = http://localhost:5173
+[2025-06-09 02:59:54] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 02:59:54] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 02:59:54] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 02:59:54] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 02:59:54] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 02:59:54] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 03:01:11] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 03:01:11] INFO: Header: content-type = application/json
+[2025-06-09 03:01:11] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:01:11] INFO: Header: accept = */*
+[2025-06-09 03:01:11] INFO: Header: postman-token = 0f66b3ac-20f6-4e5e-a5de-64e0eef1b63a
+[2025-06-09 03:01:11] INFO: Header: host = localhost:8083
+[2025-06-09 03:01:11] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:01:11] INFO: Header: connection = keep-alive
+[2025-06-09 03:01:11] INFO: Header: content-length = 80
+[2025-06-09 03:01:16] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 03:01:16] INFO: Header: content-type = application/json
+[2025-06-09 03:01:16] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:01:16] INFO: Header: accept = */*
+[2025-06-09 03:01:16] INFO: Header: postman-token = 941f18ba-bb9e-4587-b3ab-e7f8f716658b
+[2025-06-09 03:01:16] INFO: Header: host = localhost:8083
+[2025-06-09 03:01:16] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:01:16] INFO: Header: connection = keep-alive
+[2025-06-09 03:01:16] INFO: Header: content-length = 79
+[2025-06-09 03:01:21] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 03:01:21] INFO: Header: content-type = application/json
+[2025-06-09 03:01:21] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:01:21] INFO: Header: accept = */*
+[2025-06-09 03:01:21] INFO: Header: postman-token = 8b0e8cce-35ca-46e6-9eb7-4f8463ed3060
+[2025-06-09 03:01:21] INFO: Header: host = localhost:8083
+[2025-06-09 03:01:21] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:01:21] INFO: Header: connection = keep-alive
+[2025-06-09 03:01:21] INFO: Header: content-length = 78
+[2025-06-09 03:01:36] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 03:01:36] INFO: Header: content-type = application/json
+[2025-06-09 03:01:36] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:01:36] INFO: Header: accept = */*
+[2025-06-09 03:01:36] INFO: Header: postman-token = 2ee8dbc9-b9d5-44fc-b388-27f1d5532c1c
+[2025-06-09 03:01:36] INFO: Header: host = localhost:8083
+[2025-06-09 03:01:36] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:01:36] INFO: Header: connection = keep-alive
+[2025-06-09 03:01:36] INFO: Header: content-length = 80
+[2025-06-09 03:08:04] INFO: Request: http://localhost:8083/api/auth/register
+[2025-06-09 03:08:04] INFO: Header: content-type = application/json
+[2025-06-09 03:08:04] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:08:04] INFO: Header: accept = */*
+[2025-06-09 03:08:04] INFO: Header: postman-token = 0ed624d6-6fba-496e-98c9-2f7a37024f8b
+[2025-06-09 03:08:04] INFO: Header: host = localhost:8083
+[2025-06-09 03:08:04] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:08:04] INFO: Header: connection = keep-alive
+[2025-06-09 03:08:04] INFO: Header: content-length = 93
+[2025-06-09 03:08:12] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 03:08:12] INFO: Header: content-type = application/json
+[2025-06-09 03:08:12] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:08:12] INFO: Header: accept = */*
+[2025-06-09 03:08:12] INFO: Header: postman-token = 35cbe9c3-cc86-43dd-ab13-3cd8c6355d6e
+[2025-06-09 03:08:12] INFO: Header: host = localhost:8083
+[2025-06-09 03:08:12] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:08:12] INFO: Header: connection = keep-alive
+[2025-06-09 03:08:12] INFO: Header: content-length = 68
+[2025-06-09 03:08:26] INFO: Request: http://localhost:8083/submissions/pending
+[2025-06-09 03:08:26] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwQHZpZGFsaW5rLmNvbS5iciIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzQ5NDM4NDkzLCJleHAiOjE3NDk1MjQ4OTN9.Fws1UFDNdDjjiPd3uaBzS-oOg4tW00MDK3-y1eLaMHQ
+[2025-06-09 03:08:26] INFO: Header: user-agent = PostmanRuntime/7.44.0
+[2025-06-09 03:08:26] INFO: Header: accept = */*
+[2025-06-09 03:08:26] INFO: Header: postman-token = 155dbb2f-9d87-4983-aec1-29bea64576e3
+[2025-06-09 03:08:26] INFO: Header: host = localhost:8083
+[2025-06-09 03:08:26] INFO: Header: accept-encoding = gzip, deflate, br
+[2025-06-09 03:08:26] INFO: Header: connection = keep-alive
+[2025-06-09 03:19:14] INFO: Request: http://localhost:8083/api/auth/login
+[2025-06-09 03:19:14] INFO: Header: host = localhost:8083
+[2025-06-09 03:19:14] INFO: Header: connection = keep-alive
+[2025-06-09 03:19:14] INFO: Header: content-length = 60
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 03:19:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 03:19:14] INFO: Header: content-type = application/json
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 03:19:14] INFO: Header: accept = */*
+[2025-06-09 03:19:14] INFO: Header: origin = http://localhost:5173
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 03:19:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 03:19:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 03:19:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 03:19:14] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 03:19:14] INFO: Header: host = localhost:8083
+[2025-06-09 03:19:14] INFO: Header: connection = keep-alive
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 03:19:14] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzkxNTQsImV4cCI6MTc0OTUyNTU1NH0.UCisAMKMUCKB88eT7JGi_iYKMX19hMrsO_WkF7qVzV4
+[2025-06-09 03:19:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 03:19:14] INFO: Header: accept = */*
+[2025-06-09 03:19:14] INFO: Header: origin = http://localhost:5173
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 03:19:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 03:19:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 03:19:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+[2025-06-09 03:19:14] INFO: Request: http://localhost:8083/rewards/available
+[2025-06-09 03:19:14] INFO: Header: host = localhost:8083
+[2025-06-09 03:19:14] INFO: Header: connection = keep-alive
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua-platform = "Linux"
+[2025-06-09 03:19:14] INFO: Header: authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRyb3RvbWF6MTJAdmlkYWxpbmsuY29tLmJyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDk0MzkxNTQsImV4cCI6MTc0OTUyNTU1NH0.UCisAMKMUCKB88eT7JGi_iYKMX19hMrsO_WkF7qVzV4
+[2025-06-09 03:19:14] INFO: Header: user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua = "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-06-09 03:19:14] INFO: Header: sec-ch-ua-mobile = ?0
+[2025-06-09 03:19:14] INFO: Header: accept = */*
+[2025-06-09 03:19:14] INFO: Header: origin = http://localhost:5173
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-site = same-site
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-mode = cors
+[2025-06-09 03:19:14] INFO: Header: sec-fetch-dest = empty
+[2025-06-09 03:19:14] INFO: Header: referer = http://localhost:5173/
+[2025-06-09 03:19:14] INFO: Header: accept-encoding = gzip, deflate, br, zstd
+[2025-06-09 03:19:14] INFO: Header: accept-language = pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7

@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from "./pages/Home.jsx";
-import CadastroProdutos from "./pages/CadastroProdutos";
 import Contato from "./pages/Contato";
 import Doar from "./pages/Doar";
 import ListagemProdutos from "./pages/ListagemProdutos";
@@ -46,7 +45,6 @@ function App() {
                 <Route path="/Recompensa/:id" element={<PrivateRoute><DetalhesRecompensa /></PrivateRoute>} />
 
                 {/* Privadas (apenas ADMIN) */}
-                <Route path="/CadastroProdutos" element={<ProtectedRoute><CadastroProdutos /></ProtectedRoute>} />
                 <Route path="/ListagemProdutos" element={<ProtectedRoute><ListagemProdutos /></ProtectedRoute>} />
                 <Route path="/ValidarComprovante" element={<ProtectedRoute><ValidarComprovante /></ProtectedRoute>} />
             </Routes>

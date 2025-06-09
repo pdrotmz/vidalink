@@ -1,45 +1,55 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
-
-import "../styles/Principal.css"
-
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import RecompensaPerfil from "../Components/RecompensaPerfil";
-
 import InfoPerfil from "../Components/InfoPerfil";
-import fotoperfil from "../Assets/images/perfildejhon.jpg"
-
-import Certificado1 from "../Assets/images/certificado1.png"
-import Certificado2 from "../Assets/images/certificado2.png"
-import Certificado3 from "../Assets/images/certificado3.png"
-
+import "../styles/Principal.css";
 
 export const Perfil = () => {
+    const [recompensas, setRecompensas] = useState([]);
+
+    useEffect(() => {
+        const fetchRecompensas = async () => {
+            const token = localStorage.getItem('token');
+            try {
+                const response = await fetch("http://localhost:8083/rewards/my-rewards", {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    setRecompensas(data);
+                } else {
+                    console.error("Erro ao buscar recompensas:", response.status);
+                }
+            } catch (error) {
+                console.error("Erro na requisição:", error);
+            }
+        };
+
+        fetchRecompensas();
+    }, []);
 
     return (
         <div className="perfilContainer">
-            <Header/>
-
+            <Header />
             <div className="perfilContent">
-                <InfoPerfil/>
-
-                <h1>Certificados:</h1>
-
+                <InfoPerfil />
+                <h1>Recompensas:</h1>
                 <ul>
-                    <RecompensaPerfil imagem={Certificado1} nome={'Certificado1'} recompensaId={1}/>
-                    <RecompensaPerfil imagem={Certificado2} nome={'Certificado1'} recompensaId={2}/>
-                    <RecompensaPerfil imagem={Certificado3} nome={'Certificado1'} recompensaId={3}/>
-                    <RecompensaPerfil imagem={Certificado1} nome={'Certificado1'} recompensaId={1}/>
-                    <RecompensaPerfil imagem={Certificado1} nome={'Certificado1'} recompensaId={1}/>
-                    <RecompensaPerfil imagem={Certificado1} nome={'Certificado1'} recompensaId={1}/>
-                    
-                    
+                    {recompensas.map((item) => (
+                        <RecompensaPerfil
+                            key={item.id}
+                            imagem={`http://localhost:8083/rewards/${item.id}/image`} // endpoint p/ imagem
+                            nome={item.name}
+                            recompensaId={item.id}
+                        />
+                    ))}
                 </ul>
             </div>
-        </div> 
-        
+        </div>
     );
-}
+};
 
 export default Perfil;

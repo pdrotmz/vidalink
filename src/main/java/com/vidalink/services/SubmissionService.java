@@ -85,7 +85,7 @@ public class SubmissionService {
     private void checkAndApplyRewards(User user) {
         int currentPoints = user.getPoints();
 
-        // Busca recompensas que esse usuário ainda NÃO tem
+
         List<Reward> availableRewards = rewardRepository.findByPointsRequiredLessThanEqualAndActiveTrue((currentPoints));
         List<RewardRedemption> alreadyRedeemed = rewardRedemptionRepository.findByDonor(user);
 

@@ -10,7 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,13 +24,13 @@ public class RewardController {
 
     private final RewardService rewardService;
 
-    // 1. Lista todas as recompensas ativas
+
     @GetMapping("/available")
     public ResponseEntity<List<Reward>> listAvailableRewards() {
         return ResponseEntity.ok(rewardService.getActiveRewards());
     }
 
-    // 2. Tenta resgatar a próxima recompensa para o usuário autenticado
+
     @PostMapping("/redeem")
     public ResponseEntity<String> redeemReward(@AuthenticationPrincipal User user) {
         boolean redeemed = rewardService.redeemRewardIfEligible(user);
@@ -39,20 +41,30 @@ public class RewardController {
         }
     }
 
-    // 3. Cria uma nova recompensa (requer ADMIN)
+
     @PostMapping
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Reward> createReward(@RequestBody @Valid Reward reward) {
-        return ResponseEntity.ok(rewardService.createReward(reward));
+    public ResponseEntity<?> createReward(
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("pointsRequired") Integer pointsRequired,
+            @RequestParam(value = "file", required = false) MultipartFile file
+    ) {
+        try {
+            Reward reward = rewardService.createReward(name, description, pointsRequired, file);
+            return ResponseEntity.status(HttpStatus.CREATED).body(reward);
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao salvar a imagem.");
+        }
     }
 
-    // 4. Lista recompensas resgatadas pelo usuário
+
     @GetMapping("/my-rewards")
     public ResponseEntity<List<Reward>> listUserRewards(@AuthenticationPrincipal User user) {
         return ResponseEntity.ok(rewardService.getRewardsForUser(user));
     }
 
-    // 5. Atualiza recompensa (requer ADMIN)
+
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Reward> updateReward(@PathVariable UUID id, @RequestBody @Valid Reward reward) {
@@ -65,7 +77,8 @@ public class RewardController {
         List<Reward> rewards = rewardService.findRewardByName(name);
         return ResponseEntity.ok(rewards);
     }
-    // 6. Remove recompensa (requer ADMIN)
+
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Void> deleteReward(@PathVariable UUID id) {

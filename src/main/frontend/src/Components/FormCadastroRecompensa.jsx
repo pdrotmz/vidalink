@@ -6,33 +6,43 @@ const FormCadastroRecompensa = ({ onClose, onSuccess }) => {
         name: "",
         description: "",
         pointsRequired: 0,
+        file: null
     });
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const handleFileChange = (e) => {
+        setFormData({ ...formData, file: e.target.files[0] });
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const token = localStorage.getItem("token");
+            const formDataToSend = new FormData();
+
+            formDataToSend.append('name', formData.name);
+            formDataToSend.append('description', formData.description);
+            formDataToSend.append('pointsRequired', formData.pointsRequired);
+            if (formData.file) {
+                formDataToSend.append('file', formData.file);
+            }
+
             const response = await fetch("http://localhost:8083/rewards", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`,
                 },
-                body: JSON.stringify({
-                    ...formData,
-                    pointsRequired: parseInt(formData.pointsRequired),
-                }),
+                body: formDataToSend
             });
 
             if (response.ok) {
                 alert("Recompensa cadastrada com sucesso!");
-                setFormData({ name: "", description: "", pointsRequired: 0 });
-                onSuccess(); // Atualiza a lista
-                onClose();   // Fecha o modal
+                setFormData({ name: "", description: "", pointsRequired: 0, file: null });
+                onSuccess();
+                onClose();
             } else {
                 alert("Erro ao cadastrar recompensa");
             }
@@ -69,6 +79,19 @@ const FormCadastroRecompensa = ({ onClose, onSuccess }) => {
                         placeholder="Pontos Necessários"
                         required
                     />
+
+                    <div className="file-upload-container">
+                        <label className={`file-upload-label ${formData.file ? 'has-file' : ''}`}>
+                            {formData.file ? formData.file.name : "Selecionar Imagem"}
+                            <input
+                                type="file"
+                                onChange={handleFileChange}
+                                className="file-upload-input"
+                                accept="image/*"
+                            />
+                        </label>
+                    </div>
+
                     <div className="botoes-modal">
                         <button type="submit">Salvar</button>
                         <button type="button" onClick={onClose}>Cancelar</button>

@@ -3,20 +3,20 @@ FROM eclipse-temurin:21-jdk AS builder
 
 WORKDIR /app
 
-# Copia o .env para a etapa de build (não é essencial, mas pode ser útil)
+# Copia o .env para a etapa de build
 COPY .env .env
 
-# Copia apenas arquivos essenciais para o cache do Maven
+# Copia arquivos essenciais para cache do Maven
 COPY pom.xml mvnw ./
 COPY .mvn/ .mvn/
 
 # Dá permissão ao Maven Wrapper
 RUN chmod +x mvnw
 
-# Baixa as dependências antes de copiar o código-fonte
+# Baixa dependências antes de copiar o código-fonte
 RUN ./mvnw dependency:go-offline
 
-# Agora copia o código-fonte
+# Copia o código-fonte
 COPY src/ src/
 
 # Compila o projeto
@@ -27,13 +27,16 @@ FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-# Copia o JAR compilado da etapa anterior
+# Copia o JAR da etapa de build
 COPY --from=builder /app/target/*.jar app.jar
 
-# Copia o .env para a imagem final (IMPORTANTE!)
+# Copia o .env para a imagem final
 COPY --from=builder /app/.env .env
 
-# Exposição de portas
+# Cria o diretório de logs (caso não seja mapeado pelo volume)
+RUN mkdir -p /app/logs && chmod -R 777 /app/logs
+
+# Exposição da porta
 EXPOSE 8080
 
 # Comando para rodar a aplicação

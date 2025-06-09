@@ -8,7 +8,12 @@ import com.vidalink.repository.RewardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -47,9 +52,25 @@ public class RewardService {
         return false;
     }
 
-    public Reward createReward(Reward reward) {
-        reward.setId(null); // garante novo insert
+    public Reward createReward(String name, String description, Integer pointsRequired, MultipartFile file) throws IOException {
+        String imageUrl = null;
+
+        if (file != null && !file.isEmpty()) {
+            String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+            Path uploadPath = Paths.get("uploads");
+            Files.createDirectories(uploadPath);
+            Path filePath = uploadPath.resolve(fileName);
+            Files.write(filePath, file.getBytes());
+            imageUrl = fileName;
+        }
+
+        Reward reward = new Reward();
+        reward.setName(name);
+        reward.setDescription(description);
+        reward.setPointsRequired(pointsRequired);
+        reward.setImageUrl(imageUrl);
         reward.setActive(true);
+
         return rewardRepository.save(reward);
     }
 

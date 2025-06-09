@@ -1,46 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/validarcomprovante.css';
-import AdmHeader from "../Components/AdmHeader";
+import ModalComprovante from "../Components/ModalComprovante";
+import AdmHeader from "../Components/AdmHeader.jsx";
 
+const ValidarComprovante = ({ comprovantes }) => {
+  const [comprovanteSelecionado, setComprovanteSelecionado] = useState(null);
 
-import teste from "../Assets/images/logoVidaLink.png"
+  const abrirModal = (comprovante) => {
+    setComprovanteSelecionado(comprovante);
+  };
 
-const ValidarComprovante = () => {
+  const fecharModal = () => {
+    setComprovanteSelecionado(null);
+  };
+
   return (
-    <div>
-      <AdmHeader />
+      <div className="admin-container">
+        <AdmHeader />
 
-      <div className="validacaoContent">
-        
-        <div className="left-box">
-          <h1>Validação de Comprovante</h1>
-          <figure>
-            <img src={teste} alt="" />
-          </figure>
-        </div>
-
-        <div className="right-box">
-          <div className="info">
-            <p>
-              <b>Nome do usuário:</b> Artur Braga
-            </p>
-            <p>
-              <b>ID do usuário:</b> 235284920
-            </p>
-            <p>
-              <b>Data de envio:</b> 01.01.2025
-            </p>
+        <div className="comprovantes-content">
+          <div className="tabela-comprovantes-container">
+            <h2>Comprovantes Submetidos</h2>
+            <div className="tabela-wrapper">
+              <table className="tabela-comprovantes">
+                <thead>
+                <tr>
+                  <th>Nome do Usuário</th>
+                  <th>ID</th>
+                  <th>Data de Envio</th>
+                  <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                {(comprovantes || []).map((c) => (
+                    <tr key={c.id}>
+                      <td
+                          onClick={() => abrirModal(c)}
+                          className="user-name-cell"
+                      >
+                        {c.userName}
+                      </td>
+                      <td>{c.userId}</td>
+                      <td>{new Date(c.submissionDate).toLocaleDateString()}</td>
+                      <td>
+                        <button
+                            onClick={() => abrirModal(c)}
+                            className="ver-detalhes-btn"
+                        >
+                          Ver Detalhes
+                        </button>
+                      </td>
+                    </tr>
+                ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div className="buttons">
-            <button className="reprovar">Reprovar</button>
-            <button className="aprovar">Aprovar</button>
-            <button className='anterior'>&lt;</button>
-            <button className='proximo'>&gt;</button>
-          </div>
+          {comprovanteSelecionado && (
+              <ModalComprovante
+                  comprovante={comprovanteSelecionado}
+                  onClose={fecharModal}
+              />
+          )}
         </div>
       </div>
-    </div>
   );
 };
 

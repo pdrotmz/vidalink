@@ -1,139 +1,97 @@
-.containerCadastroProdutos{
-    margin-top: -20px;
-
+.containerCadastroProdutos {
+    margin-top: 20px;
+    padding: 20px;
 }
 
-.CadastroProdutosContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2vw;
+.CadastroProdutosContent {
     background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.CadastroProdutosContent form {
-    display: flex;
-    padding: 2vw;
-    justify-content: space-between;
+.CadastroProdutosContent h1 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.CadastroProdutosContent .esquerda {
-    display: inline-block;
-    position: relative;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.CadastroProdutosContent form .esquerda input[type="text"] {
-    height: 3vw;
-    width: 48vw;
-
-    border-style: solid;
-    border-color: #BFBFBF;
-    border-radius: 10px;
-    border-width: 1px;
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
-.CadastroProdutosContent form .direita textarea{
-    height: 95%;
-    width: 40vw;
-
-    resize: vertical; /* permite redimensionar verticalmente */
-    font-size: 16px;
-    line-height: 1.5;
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     box-sizing: border-box;
-
-
-    border-style: solid;
-    border-color: #BFBFBF;
-    border-radius: 10px;
-    border-width: 1px;
 }
 
-.CadastroProdutosContent form .comprovante input[type="file"] {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    cursor: pointer;
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
 }
 
+.file-upload-container {
+    margin-top: 30px;
+}
 
-.CadastroProdutosContent form .comprovante .custom-button {
+.file-upload-label {
+    display: inline-block;
+    padding: 12px 24px;
     background-color: #FF4343;
     color: white;
-    padding: 10px 20px;
-    font-size: 14px;
-    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
 }
 
-.CadastroProdutosContent .botoes{
+.file-upload-label:hover {
+    background-color: #e53935;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-name {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-actions {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-.CadastroProdutosContent .botoes button{
-    margin: 0.5vw;
-
-    border-radius: 0.8vw;
-    border-style: solid;
-    border-color: #BFBFBF;
-    border-width: 1px;
-
-    width: 8vw;
-    height: 3vw;
-
-    font-size: 80%;
+.form-actions button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
-.CadastroProdutosContent .botoes .cancelar{
+.cancelar {
     background-color: #fff;
     color: #FF4343;
+    border: 1px solid #FF4343;
 }
 
-.CadastroProdutosContent .botoes .salvar{
+.salvar {
     background-color: #FF4343;
-    color: #fff;
+    color: white;
+    border: 1px solid #FF4343;
 }
-
-@media (max-width: 1000px) {
-    input{
-      width: 50vw !important;
-      height: 5vw !important;
-
-    }
-
-    button{
-        width: 10vw !important;
-        height: 3.75 !important;
-    }
-}
-
-@media (max-width: 650px) {
-    input{
-      width: 50vw !important;
-      height: 6vw !important;
-
-    }
-
-    button {
-        width: 12vw !important;
-        height: 4.5vw !important;
-  
-      }
-}
-
-@media (max-width: 500px) {
-    input{
-      width: 50vw !important;
-      height: 6vw !important;
-
-    }
-
-    button {
-        width: 15vw !important;
-        height: 5.625vw !important;
-  
-      }
-}
-

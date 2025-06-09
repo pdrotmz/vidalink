@@ -1,0 +1,17 @@
+.tabela-comprovantes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-comprovantes th,
+.tabela-comprovantes td {
+    border: 1px solid #ccc;
+    padding: 1vw;
+    text-align: left;
+}
+
+.tabela-comprovantes th {
+    background-color: #ffecec;
+    color: #ff4a4a;
+    font-weight: bold;
+}

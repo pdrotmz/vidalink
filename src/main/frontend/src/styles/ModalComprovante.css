@@ -1,0 +1,55 @@
+.modal-comprovante-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-comprovante {
+    background: white;
+    padding: 2vw;
+    border-radius: 10px;
+    width: 60vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.modal-comprovante img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.modal-comprovante .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-comprovante .aprovar,
+.modal-comprovante .reprovar {
+    padding: 0.6vw 2vw;
+    font-size: 1.1vw;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-comprovante .aprovar {
+    background-color: #ff4a4a;
+    color: white;
+    border: none;
+}
+
+.modal-comprovante .reprovar {
+    background-color: white;
+    border: 1px solid #ff4a4a;
+    color: #ff4a4a;
+}
