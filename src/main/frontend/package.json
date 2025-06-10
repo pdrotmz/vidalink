@@ -7,7 +7,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "npm run build && rimraf ../backend/src/main/resources/static && mv dist ../backend/src/main/resources/static"
+    "deploy": "npm run build && rimraf ../backend/src/main/resources/static && mv dist ../backend/src/main/resources/static/dist"
 },
   "dependencies": {
     "@fontsource/montserrat": "^5.2.5",
