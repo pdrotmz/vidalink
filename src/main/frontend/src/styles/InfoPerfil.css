@@ -1,53 +1,178 @@
-.infoPerfilContainer{
-    width: 100vw;
-    height: 400px;
+/* InfoPerfil.css */
+.infoPerfilContainer {
+    width: 100%;
+    min-height: 500px; /* Aumentado de 400px para 500px */
     background: url("../Assets/images/bgPerfil.svg");
-    background-size: cover;       /* cobre todo o elemento */
-    background-position: center;  /* centraliza a imagem */
-    background-repeat: no-repeat; /* evita repetição */
-
-    padding: 2vw;
-
-}
-
-.infoPerfilContainer .infoPerfilContent {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.infoPerfilContainer .infoPerfilContent button{
-    background: #ef2558;
-
-    width: 10vw;
-    height: 50px;
-
-    border: 1.5px solid white;
-    border-radius: 2vw;
-
+    position: relative;
     color: white;
 }
 
-.infoPerfilContainer .perfil {
-  display: flex;
-  align-items: center;
-
+/* Restante do CSS permanece exatamente igual */
+.infoPerfilContent {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
-.infoPerfilContainer .perfil img{
-  border-radius: 50%;
-
-  margin-right: 20px;
-
-  width: 10vw;
-  height: 10vw;
-  border: 3px solid white;
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.infoPerfilContainer .perfil .textos{
-  color: white;
+.profile-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.username {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.email {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0;
 }
 
 .edit-button {
+    background: #ef2558;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.edit-button:hover {
+    background: #d41c4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.error-message {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.error-container button {
+    background: #ef2558;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.error-container button:hover {
+    background: #d41c4d;
+}
+
+.login-link {
+    color: white;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .infoPerfilContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .perfil {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .username {
+        font-size: 1.5rem;
+    }
+
+    .edit-button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .infoPerfilContainer {
+        padding: 1.5rem;
+        min-height: 300px;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .username {
+        font-size: 1.3rem;
+    }
+
+    .edit-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }

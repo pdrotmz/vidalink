@@ -8,7 +8,6 @@ import Unauthorized from "./pages/Unauthorized";
 
 // Páginas privadas (usuário autenticado)
 import Contato from "./pages/Contato";
-import Doar from "./pages/Doar";
 import Home from "./pages/Home";
 import Loja from "./pages/Loja";
 import Perfil from "./pages/Perfil";
@@ -40,7 +39,6 @@ function App() {
                 {/* Rotas Privadas (usuário autenticado) */}
                 <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
                 <Route path="/contato" element={<PrivateRoute><Contato /></PrivateRoute>} />
-                <Route path="/doar" element={<PrivateRoute><Doar /></PrivateRoute>} />
                 <Route path="/loja" element={<PrivateRoute><Loja /></PrivateRoute>} />
                 <Route path="/perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
                 <Route path="/sobre" element={<PrivateRoute><Sobre /></PrivateRoute>} />

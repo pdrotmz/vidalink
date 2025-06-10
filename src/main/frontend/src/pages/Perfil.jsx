@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import InfoPerfil from "../Components/InfoPerfil";
-import "../styles/Principal.css";
+import "../styles/Perfil.css";
 
 export const Perfil = () => {
     const [recompensas, setRecompensas] = useState([]);

@@ -1,67 +1,124 @@
+/* Loja.css */
+.lojaContainer {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
 .lojaContent {
-    padding: 20px;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
 .lojaContent h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
     position: relative;
     display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 .lojaContent h1::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 3px;
-    width: 100%;
-    background-color: red;
-    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background-color: #ef2558;
+    border-radius: 2px;
 }
 
 .lojaGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .lojaCard {
-    width: 140px;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 1.25rem;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .lojaCard:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: #ef2558;
 }
 
 .lojaImage {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.lojaCard:hover .lojaImage {
+    transform: scale(1.1);
 }
 
 .lojaNome {
     font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 4px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .lojaPontos {
-    color: red;
-    font-weight: bold;
-    font-size: 0.9rem;
+    color: #ef2558;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background-color: rgba(239, 37, 88, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lojaGrid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+
+    .lojaContent h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lojaContent {
+        padding: 1.5rem 1rem;
+    }
+
+    .lojaGrid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .lojaCard {
+        padding: 1rem;
+    }
+
+    .lojaImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    .lojaContent h1 {
+        font-size: 1.5rem;
+    }
 }

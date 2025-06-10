@@ -1,87 +1,174 @@
-.listagemProdutosContent{
-    margin-top: -20px;
+/* ListagemProdutos.css */
+.listagemProdutosContent {
+    background-color: #f5f5f5;
+    min-height: 100vh;
 }
+
+.containerListagemProdutos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.listagemProdutosContent h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.listagemProdutosContent h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #ef2558;
+    border-radius: 2px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.buscador input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    max-width: 400px;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #ef2558;
+    box-shadow: 0 0 0 2px rgba(239, 37, 88, 0.1);
+}
+
+.botoes button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ef2558;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.botoes button:hover {
+    background-color: #d41c4d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(239, 37, 88, 0.2);
+}
+
+/* Table Styles */
 .listagemProdutosContent table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
 }
+
 .listagemProdutosContent th {
-    background: #d9d9d9;
-    padding: 12px;
+    background-color: #f0f0f0;
+    padding: 1rem;
     text-align: left;
+    font-weight: 600;
+    color: #333;
 }
+
 .listagemProdutosContent td {
-    padding: 12px;
+    padding: 1rem;
     border-top: 1px solid #eee;
+    vertical-align: middle;
 }
 
-.listagemProdutosContent h1{
-    font-size: 3vw;
+.listagemProdutosContent tr:hover {
+    background-color: #f9f9f9;
 }
 
-
-.listagemProdutosContent .editar {
-    color: red;
+.editar {
+    color: #ef2558;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.containerListagemProdutos {
-    display: flex;
-    flex-direction: column;
-    padding: 2vw;
-    background: #fff;
-
-}
-.containerListagemProdutos .botoes{
-    display: flex;
-    justify-content: space-between;
+.editar:hover {
+    color: #d41c4d;
+    text-decoration: underline;
 }
 
-.containerListagemProdutos .botoes input{
-    width: 20vw;
-    height: 3vw;
-    margin-right: 2vw;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .containerListagemProdutos {
+        padding: 1.5rem;
+    }
 
-    border-style: solid;
-    border-radius: 0.8vw;
-    border-width: 1px;
-    border-color: #BFBFBF;
-}
+    .botoes {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
 
-.containerListagemProdutos .botoes button{
-    width: 8vw;
-    height: 3vw;
-    margin-right: 2vw;
+    .buscador {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
 
-    font-size: 80%;
+    .buscador input {
+        max-width: 100%;
+    }
 
-    border-style: solid;
-    border-radius: 0.8vw;
-    border-width: 1px;
-    border-color: #BFBFBF;
-    background-color: #FF4343;
-    color: #fff;
-}
+    .botoes button {
+        width: 100%;
+        padding: 0.75rem;
+    }
 
-@media (max-width: 1000px) {
-    button {
-      width: 10vw !important;
-      height: 3.75vw !important;
-
+    .listagemProdutosContent h1 {
+        font-size: 1.75rem;
     }
 }
 
-@media (max-width: 650px) {
-    button {
-      width: 12vw !important;
-      height: 4.5vw !important;
+@media (max-width: 480px) {
+    .containerListagemProdutos {
+        padding: 1rem;
+    }
 
+    .listagemProdutosContent th,
+    .listagemProdutosContent td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .listagemProdutosContent h1 {
+        font-size: 1.5rem;
     }
 }
-

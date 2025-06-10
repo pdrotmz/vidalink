@@ -1,77 +1,130 @@
 /* SubmeterComprovante.css */
-.submeterContainer {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    min-height: 100vh;
-}
-
 .submeterContent {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin: 2rem auto;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease-out;
 }
 
 .logoImage {
-    width: 120px;
-    margin-bottom: 1.5rem;
+    width: 140px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+    transform: scale(1.05);
 }
 
 h2 {
-    font-size: 1.75rem;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: 600;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ef2558;
+    border-radius: 2px;
 }
 
 .uploadForm {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .uploadBox {
-    border: 2px dashed #ccc;
-    border-radius: 12px;
-    padding: 2rem;
+    border: 2px dashed #e0e0e0;
+    border-radius: 16px;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #f8f9fa;
+    background-color: #f9fafb;
+    position: relative;
+    overflow: hidden;
 }
 
 .uploadBox:hover {
-    border-color: #ff4d4d;
-    background-color: #fff;
+    border-color: #ef2558;
+    background-color: #fef2f2;
+}
+
+.uploadBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(239,37,88,0.05) 0%, rgba(239,37,88,0.01) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.uploadBox:hover::before {
+    opacity: 1;
 }
 
 .uploadLabel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     cursor: pointer;
+    z-index: 1;
 }
 
 .uploadLabel img {
-    width: 64px;
-    height: 64px;
-    opacity: 0.7;
+    width: 80px;
+    height: 80px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.uploadBox:hover .uploadLabel img {
+    opacity: 1;
+    transform: translateY(-5px);
 }
 
 .uploadLabel span {
-    color: #666;
+    color: #6b7280;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    max-width: 300px;
+    transition: color 0.3s ease;
+}
+
+.uploadBox:hover .uploadLabel span {
+    color: #ef2558;
+}
+
+.arquivoSelecionado {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #10b981;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
 }
 
 .inputGroup {
@@ -80,24 +133,27 @@ h2 {
 
 .inputGroup label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #444;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #4b5563;
+    font-size: 0.95rem;
 }
 
 .inputGroup input {
     width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
 }
 
 .inputGroup input:focus {
     outline: none;
-    border-color: #ff4d4d;
-    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
+    border-color: #ef2558;
+    box-shadow: 0 0 0 3px rgba(239, 37, 88, 0.1);
+    background-color: white;
 }
 
 .btnGroup {
@@ -108,85 +164,81 @@ h2 {
 }
 
 .btnSubmit {
-    padding: 0.75rem 2rem;
-    background-color: #ff4d4d;
+    padding: 0.875rem 2rem;
+    background-color: #ef2558;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
+    box-shadow: 0 4px 12px rgba(239, 37, 88, 0.2);
 }
 
 .btnSubmit:hover {
-    background-color: #e04444;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 77, 77, 0.2);
+    background-color: #d41c4d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(239, 37, 88, 0.25);
 }
 
 .btnSubmit:active {
     transform: translateY(0);
 }
 
-.uploadLabel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: border 0.3s ease;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.uploadLabel:hover {
-    border-color: #ff4a4a;
-}
-
-.uploadLabel img {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.arquivoSelecionado {
-    margin-top: 10px;
-    font-weight: bold;
-    color: green;
-}
-
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .submeterContent {
+        padding: 2rem;
+        margin: 1.5rem;
+        width: calc(100% - 3rem);
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .uploadBox {
+        padding: 2rem 1.5rem;
+    }
+
+    .uploadLabel img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
     .submeterContent {
         padding: 1.5rem;
         margin: 1rem;
-        width: calc(100% - 2rem);
+        border-radius: 12px;
     }
 
     h2 {
         font-size: 1.5rem;
     }
 
-    .uploadBox {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .submeterContent {
-        padding: 1rem;
-    }
-
     .uploadLabel span {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .btnSubmit {
-        padding: 0.65rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .logoImage {
+        width: 120px;
     }
 }

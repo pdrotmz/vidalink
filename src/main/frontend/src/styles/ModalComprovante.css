@@ -1,55 +1,179 @@
+/* ModalComprovante.css */
 .modal-comprovante-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
 }
 
 .modal-comprovante {
     background: white;
-    padding: 2vw;
-    border-radius: 10px;
-    width: 60vw;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
     max-height: 90vh;
     overflow-y: auto;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    animation: slideUp 0.3s ease-out forwards;
+    position: relative;
+}
+
+.modal-comprovante h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.modal-comprovante h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1px;
+    width: 80px;
+    height: 3px;
+    background-color: #ef2558;
+    border-radius: 2px;
 }
 
 .modal-comprovante img {
     max-width: 100%;
-    border-radius: 10px;
-    margin-top: 1rem;
+    max-height: 60vh;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
 }
 
 .modal-comprovante .buttons {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .modal-comprovante .aprovar,
 .modal-comprovante .reprovar {
-    padding: 0.6vw 2vw;
-    font-size: 1.1vw;
-    border-radius: 6px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .modal-comprovante .aprovar {
-    background-color: #ff4a4a;
+    background-color: #ef2558;
     color: white;
     border: none;
 }
 
+.modal-comprovante .aprovar:hover {
+    background-color: #d41c4d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(239, 37, 88, 0.3);
+}
+
 .modal-comprovante .reprovar {
     background-color: white;
-    border: 1px solid #ff4a4a;
-    color: #ff4a4a;
+    border: 2px solid #ef2558;
+    color: #ef2558;
+}
+
+.modal-comprovante .reprovar:hover {
+    background-color: #fef2f2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(239, 37, 88, 0.1);
+}
+
+/* Error message when no image */
+.modal-comprovante p {
+    color: #6b7280;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+/* Close button (optional) */
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    color: #ef2558;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-comprovante {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .modal-comprovante h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal-comprovante .buttons {
+        gap: 1rem;
+    }
+
+    .modal-comprovante .aprovar,
+    .modal-comprovante .reprovar {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-comprovante {
+        padding: 1.25rem;
+    }
+
+    .modal-comprovante .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .modal-comprovante .aprovar,
+    .modal-comprovante .reprovar {
+        width: 100%;
+    }
 }

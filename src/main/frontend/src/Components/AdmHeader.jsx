@@ -4,11 +4,15 @@ import "../styles/AdmHeader.css"
 
 export const AdmHeader = () => {
     return (
-        <header className="admHeaderContent">
+        <header className="adm-header">
             <nav>
-                <ul>
-                    <li><Link to="/ValidarComprovante">Validação</Link></li>
-                    <li><Link to="/ListagemProdutos">Listagem</Link></li>
+                <ul className="adm-header__nav-list">
+                    <li className="adm-header__nav-item">
+                        <Link to="/ValidarComprovante" className="adm-header__nav-link">Validação</Link>
+                    </li>
+                    <li className="adm-header__nav-item">
+                        <Link to="/ListagemProdutos" className="adm-header__nav-link">Listagem</Link>
+                    </li>
                 </ul>
                 
             </nav>

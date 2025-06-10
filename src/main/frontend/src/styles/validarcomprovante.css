@@ -1,91 +1,165 @@
-/* Admin Panel Styles */
+/* validarcomprovante.css */
 .admin-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f5f7fa;
 }
 
 .comprovantes-content {
   padding: 2rem;
   flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .tabela-comprovantes-container {
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .tabela-comprovantes-container h2 {
-  color: #333;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.tabela-comprovantes-container h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #ef2558;
+  border-radius: 2px;
 }
 
 .tabela-wrapper {
   overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
 }
 
 .tabela-comprovantes {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  min-width: 600px;
 }
 
 .tabela-comprovantes th {
-  background-color: #ff4a4a;
+  background-color: #ef2558;
   color: white;
-  padding: 12px 15px;
+  padding: 1rem 1.25rem;
   text-align: left;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
 }
 
 .tabela-comprovantes td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #eee;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
   vertical-align: middle;
+  transition: background-color 0.2s ease;
 }
 
-.tabela-comprovantes tr:hover {
-  background-color: #f9f9f9;
+.tabela-comprovantes tr:not(:last-child) td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tabela-comprovantes tr:hover td {
+  background-color: #fef2f2;
 }
 
 .user-name-cell {
-  color: #ff4a4a;
-  font-weight: bold;
+  color: #ef2558;
+  font-weight: 500;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .user-name-cell:hover {
-  color: #e04141;
+  color: #d41c4d;
   text-decoration: underline;
 }
 
+.user-name-cell::before {
+  content: '👤';
+  font-size: 0.9em;
+}
+
 .ver-detalhes-btn {
-  background-color: #ff4a4a;
+  background-color: #ef2558;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.8rem;
-  transition: background-color 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(239, 37, 88, 0.2);
 }
 
 .ver-detalhes-btn:hover {
-  background-color: #e04141;
+  background-color: #d41c4d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(239, 37, 88, 0.3);
+}
+
+.ver-detalhes-btn:active {
+  transform: translateY(0);
+}
+
+.ver-detalhes-btn::before {
+  content: '🔍';
+  font-size: 0.9em;
 }
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+  .comprovantes-content {
+    padding: 1.5rem;
+  }
+
+  .tabela-comprovantes-container {
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .comprovantes-content {
     padding: 1rem;
   }
 
+  .tabela-comprovantes-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
   .tabela-comprovantes th,
   .tabela-comprovantes td {
-    padding: 8px 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .ver-detalhes-btn {
+    padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
   }
 }
@@ -93,10 +167,20 @@
 @media (max-width: 480px) {
   .tabela-comprovantes-container {
     padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .tabela-comprovantes-container h2 {
+    font-size: 1.3rem;
   }
 
   .ver-detalhes-btn {
-    padding: 4px 8px;
-    font-size: 0.7rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user-name-cell::before,
+  .ver-detalhes-btn::before {
+    display: none;
   }
 }
