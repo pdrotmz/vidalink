@@ -3,7 +3,7 @@ spring:
     name: vidalink
 
   profiles:
-    active: test
+    active: prod
 
   api:
     security:
