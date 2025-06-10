@@ -1,74 +1,131 @@
-.containerLogin{
+/* Login.css */
+.containerLogin {
     display: flex;
-    
 }
 
-.containerLogin .loginEsquerda{
+.containerLogin .loginEsquerda {
     width: 50vw;
     height: 100vh;
-    
-    
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .containerLogin .loginEsquerda form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 60vh;
-
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
 }
 
-.containerLogin .loginEsquerda form h1{
+.containerLogin .loginEsquerda form h1 {
     text-align: center;
+    font-size: 2.5rem;
+    color: #ef2558;
+    margin: 0 0 0.5rem 0;
 }
 
-.containerLogin .loginEsquerda form input{
+.containerLogin .loginEsquerda .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.containerLogin .loginEsquerda .formulario label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.containerLogin .loginEsquerda form input {
     width: 30vw;
-    height: 5vw;
+    height: 3.5rem;
     border-radius: 1vw;
-    border-style: solid;
-    border-color: #d3d3d3;
-    border-width: 10%;
-
+    border: 1px solid #d3d3d3;
+    padding: 0 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.containerLogin .loginEsquerda form button{
+.containerLogin .loginEsquerda form input:focus {
+    border-color: #ef2558;
+}
+
+.containerLogin .loginEsquerda .botao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.containerLogin .loginEsquerda form button {
     width: 30vw;
-    height: 5vw;
+    height: 3.5rem;
     color: #fff;
     background: #ef2558;
-
-    border-style: none;
+    border: none;
     border-radius: 1vw;
-
-    font-size: large;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.containerLogin .loginEsquerda form button:hover {
+    background: #d91e47;
+}
 
-.containerLogin .loginEsquerda p{
-    text-align: end;
+.containerLogin .loginEsquerda p {
+    text-align: center;
     color: #b0b0b0;
+    margin: 0;
 }
 
-.containerLogin .loginEsquerda a{
-    text-align: end;
+.containerLogin .loginEsquerda a {
     color: #ef2558;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.containerLogin .loginDireita{
+.containerLogin .loginEsquerda a:hover {
+    text-decoration: underline;
+}
+
+.containerLogin .loginDireita {
     width: 50vw;
     height: 100vh;
     background: #ef2558;
     display: flex;
-    align-items: end;
-
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.containerLogin .loginDireita img{
+.containerLogin .loginDireita img {
     width: 50vw;
-    transform: scaleX(-1);
+    height: auto;
+    object-fit: cover;
+}
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .containerLogin {
+        flex-direction: column;
+    }
+
+    .containerLogin .loginEsquerda,
+    .containerLogin .loginDireita {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .containerLogin .loginEsquerda form input,
+    .containerLogin .loginEsquerda form button {
+        width: 80vw;
+    }
+
+    .containerLogin .loginDireita img {
+        width: 100vw;
+    }
 }
