@@ -51,7 +51,7 @@ const ModalEdicaoPerfil = ({ user, onClose, onSave }) => {
         }
 
         try {
-            const response = await fetch(`http://localhost:8083/api/users/${user.id}/edit-profile`, {
+            const response = await fetch(`https://vidalink.onrender.com/api/users/${user.id}/edit-profile`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,

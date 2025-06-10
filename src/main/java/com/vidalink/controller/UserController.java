@@ -16,6 +16,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 
@@ -41,6 +42,16 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> getMyProfile(@AuthenticationPrincipal User user) {
         return ResponseEntity.ok(UserResponseDTO.from(user));
 
+    }
+
+    @PutMapping(value = "/{id}/edit-profile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<UserResponseDTO> updateUserProfile(
+            @PathVariable UUID id,
+            @RequestPart("user") @Valid UserProfileMultipartDTO updateDTO,
+            @RequestPart(value = "profileImage", required = false) MultipartFile profileImage
+    ) throws IOException {
+        User updatedUser = userService.editionProfile(id, updateDTO, profileImage);
+        return ResponseEntity.ok(UserResponseDTO.from(updatedUser));
     }
 
     @PutMapping("/me/email")
