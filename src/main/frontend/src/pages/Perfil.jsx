@@ -10,7 +10,7 @@ export const Perfil = () => {
         const fetchRecompensas = async () => {
             const token = localStorage.getItem("token");
             try {
-                const response = await fetch("http://localhost:8083/rewards/my-rewards", {
+                const response = await fetch("https://vidalink.onrender.com/rewards/my-rewards", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -43,7 +43,7 @@ export const Perfil = () => {
                         recompensas.map((item) => (
                             <div key={item.id} className="recompensaCard">
                                 <img
-                                    src={`http://localhost:8083/rewards/${item.id}/image`}
+                                    src={`https://vidalink.onrender.com/rewards/${item.id}/image`}
                                     alt={item.name}
                                     className="recompensaImage"
                                     onError={(e) => {

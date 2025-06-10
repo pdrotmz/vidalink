@@ -19,7 +19,7 @@ export default function Cadastro() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:8083/api/auth/register', {
+        const response = await fetch('https://vidalink.onrender.com/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

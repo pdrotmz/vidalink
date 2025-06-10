@@ -18,7 +18,7 @@ const ValidarComprovante = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8083/submissions/pending", {
+    fetch("https://vidalink.onrender.com/submissions/pending", {
       headers: {
         Authorization: `Bearer ${token}`
       }

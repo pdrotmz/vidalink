@@ -13,7 +13,7 @@ export const ListagemProdutos = () => {
     const fetchRecompensas = async () => {
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("http://localhost:8083/rewards/available", {
+            const response = await fetch("https://vidalink.onrender.com/rewards/available", {
                 headers: {
                     "Authorization": `Bearer ${token}`,
                 },
@@ -38,7 +38,7 @@ export const ListagemProdutos = () => {
 
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch(`http://localhost:8083/rewards/search/${termoBusca}`, {
+            const response = await fetch(`https://vidalink.onrender.com/rewards/search/${termoBusca}`, {
                 headers: {
                     "Authorization": `Bearer ${token}`,
                 },
