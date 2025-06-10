@@ -38,7 +38,7 @@ COPY src/main/resources/static.dist/ src/main/resources/static/
 RUN ./mvnw clean package -DskipTests
 
 # --- ETAPA 2: IMAGEM FINAL DE PRODUÇÃO (LEVE) ---
-FROM eclipse-temurin:21-jre-alpine # Use JRE Alpine para uma imagem menor
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
