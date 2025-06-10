@@ -347,39 +347,3 @@
   }
 }
 
-/* Modo escuro (opcional) */
-@media (prefers-color-scheme: dark) {
-  .contato-wrapper {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  }
-
-  .contato-card {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
-  }
-
-  .contato-texto {
-    color: #c0c0c0;
-  }
-
-  .contato-texto a {
-    color: #6ba3f5;
-  }
-
-  .contato-texto a:hover {
-    color: #4a8ae0;
-  }
-
-  .contato-final {
-    border-top-color: #444;
-  }
-
-  .contato-final p {
-    color: #e0e0e0;
-  }
-
-  .contato-final span {
-    color: #b0b0b0;
-  }
-}
