@@ -1,52 +1,58 @@
 # --- ETAPA 1: BUILD DO FRONT-END (REACT/VITE) ---
 FROM node:20-alpine AS frontend-builder
 
+# O WORKDIR para o front-end será a pasta onde os arquivos do front-end estão
 WORKDIR /app/frontend
 
 # Copia package.json e package-lock.json (ou yarn.lock) para cache de dependências
-COPY frontend/package*.json ./
+# O caminho é relativo ao contexto de build do Docker (raiz do seu projeto)
+# Sua pasta 'frontend' está em 'src/main/frontend'
+COPY src/main/frontend/package*.json ./
 
 # Instala as dependências do front-end
 RUN npm install --omit=dev
 
 # Copia o restante do código-fonte do front-end
-COPY frontend/ .
+# O caminho é relativo ao contexto de build do Docker
+COPY src/main/frontend/ .
 
-# Compila o front-end (gera a pasta 'dist')
+# Compila o front-end (gera a pasta 'dist' dentro de /app/frontend)
 RUN npm run build
 
 # --- ETAPA 2: BUILD DO BACK-END (SPRING BOOT) E INTEGRAÇÃO DO FRONT-END ---
 FROM eclipse-temurin:21-jdk AS backend-builder
 
+# O WORKDIR para o back-end será a raiz do seu projeto dentro do container
 WORKDIR /app
 
 # Copia o .env (se necessário para o build do Spring Boot ou runtime)
-# Geralmente o .env é para variáveis de ambiente do ambiente de execução,
-# não para variáveis de build do Java em si.
+# O .env está na raiz do seu projeto
 COPY .env .env
 
 # Copia arquivos essenciais para cache do Maven (pom.xml, mvnw, .mvn/)
-# Certifique-se de que estes estão na raiz do seu contexto de build ou ajusta os caminhos
-COPY backend/pom.xml backend/mvnw ./backend/
-COPY backend/.mvn/ ./backend/.mvn/
+# Estes estão na raiz do seu projeto
+COPY pom.xml mvnw ./
+COPY .mvn/ .mvn/
 
-# Dá permissão ao Maven Wrapper no diretório correto
-RUN chmod +x backend/mvnw
+# Dá permissão ao Maven Wrapper
+RUN chmod +x mvnw
 
 # Baixa dependências do Maven antes de copiar o código-fonte Java
-WORKDIR /app/backend
+# O WORKDIR é /app, então o mvnw será encontrado aqui
 RUN ./mvnw dependency:go-offline
 
 # Copia o código-fonte do back-end
-COPY backend/src/ src/
+# O código-fonte Java está em src/main/java
+COPY src/main/java/ src/main/java/
+COPY src/main/resources/ src/main/resources/ # Copia os recursos (como application.properties)
 
 # Copia os arquivos de build do front-end para o diretório de recursos estáticos do Spring Boot
-# A pasta `dist` do frontend foi gerada na etapa `frontend-builder`
-# Ela será copiada para `src/main/resources/static` no contexto de build do backend
-# O caminho aqui é relativo ao WORKDIR atual (`/app/backend`)
+# A pasta `dist` foi gerada na etapa `frontend-builder` em /app/frontend/dist
+# Ela será copiada para `src/main/resources/static` na etapa atual (/app/src/main/resources/static)
 COPY --from=frontend-builder /app/frontend/dist src/main/resources/static
 
 # Compila o projeto Spring Boot (agora com o front-end empacotado)
+# O WORKDIR é /app, então o mvnw será encontrado aqui
 RUN ./mvnw clean package -DskipTests
 
 # --- ETAPA 3: IMAGEM FINAL DE PRODUÇÃO (LEVE) ---
@@ -55,7 +61,8 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copia o JAR da etapa de build do back-end
-COPY --from=backend-builder /app/backend/target/*.jar app.jar
+# O JAR estará em /app/target/ na etapa backend-builder
+COPY --from=backend-builder /app/target/*.jar app.jar
 
 # Copia o .env para a imagem final (se usado pelo Spring Boot em runtime)
 COPY --from=backend-builder /app/.env .env
