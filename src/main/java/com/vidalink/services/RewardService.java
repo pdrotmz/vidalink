@@ -1,10 +1,12 @@
 package com.vidalink.services;
 
+import com.vidalink.dto.reward.RewardDTO;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.reward.RewardRedemption;
 import com.vidalink.model.user.User;
 import com.vidalink.repository.RewardRedemptionRepository;
 import com.vidalink.repository.RewardRepository;
+import com.vidalink.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +28,7 @@ public class RewardService {
 
     private final RewardRepository rewardRepository;
     private final RewardRedemptionRepository rewardRedemptionRepository;
+    private final UserRepository userRepository;
 
     public List<Reward> getActiveRewards() {
         return rewardRepository.findByActiveTrueOrderByPointsRequiredAsc();
@@ -44,7 +47,6 @@ public class RewardService {
                 RewardRedemption redemption = new RewardRedemption();
                 redemption.setDonor(user);
                 redemption.setReward(reward);
-                redemption.setRedemptionDate(LocalDate.now());
                 rewardRedemptionRepository.save(redemption);
                 return true;
             }
@@ -92,6 +94,28 @@ public class RewardService {
             throw new RuntimeException("Não há nenhuma recompensa!");
         }
         return rewards;
+    }
+
+    public void redeemReward(UUID userId, UUID rewardId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        Reward reward = rewardRepository.findById(rewardId)
+                .orElseThrow(() -> new RuntimeException("Recompensa não encontrada"));
+
+        if (user.getPoints() < reward.getPointsRequired()) {
+            throw new RuntimeException("Pontos insuficientes para resgatar esta recompensa.");
+        }
+
+        // Desconta os pontos
+        user.setPoints(user.getPoints() - reward.getPointsRequired());
+        userRepository.save(user);
+
+        // Salva o vínculo no histórico de resgate
+        RewardRedemption redemption = new RewardRedemption();
+        redemption.setDonor(user);
+        redemption.setReward(reward);
+        rewardRedemptionRepository.save(redemption);
     }
 
     public Reward updateReward(UUID id, Reward updatedReward) {

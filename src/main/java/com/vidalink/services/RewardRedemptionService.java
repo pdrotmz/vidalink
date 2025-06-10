@@ -2,6 +2,7 @@ package com.vidalink.services;
 
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.reward.RewardRedemption;
+import com.vidalink.model.user.User;
 import com.vidalink.repository.RewardRedemptionRepository;
 import com.vidalink.repository.RewardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,19 +28,28 @@ public class RewardRedemptionService {
     private DonationService donationService;
 
     public RewardRedemption redeem(UUID donorId, UUID rewardId) {
-        int donorPoints = donationService.calculatePoints(donorId);
+        User donor = donorService.findById(donorId);
         Reward reward = rewardService.getById(rewardId);
 
-        if (donorPoints < reward.getPointsRequired()) {
-            throw new RuntimeException("Not enough points to redeem this reward.");
-        }
+        validateRedemptionEligibility(donor, reward, donorId);
 
         RewardRedemption redemption = new RewardRedemption();
-        redemption.setDonor(donorService.findById(donorId));
+        redemption.setDonor(donor);
         redemption.setReward(reward);
-        redemption.setRedemptionDate(LocalDate.now());
 
         return redemptionRepository.save(redemption);
+    }
+
+    private void validateRedemptionEligibility(User donor, Reward reward, UUID donorId) {
+        int donorPoints = donationService.calculatePoints(donorId);
+
+        if (donorPoints < reward.getPointsRequired()) {
+            throw new IllegalArgumentException("Você não tem pontos suficientes para resgatar esta recompensa.");
+        }
+
+        if (redemptionRepository.existsByDonorAndReward(donor, reward)) {
+            throw new IllegalStateException("Você já resgatou essa recompensa.");
+        }
     }
 
     public List<RewardRedemption> getRedemptionsByDonor(UUID donorId) {

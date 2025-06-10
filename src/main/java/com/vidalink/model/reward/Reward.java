@@ -18,7 +18,7 @@ public class Reward {
     private String name;
     private String description;
     private Integer pointsRequired;
-    private boolean active;
     private String imageUrl;
+    private boolean active;
 }
 

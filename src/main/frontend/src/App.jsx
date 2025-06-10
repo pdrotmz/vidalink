@@ -1,50 +1,54 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home.jsx";
+// Páginas públicas
+import Cadastro from "./pages/cadastro";
+import Login from "./pages/Login";
+import LoginCadastro from "./Components/LoginCadastro";
+import Unauthorized from "./pages/Unauthorized";
+
+// Páginas privadas (usuário autenticado)
 import Contato from "./pages/Contato";
 import Doar from "./pages/Doar";
-import ListagemProdutos from "./pages/ListagemProdutos";
-import Login from './pages/Login';
+import Home from "./pages/Home";
 import Loja from "./pages/Loja";
 import Perfil from "./pages/Perfil";
 import Sobre from "./pages/Sobre";
-import DetalhesRecompensa from './pages/DetalhesRecompensa';
-import Cadastro from './pages/cadastro';
-import ValidarComprovante from './pages/validarcomprovante';
-import SubmeterComprovante from './pages/SubmeterComprovante';
+import SubmeterComprovante from "./pages/SubmeterComprovante";
 
-import LoginCadastro from './Components/LoginCadastro';
+// Páginas privadas (admin)
+import ListagemProdutos from "./pages/ListagemProdutos";
+import ValidarComprovante from "./pages/validarcomprovante";
 
-import "../src/index.css";
-import "../src/App.css"
+// Proteções de rota
+import PrivateRoute from "./Components/PrivateRoute";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
-import ProtectedRoute from "./Components/ProtectedRoute.jsx";
-import Unauthorized from "./pages/Unauthorized.jsx";
-import PrivateRoute from "./Components/PrivateRoute.jsx";
+// Estilos globais
+import "./index.css";
+import "./App.css";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                {/* Públicas */}
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Cadastro" element={<Cadastro />} />
+                {/* Rotas Públicas */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/unauthorized" element={<Unauthorized />} />
-                <Route path="/LoginCadastro" element={<LoginCadastro />} />
+                <Route path="/logincadastro" element={<LoginCadastro />} />
 
-                {/* Privadas (qualquer usuário logado) */}
+                {/* Rotas Privadas (usuário autenticado) */}
                 <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
-                <Route path="/Contato" element={<PrivateRoute><Contato /></PrivateRoute>} />
-                <Route path="/Doar" element={<PrivateRoute><Doar /></PrivateRoute>} />
-                <Route path="/Loja" element={<PrivateRoute><Loja /></PrivateRoute>} />
-                <Route path="/Perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
-                <Route path="/Sobre" element={<PrivateRoute><Sobre /></PrivateRoute>} />
-                <Route path="/SubmeterComprovante" element={<PrivateRoute><SubmeterComprovante /></PrivateRoute>} />
-                <Route path="/Recompensa/:id" element={<PrivateRoute><DetalhesRecompensa /></PrivateRoute>} />
+                <Route path="/contato" element={<PrivateRoute><Contato /></PrivateRoute>} />
+                <Route path="/doar" element={<PrivateRoute><Doar /></PrivateRoute>} />
+                <Route path="/loja" element={<PrivateRoute><Loja /></PrivateRoute>} />
+                <Route path="/perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
+                <Route path="/sobre" element={<PrivateRoute><Sobre /></PrivateRoute>} />
+                <Route path="/submetercomprovante" element={<PrivateRoute><SubmeterComprovante /></PrivateRoute>} />
 
-                {/* Privadas (apenas ADMIN) */}
-                <Route path="/ListagemProdutos" element={<ProtectedRoute><ListagemProdutos /></ProtectedRoute>} />
-                <Route path="/ValidarComprovante" element={<ProtectedRoute><ValidarComprovante /></ProtectedRoute>} />
+                {/* Rotas Privadas (somente ADMIN) */}
+                <Route path="/listagemprodutos" element={<ProtectedRoute><ListagemProdutos /></ProtectedRoute>} />
+                <Route path="/validarcomprovante" element={<ProtectedRoute><ValidarComprovante /></ProtectedRoute>} />
             </Routes>
         </BrowserRouter>
     );

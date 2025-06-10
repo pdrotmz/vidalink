@@ -98,6 +98,8 @@ public class SecurityConfig {
                         // 🔓 Público (listar recompensas ativas)
                         .requestMatchers(HttpMethod.GET, "/rewards/available").hasAnyRole("ADMIN", "USER")
 
+                        .requestMatchers(HttpMethod.GET, "/rewards/*/image").permitAll()
+
                         // 🔐 ADMIN pode criar recompensas
                         .requestMatchers(HttpMethod.POST, "/rewards").hasRole("ADMIN")
 

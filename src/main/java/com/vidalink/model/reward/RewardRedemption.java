@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -22,6 +23,6 @@ public class RewardRedemption {
     @ManyToOne
     private Reward reward;
 
-    private LocalDate redemptionDate;
+    private LocalDateTime redeemedAt = LocalDateTime.now();
 }
 

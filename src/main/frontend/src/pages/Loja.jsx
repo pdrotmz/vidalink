@@ -1,69 +1,52 @@
-import React from "react";
-import Header from "../Components/Header"
-import RecompensaLoja from "../Components/RecompensaLoja";
-
-import Certificado1 from "../Assets/images/certificado1.png"
-import Certificado2 from "../Assets/images/certificado2.png"
-import Certificado3 from "../Assets/images/certificado3.png"
-
-import Categoria1 from "../Assets/images/categoria1.png"
-
-
-
+import React, { useEffect, useState } from "react";
+import Header from "../Components/Header";
 import "../styles/Loja.css";
 
-const Loja = () => {
-  return (
-    <div className="containerLoja">
-      <Header></Header>
-      <div className="lojaContent">
+export const Loja = () => {
+    const [recompensas, setRecompensas] = useState([]);
 
-        <div className="categorias">
-          <h1>Categorias</h1>
-          <div className="line">
-            <div className="redline" />
-            <div className="blackline"/>
-          </div>
+    useEffect(() => {
+        const token = localStorage.getItem("token");
 
-          <ul>
-            <li>
-              <img src={Categoria1} alt="" />
-              <p>Nome</p>
-            </li>
-            <li>
-              <img src={Categoria1} alt="" />
-              <p>Nome</p>
-            </li>
-            <li>
-              <img src={Categoria1} alt="" />
-              <p>Nome</p>
-            </li>
-          </ul>
+        fetch("http://localhost:8083/rewards/available", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => {
+                if (!response.ok) throw new Error("Erro na requisição");
+                return response.json();
+            })
+            .then(data => setRecompensas(data))
+            .catch(error => console.error("Erro:", error));
+    }, []);
+
+    return (
+        <div className="lojaContainer">
+            <Header />
+            <div className="lojaContent">
+                <h1>Top Medalhas</h1>
+                <div className="lojaGrid">
+                    {recompensas.map((item) => (
+                        <div key={item.id} className="lojaCard">
+                            <img
+                                src={`http://localhost:8083/rewards/${item.id}/image`}
+                                alt={item.name}
+                                className="lojaImage"
+                                onError={(e) => {
+                                    e.target.src = "/placeholder.png"; // fallback
+                                }}
+                            />
+                            <p className="lojaNome">{item.name}</p>
+                            <p className="lojaPontos">{item.requiredPoints} pts</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-
-        <div className="vitrine">
-          <h1>Top Medalhas</h1>
-          <div className="line">
-            <div className="redline" />
-            <div className="blackline"/>
-          </div>
-          
-
-          <ul>
-            <RecompensaLoja imagem={Certificado1} nome={'Primeira doação'} preco={'1'} recompensaId={1}/>
-          
-            <RecompensaLoja imagem={Certificado2} nome={'Primeira recomendação'} preco={'50'} recompensaId={2}/>
-
-            <RecompensaLoja imagem={Certificado3} nome={'Primeira doação'} preco={'50'} recompensaId={3}/>
-
-          </ul>
-        </div>
-      </div>
-      
-      
-    </div>
-  );
+    );
 };
 
 export default Loja;
-

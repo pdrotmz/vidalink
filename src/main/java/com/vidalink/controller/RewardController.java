@@ -1,8 +1,11 @@
 package com.vidalink.controller;
 
+import com.vidalink.dto.reward.RewardDTO;
+import com.vidalink.dto.reward.RewardRedeemResponseDTO;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.user.User;
 import com.vidalink.services.RewardService;
+import com.vidalink.services.storage.LocalStorageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -11,6 +14,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,9 +27,11 @@ import java.util.UUID;
 public class RewardController {
 
     private final RewardService rewardService;
+    private final LocalStorageService fileStorageService;
 
 
     @GetMapping("/available")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public ResponseEntity<List<Reward>> listAvailableRewards() {
         return ResponseEntity.ok(rewardService.getActiveRewards());
     }
@@ -41,6 +47,17 @@ public class RewardController {
         }
     }
 
+    @PostMapping("/redeem/{rewardId}")
+    public ResponseEntity<RewardRedeemResponseDTO> redeemReward(
+            @PathVariable UUID rewardId,
+            @AuthenticationPrincipal User user) {
+
+        rewardService.redeemReward(user.getId(), rewardId);
+
+        return ResponseEntity.ok(
+                new RewardRedeemResponseDTO("Recompensa resgatada com sucesso!", user.getPoints())
+        );
+    }
 
     @PostMapping
     @PreAuthorize("hasRole('ADMIN')")

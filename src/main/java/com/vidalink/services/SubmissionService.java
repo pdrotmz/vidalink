@@ -106,7 +106,6 @@ public class SubmissionService {
                     RewardRedemption redemption = new RewardRedemption();
                     redemption.setDonor(user);
                     redemption.setReward(reward);
-                    redemption.setRedemptionDate(LocalDate.now());
                     return redemption;
                 }).toList();
 

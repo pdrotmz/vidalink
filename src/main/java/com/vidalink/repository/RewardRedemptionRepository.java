@@ -1,5 +1,6 @@
 package com.vidalink.repository;
 
+import com.vidalink.model.reward.Reward;
 import com.vidalink.model.reward.RewardRedemption;
 import com.vidalink.model.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,4 +14,6 @@ public interface RewardRedemptionRepository extends JpaRepository<RewardRedempti
     List<RewardRedemption> findByDonorId(UUID donorId);
 
     List<RewardRedemption> findByDonor(User user);
+
+    boolean existsByDonorAndReward(User donor, Reward reward);
 }
