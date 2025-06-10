@@ -1,0 +1,102 @@
+version: "3.8"
+
+services:
+  vidalink:
+    build: .
+    container_name: vidalink-app
+    ports:
+      - "8090:8090" # Porta para acesso local à sua aplicação
+    environment:
+      # Configurações para o banco de dados PostgreSQL
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      # Define o perfil ativo do Spring Boot como 'prod'
+      - SPRING_PROFILES_ACTIVE=prod
+      - SECRET=${SECRET}
+
+    # O serviço vidalink depende do PostgreSQL e Redis estarem prontos
+    depends_on:
+      postgres:
+        condition: service_healthy # Espera o DB estar saudável
+      redis:
+        condition: service_started # Espera o Redis estar iniciado
+
+    # Monta um volume para logs que será compartilhado com o Promtail
+    volumes:
+      - app-logs-data:/app/logs # Certifique-se que sua aplicação Spring Boot escreve logs nesta pasta dentro do container
+
+    networks:
+      - prod-net
+
+  postgres:
+    image: postgres:16 # Imagem oficial do PostgreSQL
+    container_name: postgres-db
+    restart: always
+    environment:
+      - POSTGRES_DB=vidalink_db_prod # Nome do banco de dados
+      - POSTGRES_USER=${SPRING_DATASOURCE_USERNAME}
+      - POSTGRES_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    ports:
+      - "5432:5432" # Porta para acesso local ao banco de dados (opcional, pode remover se não precisar)
+    volumes:
+      - postgres-data:/var/lib/postgresql/data # Volume persistente para os dados do DB
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - prod-net
+
+  redis:
+    image: redis:7
+    container_name: redis-vidalink-prod
+    ports:
+      - "6379:6379" # Porta para acesso local ao Redis (opcional, pode remover se não precisar)
+    networks:
+      - prod-net
+
+  # --- Serviços de Log (Loki, Promtail, Grafana) ---
+  loki:
+    image: grafana/loki:2.9.4
+    container_name: loki
+    ports:
+      - "3100:3100" # Porta padrão do Loki para envio de logs
+    command: -config.file=/etc/loki/local-config.yaml # Configuração padrão do Loki
+    networks:
+      - prod-net
+
+  promtail:
+    image: grafana/promtail:2.9.4
+    container_name: promtail
+    volumes:
+      # Monta o volume compartilhado de logs da aplicação para o Promtail
+      - app-logs-data:/var/log/vidalink-app-logs
+      # Monta o arquivo de configuração do Promtail
+      - ./promtail-config.yaml:/etc/promtail/config.yaml
+    command: -config.file=/etc/promtail/config.yaml
+    networks:
+      - prod-net
+    depends_on:
+      - loki # Promtail precisa do Loki para enviar os logs
+
+  grafana:
+    image: grafana/grafana:10.4.2
+    container_name: grafana
+    ports:
+      - "3000:3000" # Porta para acessar o dashboard do Grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin # Senha padrão para o admin do Grafana
+    networks:
+      - prod-net
+    depends_on:
+      - loki # Grafana precisa do Loki como fonte de dados
+
+volumes:
+  postgres-data: # Volume para persistir os dados do PostgreSQL
+  app-logs-data: # Volume compartilhado para logs da aplicação
+
+networks:
+  prod-net:
+    driver: bridge

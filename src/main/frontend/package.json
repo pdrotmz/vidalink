@@ -1,14 +1,14 @@
 {
   "name": "frontend",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "deploy": "npm run build && rimraf ../backend/src/main/resources/static && mv dist ../backend/src/main/resources/static"
+},
   "dependencies": {
     "@fontsource/montserrat": "^5.2.5",
     "axios": "^1.9.0",

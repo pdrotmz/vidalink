@@ -2,6 +2,7 @@ package com.vidalink.infra.cors;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
@@ -22,5 +23,14 @@ public class CorsConfig implements WebMvcConfigurer {
         registry
                 .addResourceHandler("/uploads/**")
                 .addResourceLocations("file:uploads/");
+    }
+
+    public void configureViewControlleres(ViewControllerRegistry registry) {
+        registry.addViewController("/{spring:[\\w-]+}")
+                .setViewName("forward:/index.html");
+        registry.addViewController("/**/{spring:[\\w-]+}")
+                .setViewName("forward:/index.html");
+        registry.addViewController("/{spring:[\\w-]+\\.{spring:[\\w-]+}}")
+                .setViewName("forward:/index.html");
     }
 }
