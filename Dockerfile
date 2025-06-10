@@ -9,8 +9,8 @@ WORKDIR /app/src/main/frontend
 # O caminho de origem é relativo ao contexto de build do Docker (raiz do seu projeto)
 COPY src/main/frontend/package*.json ./
 
-# Instala as dependências do front-end
-RUN npm install --omit=dev
+# Instala as dependências do front-end (AGORA INCLUINDO AS DEV DEPENDENCIES NECESSÁRIAS PARA O BUILD)
+RUN npm install
 
 # Copia o restante do código-source do front-end
 # O caminho de origem é relativo ao contexto de build do Docker
