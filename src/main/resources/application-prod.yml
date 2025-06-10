@@ -27,3 +27,7 @@ server:
   error:
     include-message: never
     include-binding-errors: never
+
+  web:
+    resources:
+      static-locations: classpath:/static/

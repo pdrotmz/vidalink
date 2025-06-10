@@ -73,7 +73,8 @@ public class SecurityConfig {
 
                         // 🔓 Público
                         .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/", "/index.html", "/static/**", "/css/**", "/js/**", "/images/**").permitAll()
+                        .requestMatchers("/", "/index.html", "/assets/**", "/icon.svg", "/vite.svg").permitAll()
+
 
                         // 👤 USER pode submeter
                         .requestMatchers(HttpMethod.POST, "/submissions").hasRole("USER")

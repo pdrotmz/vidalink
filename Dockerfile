@@ -31,7 +31,7 @@ COPY src/main/resources/ src/main/resources/
 # COPIA OS ARQUIVOS DO FRONT-END JÁ PRÉ-BUILDADOS
 # A pasta `static.dist` que já contém o build do front-end será copiada
 # para o local que o Spring Boot espera para servir recursos estáticos: src/main/resources/static
-COPY src/main/resources/static/dist/ src/main/resources/static/
+COPY src/main/resources/static/ src/main/resources/
 
 # Compila o projeto Spring Boot (agora com o front-end empacotado)
 # O WORKDIR é /app, então o mvnw será encontrado aqui
@@ -46,8 +46,8 @@ WORKDIR /app
 # O JAR estará em /app/target/ na etapa builder
 COPY --from=builder /app/target/*.jar app.jar
 
-# Copia o .env para a imagem final (se usado pelo Spring Boot em runtime)
-COPY --from=builder /app/.env .env
+# REMOVIDO: Não copia o .env para a imagem final
+# COPY --from=builder /app/.env .env
 
 # Cria o diretório de logs (caso não seja mapeado pelo volume)
 RUN mkdir -p /app/logs && chmod -R 777 /app/logs
