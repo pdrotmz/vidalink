@@ -6,6 +6,8 @@ import com.vidalink.model.user.User;
 import com.vidalink.services.UserService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,7 +16,6 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 
@@ -23,6 +24,7 @@ import java.util.UUID;
 public class UserController {
 
     private final UserService userService;
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     public UserController(UserService userService) {
@@ -54,8 +56,8 @@ public class UserController {
         }
     }
 
-    @PutMapping(value = "/{id}/edit-profile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<?> updateUserProfile(
+    @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<?> updateReward(
             @PathVariable UUID id,
             @RequestPart("user") @Valid UserProfileMultipartDTO updateDTO,
             @RequestPart(value = "profileImage", required = false) MultipartFile profileImage
@@ -63,10 +65,20 @@ public class UserController {
         try {
             User updatedUser = userService.editionProfile(id, updateDTO, profileImage);
             return ResponseEntity.ok(UserResponseDTO.from(updatedUser));
-        } catch (Exception e) {
-            e.printStackTrace(); // ou logger.error("Erro ao editar perfil", e);
+
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of("message", e.getMessage()));
+
+        } catch (RuntimeException e) {
+            logger.error("Erro ao editar perfil do usuário {}: {}", id, e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(Map.of("message", e.getMessage()));
+
+        } catch (Exception e) {
+            logger.error("Erro inesperado ao editar perfil do usuário {}: {}", id, e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("message", "Erro interno do servidor"));
         }
     }
 }

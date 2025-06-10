@@ -46,12 +46,21 @@ public class UserService {
     }
 
     @Transactional
-    public User editionProfile(UUID id, UserProfileMultipartDTO dto, MultipartFile profileImage) throws IOException {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado com ID: " + id));
+    public User editionProfile(UUID id, UserProfileMultipartDTO dto, MultipartFile profileImage) {
+        try {
+            User user = userRepository.findById(id)
+                    .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado com ID: " + id));
 
-        updateFields(user, dto, profileImage);
-        return userRepository.save(user);
+            updateFields(user, dto, profileImage);
+            return userRepository.save(user);
+
+        } catch (EntityNotFoundException e) {
+            throw e;
+        } catch (IOException e) {
+            throw new RuntimeException("Erro ao processar imagem do perfil: " + e.getMessage(), e);
+        } catch (Exception e) {
+            throw new RuntimeException("Erro interno ao editar perfil: " + e.getMessage(), e);
+        }
     }
 
     private void updateFields(User user, UserProfileMultipartDTO dto, MultipartFile image) throws IOException {
@@ -65,7 +74,7 @@ public class UserService {
 
         if (image != null && !image.isEmpty()) {
             String filename = storageService.saveFile(image);
-            user.setProfileImage("/uploads/" + filename);
+            user.setProfileImage(filename);
         }
     }
 

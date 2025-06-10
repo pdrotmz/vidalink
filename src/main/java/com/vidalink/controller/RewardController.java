@@ -84,8 +84,12 @@ public class RewardController {
 
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Reward> updateReward(@PathVariable UUID id, @RequestBody @Valid Reward reward) {
-        return ResponseEntity.ok(rewardService.updateReward(id, reward));
+    public ResponseEntity<Reward> updateReward(
+            @PathVariable UUID id,
+            @RequestPart("reward") @Valid Reward reward,
+            @RequestPart(value = "file", required = false) MultipartFile file
+    ) {
+        return ResponseEntity.ok(rewardService.updateReward(id, reward, file));
     }
 
     @GetMapping("/search/{name}")

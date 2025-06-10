@@ -1,4 +1,4 @@
-/* Modal.css */
+
 .modal {
     position: fixed;
     top: 0;
@@ -15,6 +15,7 @@
     animation: fadeIn 0.3s ease-out forwards;
 }
 
+/* Conteúdo do Modal */
 .modal-content {
     background-color: white;
     padding: 2rem;
@@ -26,6 +27,7 @@
     animation: slideUp 0.3s ease-out forwards;
 }
 
+/* Título do Modal */
 .modal-content h2 {
     color: #2c3e50;
     margin-bottom: 1.5rem;
@@ -48,12 +50,14 @@
     border-radius: 2px;
 }
 
+/* Formulário no Modal */
 .modal-content form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
+/* Inputs Gerais */
 .modal-content input {
     width: 100%;
     padding: 0.875rem 1rem;
@@ -64,13 +68,15 @@
     background-color: #f9fafb;
 }
 
+/* Regra geral de foco para inputs, mas as regras de validação a sobrescreverão */
 .modal-content input:focus {
     outline: none;
-    border-color: #ef2558;
-    box-shadow: 0 0 0 3px rgba(239, 37, 88, 0.1);
+    border-color: #ef2558; /* Cor padrão de foco, será sobrescrita pela validação */
+    box-shadow: 0 0 0 3px rgba(239, 37, 88, 0.1); /* Sombra padrão de foco, será sobrescrita pela validação */
     background-color: white;
 }
 
+/* Upload de Arquivo */
 .file-upload-container {
     margin: 0.5rem 0;
 }
@@ -99,6 +105,16 @@
     display: none;
 }
 
+/* Estado de Arquivo Selecionado */
+.file-upload-label.has-file {
+    background-color: #10b981;
+}
+
+.file-upload-label.has-file:hover {
+    background-color: #0d9f6e;
+}
+
+/* Botões do Modal */
 .botoes-modal {
     display: flex;
     justify-content: flex-end;
@@ -137,16 +153,57 @@
     background-color: #e5e7eb;
 }
 
-/* File selected state */
-.file-upload-label.has-file {
-    background-color: #10b981;
+---
+
+    /* --- Estilos de Validação --- */
+
+    /* Estilo para input válido */
+.input-valid {
+    border-color: #10b981 !important;
+    background-color: #f0fdf4 !important;
 }
 
-.file-upload-label.has-file:hover {
-    background-color: #0d9f6e;
+/* Importante: Adiciona a classe 'input' ao seletor de foco para maior especificidade */
+.modal-content input.input-valid:focus {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+    background-color: white !important; /* Mantém o fundo branco ao focar em input válido */
 }
 
-/* Animations */
+/* Estilo para input inválido */
+.input-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+    animation: shakeError 0.5s ease-in-out;
+}
+
+/* Importante: Adiciona a classe 'input' ao seletor de foco para maior especificidade */
+.modal-content input.input-error:focus {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    background-color: #fef2f2 !important; /* Mantém o fundo de erro ao focar em input inválido */
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.error-message::before {
+    content: "⚠️";
+    font-size: 0.875rem;
+}
+
+---
+
+/* --- Animações --- */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -157,7 +214,16 @@
     to { transform: translateY(0); }
 }
 
-/* Responsive Design */
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+---
+
+/* --- Design Responsivo --- */
+
 @media (max-width: 480px) {
     .modal-content {
         padding: 1.5rem;

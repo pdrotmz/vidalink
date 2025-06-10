@@ -7,6 +7,7 @@ import com.vidalink.model.user.User;
 import com.vidalink.repository.RewardRedemptionRepository;
 import com.vidalink.repository.RewardRepository;
 import com.vidalink.repository.UserRepository;
+import com.vidalink.services.storage.LocalStorageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,7 @@ public class RewardService {
     private final RewardRepository rewardRepository;
     private final RewardRedemptionRepository rewardRedemptionRepository;
     private final UserRepository userRepository;
+    private final LocalStorageService fileStorageService;
 
     public List<Reward> getActiveRewards() {
         return rewardRepository.findByActiveTrueOrderByPointsRequiredAsc();
@@ -72,6 +74,10 @@ public class RewardService {
         reward.setPointsRequired(pointsRequired);
         reward.setImageUrl(imageUrl);
         reward.setActive(true);
+
+        if(reward.getPointsRequired() < 0) {
+            throw new RuntimeException("Número precisa ser maior que 0");
+        }
 
         return rewardRepository.save(reward);
     }
@@ -118,11 +124,17 @@ public class RewardService {
         rewardRedemptionRepository.save(redemption);
     }
 
-    public Reward updateReward(UUID id, Reward updatedReward) {
+    public Reward updateReward(UUID id, Reward updatedReward, MultipartFile file) {
         Reward existing = getById(id);
         existing.setName(updatedReward.getName());
         existing.setDescription(updatedReward.getDescription());
         existing.setPointsRequired(updatedReward.getPointsRequired());
+
+        if (file != null && !file.isEmpty()) {
+            String imagePath = fileStorageService.saveFile(file);
+            existing.setImageUrl(imagePath);
+        }
+
         return rewardRepository.save(existing);
     }
 

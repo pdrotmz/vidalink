@@ -1,130 +1,150 @@
-import React, { useState, useEffect } from "react";
-import "../styles/ModalEdicaoPerfil.css";
+import React, { useState } from "react";
+import "../styles/Modal.css";
 
-const ModalEdicaoPerfil = ({ user, onClose, onSave }) => {
-    const [form, setForm] = useState({
-        username: "",
-        email: "",
-        profileImage: null,
+const FormCadastroRecompensa = ({ onClose, onSuccess }) => {
+    const [formData, setFormData] = useState({
+        name: "",
+        description: "",
+        pointsRequired: "",
+        file: null
     });
-    const [previewImage, setPreviewImage] = useState("");
 
-    useEffect(() => {
-        if (user) {
-            setForm({
-                username: user.username || "",
-                email: user.email || "",
-                profileImage: null,
-            });
-            setPreviewImage(user.profileImage || "");
-        }
-    }, [user]);
+    const [validation, setValidation] = useState({
+        pointsValid: false,
+        pointsTouched: false
+    });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setForm((prev) => ({ ...prev, [name]: value }));
+        setFormData(prev => ({ ...prev, [name]: value }));
+
+        // Validação especial para pontos
+        if (name === 'pointsRequired') {
+            const pointsValue = parseInt(value) || 0;
+            const isValid = pointsValue > 0;
+            setValidation(prev => ({
+                ...prev,
+                pointsValid: isValid,
+                pointsTouched: true
+            }));
+        }
     };
 
-    const handleFotoChange = (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-        setForm((prev) => ({ ...prev, profileImage: file }));
-        setPreviewImage(URL.createObjectURL(file));
+    const handleFileChange = (e) => {
+        setFormData(prev => ({ ...prev, file: e.target.files[0] }));
+    };
+
+    const isFormValid = () => {
+        const pointsValue = parseInt(formData.pointsRequired) || 0;
+        return pointsValue > 0 &&
+            formData.name.trim() &&
+            formData.description.trim();
+    };
+
+    const getInputClass = () => {
+        if (!validation.pointsTouched) return '';
+        return validation.pointsValid ? 'input-valid' : 'input-error';
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const token = localStorage.getItem("token");
-        const formData = new FormData();
 
-        const userData = {
-            username: form.username,
-            email: form.email,
-        };
-
-        formData.append("user", new Blob([JSON.stringify(userData)], {
-            type: "application/json",
-        }));
-
-        if (form.profileImage instanceof File) {
-            formData.append("profileImage", form.profileImage);
+        if (!isFormValid()) {
+            alert("Por favor, preencha todos os campos corretamente.");
+            return;
         }
 
         try {
-            const response = await fetch(`http://localhost:8083/api/users/${user.id}/edit-profile`, {
-                method: "PUT",
+            const token = localStorage.getItem("token");
+            const formDataToSend = new FormData();
+
+            formDataToSend.append('name', formData.name);
+            formDataToSend.append('description', formData.description);
+            formDataToSend.append('pointsRequired', formData.pointsRequired);
+            if (formData.file) {
+                formDataToSend.append('file', formData.file);
+            }
+
+            const response = await fetch("http://localhost:8083/rewards", {
+                method: "POST",
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    "Authorization": `Bearer ${token}`,
                 },
-                body: formData,
+                body: formDataToSend
             });
 
             if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(errorText || "Erro ao atualizar perfil");
+                throw new Error("Erro ao cadastrar recompensa");
             }
 
-            const updatedUser = await response.json();
-            onSave(updatedUser);
-        } catch (err) {
-            console.error("Erro ao atualizar perfil:", err);
-            alert("Erro ao atualizar perfil. Verifique os dados.");
+            alert("Recompensa cadastrada com sucesso!");
+            onSuccess();
+            onClose();
+        } catch (error) {
+            console.error("Erro:", error);
+            alert(error.message || "Erro ao cadastrar recompensa");
         }
     };
 
     return (
-        <div className="modal-backdrop">
-            <div className="modal-container">
-                <button className="modal-close" onClick={onClose}>×</button>
-                <h2 className="modal-title">Editar Perfil</h2>
+        <div className="modal">
+            <div className="modal-content">
+                <h2>Cadastrar Recompensa</h2>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Nome"
+                        required
+                    />
+                    <input
+                        name="description"
+                        value={formData.description}
+                        onChange={handleChange}
+                        placeholder="Descrição"
+                        required
+                    />
 
-                <form onSubmit={handleSubmit} className="profile-form">
-                    <div className="form-group">
-                        <label htmlFor="username">Nome:</label>
+                    <div className="input-container">
                         <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            value={form.username}
+                            type="number"
+                            name="pointsRequired"
+                            value={formData.pointsRequired}
                             onChange={handleChange}
+                            placeholder="Pontos Necessários"
+                            className={getInputClass()}
+                            required
+                            min="1"
                         />
+                        {validation.pointsTouched && !validation.pointsValid && (
+                            <span className="error-message">
+                                Os pontos devem ser maiores que zero
+                            </span>
+                        )}
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="email">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={form.email}
-                            onChange={handleChange}
-                        />
+                    <div className="file-upload-container">
+                        <label className={`file-upload-label ${formData.file ? 'has-file' : ''}`}>
+                            {formData.file ? formData.file.name : "Selecionar Imagem"}
+                            <input
+                                type="file"
+                                onChange={handleFileChange}
+                                className="file-upload-input"
+                                accept="image/*"
+                            />
+                        </label>
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="profileImage">Foto de Perfil:</label>
-                        <input
-                            type="file"
-                            id="profileImage"
-                            accept="image/*"
-                            onChange={handleFotoChange}
-                            className="file-input"
-                        />
-                    </div>
-
-                    {previewImage && (
-                        <div className="image-preview">
-                            <img src={previewImage} alt="Prévia da imagem de perfil" />
-                        </div>
-                    )}
-
-                    <div className="modal-actions">
-                        <button type="button" className="cancel-button" onClick={onClose}>
-                            Cancelar
+                    <div className="botoes-modal">
+                        <button
+                            type="submit"
+                            disabled={!isFormValid()}
+                            className={!isFormValid() ? 'button-disabled' : ''}
+                        >
+                            Salvar
                         </button>
-                        <button type="submit" className="save-button">
-                            Salvar Alterações
-                        </button>
+                        <button type="button" onClick={onClose}>Cancelar</button>
                     </div>
                 </form>
             </div>
@@ -132,4 +152,4 @@ const ModalEdicaoPerfil = ({ user, onClose, onSave }) => {
     );
 };
 
-export default ModalEdicaoPerfil;
+export default FormCadastroRecompensa;
