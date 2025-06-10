@@ -1,26 +1,29 @@
+# application-prod.yml
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
-
+    driver-class-name: org.postgresql.Driver
+  
   jpa:
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
+    show-sql: false
     properties:
       hibernate:
-        format_sql: false
-        use_sql_comments: false
-    show-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
-server:
-  port: 8000
-
+# Configurações de logging para produção
 logging:
   level:
-    org:
-      springframework:
-        security: DEBUG
+    com.vidalink: INFO
+    org.springframework.security: WARN
+  file:
+    name: /app/logs/vidalink-prod.log
+
+# Configurações de segurança
+server:
+  error:
+    include-message: never
+    include-binding-errors: never
