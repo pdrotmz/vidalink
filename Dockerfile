@@ -31,7 +31,7 @@ COPY src/main/resources/ src/main/resources/
 # COPIA OS ARQUIVOS DO FRONT-END JÁ PRÉ-BUILDADOS
 # A pasta `static.dist` que já contém o build do front-end será copiada
 # para o local que o Spring Boot espera para servir recursos estáticos: src/main/resources/static
-COPY src/main/resources/static.dist/ src/main/resources/static/
+COPY src/main/resources/static/dist/ src/main/resources/static/
 
 # Compila o projeto Spring Boot (agora com o front-end empacotado)
 # O WORKDIR é /app, então o mvnw será encontrado aqui
