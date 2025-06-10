@@ -1,4 +1,3 @@
-/* Unauthorized.css */
 .unauthorized-container {
     display: flex;
     flex-direction: column;
@@ -8,16 +7,19 @@
     padding: 2rem;
     text-align: center;
     background-color: #f8f9fa;
-    background-image: radial-gradient(circle at 10% 20%, rgba(239, 37, 88, 0.05) 0%, rgba(239, 37, 88, 0.01) 90%);
+    background-image:
+            radial-gradient(circle at 10% 20%, rgba(239, 37, 88, 0.05) 0%, rgba(239, 37, 88, 0.01) 90%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 .unauthorized-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     color: #ef2558;
     margin-bottom: 1.5rem;
     font-weight: 700;
     position: relative;
     padding-bottom: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .unauthorized-title::after {
@@ -26,18 +28,19 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    width: 80px;
+    width: min(80px, 20vw);
     height: 4px;
-    background-color: #ef2558;
+    background: linear-gradient(90deg, #ef2558, #ff6b9d);
     border-radius: 2px;
 }
 
 .unauthorized-message {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: #4a5568;
-    max-width: 600px;
+    max-width: min(600px, 90vw);
     margin: 0 auto 2rem;
     line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .unauthorized-message strong {
@@ -46,33 +49,41 @@
 }
 
 .unauthorized-icon {
-    font-size: 4rem;
+    font-size: clamp(3rem, 6vw, 4rem);
     color: #ef2558;
     margin-bottom: 1.5rem;
     animation: bounce 2s infinite;
+    filter: drop-shadow(0 4px 8px rgba(239, 37, 88, 0.2));
 }
 
 .unauthorized-button {
-    padding: 0.75rem 2rem;
-    background-color: #ef2558;
+    padding: clamp(0.6rem, 2vw, 0.75rem) clamp(1.5rem, 4vw, 2rem);
+    background: linear-gradient(135deg, #ef2558, #d41c4d);
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 8px rgba(239, 37, 88, 0.2);
+    box-shadow: 0 4px 12px rgba(239, 37, 88, 0.3);
+    font-family: inherit;
+    min-width: 120px;
 }
 
 .unauthorized-button:hover {
-    background-color: #d41c4d;
+    background: linear-gradient(135deg, #d41c4d, #b91640);
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(239, 37, 88, 0.3);
+    box-shadow: 0 6px 16px rgba(239, 37, 88, 0.4);
 }
 
-/* Animations */
+.unauthorized-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(239, 37, 88, 0.3);
+}
+
+/* Animações */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -85,29 +96,36 @@
     }
 }
 
-/* Responsive Design */
+/* Responsivo - Tablet */
+@media (max-width: 1024px) {
+    .unauthorized-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Responsivo - Celular */
 @media (max-width: 768px) {
-    .unauthorized-title {
-        font-size: 2rem;
+    .unauthorized-container {
+        padding: 1rem;
+        min-height: 100svh; /* Para mobile browsers */
     }
 
     .unauthorized-message {
-        font-size: 1.1rem;
-        padding: 0 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .unauthorized-icon {
-        font-size: 3rem;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .unauthorized-title {
-        font-size: 1.75rem;
+    .unauthorized-container {
+        padding: 0.8rem;
     }
 
     .unauthorized-button {
-        padding: 0.65rem 1.5rem;
-        font-size: 0.95rem;
+        width: 100%;
+        max-width: 280px;
     }
 }

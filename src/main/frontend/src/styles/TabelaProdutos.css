@@ -1,42 +1,138 @@
 .tabela-container {
-    padding: 2rem;
-    max-width: 100%;
-    overflow-x: auto;
-  }
-  
-  .tabela-produtos {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 8px;
-    overflow: hidden;
-    font-family: sans-serif;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tabela-produtos th {
-    background-color: #ddd;
-    padding: 1rem;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .tabela-produtos td {
-    padding: 1rem;
-    border-top: 1px solid #eee;
-  }
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 700px;
+}
+
+.tabela-produtos th {
+  background-color: #e9ecef;
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tabela-produtos td {
+  padding: 1rem;
+  border-bottom: 1px solid #f8f9fa;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tabela-produtos tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.tabela-produtos tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.2s ease;
+}
 
 .acoes {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  font-size: 1.2rem;
+  align-items: center;
+  font-size: 1.1rem;
+  min-width: 80px;
+}
+
+.acoes > * {
   cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .acoes .editar:hover {
   color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.1);
 }
 
 .acoes .excluir:hover {
   color: #ef2558;
+  background-color: rgba(239, 37, 88, 0.1);
+  transform: scale(1.1);
+}
+
+/* Responsivo - Tablet */
+@media (max-width: 1024px) {
+  .tabela-container {
+    padding: 1.5rem;
+  }
+
+  .tabela-produtos {
+    min-width: 600px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    padding: 0.9rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .acoes {
+    gap: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Responsivo - Celular */
+@media (max-width: 768px) {
+  .tabela-container {
+    padding: 1rem;
+  }
+
+  .tabela-produtos {
+    min-width: 500px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    padding: 0.7rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .acoes {
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabela-container {
+    padding: 0.5rem;
+  }
+
+  .tabela-produtos {
+    min-width: 400px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .acoes {
+    font-size: 0.8rem;
+  }
 }

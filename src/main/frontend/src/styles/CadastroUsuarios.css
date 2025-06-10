@@ -1,73 +1,276 @@
-/* CadastroUsuarios.css */
-.containerCadastro{
+/* CadastroUsuarios.css - Versão Responsiva */
+.containerCadastro {
     display: flex;
+    min-height: 100vh;
 }
 
-.containerCadastro .cadastroDireita{
+.containerCadastro .cadastroDireita {
     width: 50vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .containerCadastro .cadastroDireita form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70vh;
+    min-height: 70vh;
+    width: 100%;
+    max-width: 400px;
 }
 
-.containerCadastro .cadastroDireita form h1{
+.containerCadastro .cadastroDireita form h1 {
     text-align: center;
-    font-size: 2.5rem; /* Aumentei o tamanho do título */
+    font-size: 2.5rem;
+    color: #ef2558;
+    margin-bottom: 2rem;
 }
 
-.containerCadastro .cadastroDireita form input{
-    width: 30vw;
-    height: 3.5rem; /* Mudei de vw para rem para melhor consistência */
-    border-radius: 1vw;
-    border-style: solid;
-    border-color: #d3d3d3;
-    border-width: 1px;
-    padding: 0 1rem; /* Adicionei padding horizontal */
-    font-size: 1rem; /* Garanti tamanho de fonte legível */
+.containerCadastro .cadastroDireita form input {
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d3d3d3;
+    padding: 0 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
 }
 
-.containerCadastro .cadastroDireita form button{
-    width: 30vw;
-    height: 3.5rem; /* Padronizei com a altura dos inputs */
+.containerCadastro .cadastroDireita form input:focus {
+    outline: none;
+    border-color: #ef2558;
+    box-shadow: 0 0 0 2px rgba(239, 37, 88, 0.1);
+}
+
+.containerCadastro .cadastroDireita form button {
+    width: 100%;
+    height: 3.5rem;
     color: #fff;
     background: #ef2558;
-    border-style: none;
-    border-radius: 1vw;
-    font-size: 1.1rem; /* Aumentei ligeiramente a fonte */
-    margin-bottom: 1.5rem; /* Adicionei espaço abaixo do botão */
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.containerCadastro .cadastroDireita p{
-    text-align: end;
+.containerCadastro .cadastroDireita form button:hover {
+    background: #d91f47;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 37, 88, 0.3);
+}
+
+.containerCadastro .cadastroDireita p {
+    text-align: right;
     color: #b0b0b0;
-    margin-top: 1rem; /* Espaço acima do "Já tem conta?" */
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }
 
-.containerCadastro .cadastroDireita a{
-    text-align: end;
+.containerCadastro .cadastroDireita a {
     color: #ef2558;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.containerCadastro .cadastroEsquerda{
+.containerCadastro .cadastroDireita a:hover {
+    color: #d91f47;
+    text-decoration: underline;
+}
+
+.containerCadastro .cadastroEsquerda {
     width: 50vw;
-    height: 100vh;
+    min-height: 100vh;
     background: #ef2558;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.containerCadastro .cadastroEsquerda img{
-    width: 50vw;
+.containerCadastro .cadastroEsquerda img {
+    width: 100%;
+    max-width: 50vw;
+    height: auto;
+    object-fit: cover;
 }
 
-.cadastroDireita h1 {
-    color: #ef2558;
+/* RESPONSIVIDADE */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    .containerCadastro .cadastroDireita {
+        padding: 1.5rem;
+    }
+
+    .containerCadastro .cadastroDireita form h1 {
+        font-size: 2.2rem;
+    }
+
+    .containerCadastro .cadastroDireita form input,
+    .containerCadastro .cadastroDireita form button {
+        height: 3.2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tablets pequenos e smartphones grandes (600px - 767px) */
+@media (max-width: 767px) {
+    .containerCadastro {
+        flex-direction: column;
+    }
+
+    .containerCadastro .cadastroEsquerda {
+        width: 100vw;
+        height: 30vh;
+        min-height: 200px;
+        order: 1;
+    }
+
+    .containerCadastro .cadastroEsquerda img {
+        width: 100%;
+        max-width: 100vw;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .containerCadastro .cadastroDireita {
+        width: 100vw;
+        min-height: 70vh;
+        order: 2;
+        padding: 2rem 1.5rem;
+    }
+
+    .containerCadastro .cadastroDireita form {
+        max-width: 500px;
+        min-height: auto;
+    }
+
+    .containerCadastro .cadastroDireita form h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Smartphones (até 599px) */
+@media (max-width: 599px) {
+    .containerCadastro .cadastroEsquerda {
+        height: 25vh;
+        min-height: 150px;
+    }
+
+    .containerCadastro .cadastroDireita {
+        min-height: 75vh;
+        padding: 1.5rem 1rem;
+    }
+
+    .containerCadastro .cadastroDireita form h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .containerCadastro .cadastroDireita form input,
+    .containerCadastro .cadastroDireita form button {
+        height: 3rem;
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .containerCadastro .cadastroDireita form input {
+        border-radius: 0.4rem;
+    }
+
+    .containerCadastro .cadastroDireita form button {
+        border-radius: 0.4rem;
+        font-size: 1rem;
+    }
+
+    .containerCadastro .cadastroDireita p {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+/* Smartphones muito pequenos (até 375px) */
+@media (max-width: 375px) {
+    .containerCadastro .cadastroDireita {
+        padding: 1rem 0.8rem;
+    }
+
+    .containerCadastro .cadastroDireita form h1 {
+        font-size: 1.6rem;
+    }
+
+    .containerCadastro .cadastroDireita form input,
+    .containerCadastro .cadastroDireita form button {
+        height: 2.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .containerCadastro .cadastroDireita p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Orientação landscape em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+    .containerCadastro {
+        flex-direction: row;
+    }
+
+    .containerCadastro .cadastroEsquerda {
+        width: 40vw;
+        height: 100vh;
+        order: 1;
+    }
+
+    .containerCadastro .cadastroDireita {
+        width: 60vw;
+        height: 100vh;
+        order: 2;
+        padding: 1rem;
+    }
+
+    .containerCadastro .cadastroDireita form {
+        min-height: auto;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .containerCadastro .cadastroDireita form h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .containerCadastro .cadastroDireita form input,
+    .containerCadastro .cadastroDireita form button {
+        height: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Telas muito grandes (acima de 1400px) */
+@media (min-width: 1400px) {
+    .containerCadastro .cadastroDireita form {
+        max-width: 500px;
+    }
+
+    .containerCadastro .cadastroDireita form h1 {
+        font-size: 3rem;
+    }
+
+    .containerCadastro .cadastroDireita form input,
+    .containerCadastro .cadastroDireita form button {
+        height: 4rem;
+        font-size: 1.2rem;
+    }
 }

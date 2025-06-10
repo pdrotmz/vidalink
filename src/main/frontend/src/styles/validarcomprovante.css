@@ -1,15 +1,15 @@
-/* validarcomprovante.css */
 .admin-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: #f5f7fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .comprovantes-content {
   padding: 2rem;
   flex: 1;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -25,7 +25,7 @@
 .tabela-comprovantes-container h2 {
   color: #2c3e50;
   margin-bottom: 1.75rem;
-  font-size: 1.75rem;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
   font-weight: 600;
   position: relative;
   padding-bottom: 0.75rem;
@@ -36,9 +36,9 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 60px;
+  width: min(60px, 15vw);
   height: 4px;
-  background-color: #ef2558;
+  background: linear-gradient(90deg, #ef2558, #ff6b9d);
   border-radius: 2px;
 }
 
@@ -46,23 +46,27 @@
   overflow-x: auto;
   border-radius: 8px;
   border: 1px solid #eaeaea;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 .tabela-comprovantes {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
-  min-width: 600px;
+  min-width: 800px;
 }
 
 .tabela-comprovantes th {
-  background-color: #ef2558;
+  background: linear-gradient(135deg, #ef2558, #d41c4d);
   color: white;
   padding: 1rem 1.25rem;
   text-align: left;
   font-weight: 500;
   position: sticky;
   top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tabela-comprovantes td {
@@ -70,6 +74,7 @@
   border-bottom: 1px solid #f0f0f0;
   vertical-align: middle;
   transition: background-color 0.2s ease;
+  line-height: 1.4;
 }
 
 .tabela-comprovantes tr:not(:last-child) td {
@@ -80,6 +85,10 @@
   background-color: #fef2f2;
 }
 
+.tabela-comprovantes tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
 .user-name-cell {
   color: #ef2558;
   font-weight: 500;
@@ -88,20 +97,23 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 120px;
 }
 
 .user-name-cell:hover {
   color: #d41c4d;
   text-decoration: underline;
+  transform: translateX(2px);
 }
 
 .user-name-cell::before {
   content: '👤';
   font-size: 0.9em;
+  flex-shrink: 0;
 }
 
 .ver-detalhes-btn {
-  background-color: #ef2558;
+  background: linear-gradient(135deg, #ef2558, #d41c4d);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -112,12 +124,15 @@
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   box-shadow: 0 2px 6px rgba(239, 37, 88, 0.2);
+  min-width: 100px;
+  font-family: inherit;
 }
 
 .ver-detalhes-btn:hover {
-  background-color: #d41c4d;
+  background: linear-gradient(135deg, #d41c4d, #b91640);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(239, 37, 88, 0.3);
 }
@@ -131,8 +146,8 @@
   font-size: 0.9em;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
+/* Responsivo - Tablet */
+@media (max-width: 1024px) {
   .comprovantes-content {
     padding: 1.5rem;
   }
@@ -140,47 +155,99 @@
   .tabela-comprovantes-container {
     padding: 1.5rem;
   }
+
+  .tabela-comprovantes {
+    min-width: 700px;
+    font-size: 0.9rem;
+  }
+
+  .tabela-comprovantes th,
+  .tabela-comprovantes td {
+    padding: 0.9rem 1rem;
+  }
 }
 
+/* Responsivo - Celular */
 @media (max-width: 768px) {
   .comprovantes-content {
     padding: 1rem;
   }
 
-  .tabela-comprovantes-container h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .tabela-comprovantes th,
-  .tabela-comprovantes td {
-    padding: 0.75rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .ver-detalhes-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
   .tabela-comprovantes-container {
     padding: 1rem;
     border-radius: 8px;
   }
 
-  .tabela-comprovantes-container h2 {
-    font-size: 1.3rem;
+  .tabela-comprovantes {
+    min-width: 600px;
+    font-size: 0.85rem;
+  }
+
+  .tabela-comprovantes th,
+  .tabela-comprovantes td {
+    padding: 0.75rem 0.8rem;
+  }
+
+  .ver-detalhes-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+
+  .user-name-cell {
+    min-width: 100px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comprovantes-content {
+    padding: 0.5rem;
+  }
+
+  .tabela-comprovantes-container {
+    padding: 0.8rem;
+  }
+
+  .tabela-comprovantes {
+    min-width: 500px;
+    font-size: 0.8rem;
+  }
+
+  .tabela-comprovantes th,
+  .tabela-comprovantes td {
+    padding: 0.6rem 0.5rem;
   }
 
   .ver-detalhes-btn {
     width: 100%;
     justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.75rem;
   }
 
   .user-name-cell::before,
   .ver-detalhes-btn::before {
     display: none;
+  }
+
+  .user-name-cell {
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+}
+
+/* Melhorias gerais para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .unauthorized-icon {
+    animation: none;
+  }
+
+  .tabela-comprovantes tr,
+  .tabela-produtos tr,
+  .ver-detalhes-btn,
+  .acoes > *,
+  .user-name-cell {
+    transition: none;
   }
 }

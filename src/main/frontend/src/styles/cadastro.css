@@ -1,12 +1,14 @@
+/* cadastro.css - Versão Responsiva */
 .CadastroContainer body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     gap: 20px;
     background-color: #f44336;
+    padding: 1rem;
 }
 
 .CadastroContainer .titulo {
@@ -15,22 +17,21 @@
     text-align: center;
     font-size: 2.0em;
     margin-bottom: 20px;
-    max-width: 80%;
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
-
-
 .CadastroContainer .container {
-
     margin-top: -45px;
     background-color: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 30%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
-    height: 280px
+    min-height: 280px;
+    box-sizing: border-box;
 }
 
 .CadastroContainer .form-group {
@@ -47,27 +48,27 @@
     font-size: 1.5em;
 }
 
-.CadastroContainer .form-group {
-    margin-bottom: 15px;
-}
-
 .CadastroContainer .row {
     display: flex;
     gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .CadastroContainer .row input,
-.row select {
+.CadastroContainer .row select {
     flex: 1;
+    min-width: 0;
 }
 
 .CadastroContainer input,
-select {
+.CadastroContainer select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 .CadastroContainer .button {
@@ -76,12 +77,11 @@ select {
     border: none;
     padding: 12px;
     width: 100%;
+    max-width: 250px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    width: 250px;
-    /* Ajuste para o tamanho desejado */
-
+    transition: background-color 0.3s ease;
 }
 
 .CadastroContainer .button:hover {
@@ -96,92 +96,219 @@ select {
 .CadastroContainer input[type="date"] {
     height: 40px;
     max-width: 150px;
-    /* Define um limite máximo de largura */
     width: 100%;
-    /* Ajusta para ocupar no máximo 150px */
     padding: 5px;
-    /* Ajusta o espaçamento interno */
     font-size: 14px;
-    /* Reduz o tamanho da fonte */
     box-sizing: border-box;
-    /* Garante que o padding não afete o tamanho final */
-    margin-left: auto;
-    /* Empurra o campo para a direita */
-
 }
 
 .CadastroContainer .form-group.genero-data {
     margin-bottom: 20px;
-    /* Adiciona um espaçamento abaixo do grupo de gênero e data */
 }
 
 .CadastroContainer .genero-label {
     font-size: 1.3em;
-    /* Aumenta o tamanho da fonte */
-    font-weight: medium;
-    /* Deixa a frase mais destacada */
+    font-weight: 500;
     margin-bottom: 10px;
-    /* Ajusta o espaçamento abaixo da pergunta */
     display: block;
-    /* Garante que ocupe toda a largura */
-}
-
-.CadastroContainer .row {
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os elementos na linha */
-    align-items: center;
-    /* Alinha verticalmente */
 }
 
 .CadastroContainer .row label {
     display: flex;
     align-items: center;
     gap: 5px;
-    /* Ajusta o espaçamento entre a bolinha e o texto */
     font-size: 19px;
-    /* Aumenta o tamanho do texto */
-    font-weight: medium;
-    /* Deixa o texto mais destacado (opcional) */
-
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .CadastroContainer .terms {
     display: flex;
     align-items: center;
-    /* Alinha o ícone com o texto */
     gap: 5px;
-    /* Espaçamento entre o ícone e o texto */
     font-size: 14px;
-    /* Ajuste do tamanho da fonte */
     justify-content: center;
-    /* Centraliza horizontalmente */
     text-align: center;
-    /* Garante a centralização do texto */
     width: 100%;
-    /* Ocupa toda a largura disponível */
+    flex-wrap: wrap;
 }
 
 .CadastroContainer .terms-icone {
     width: 16px;
-    /* Tamanho da imagem */
     height: 16px;
-    /* Tamanho da imagem */
+    flex-shrink: 0;
 }
 
 .CadastroContainer select {
     width: 150px;
-    /* Ajuste a largura conforme necessário */
     height: 40px;
-    /* Ajuste a altura conforme necessário */
     font-size: 14px;
-    /* Ajuste o tamanho do texto dentro da caixa */
 }
 
 .CadastroContainer .form-group select {
     display: block;
     margin: 0 auto;
-    /* Centraliza horizontalmente */
     text-align: center;
-    /* Centraliza o texto dentro da caixa */
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    .CadastroContainer .titulo {
+        font-size: 1.8em;
+        margin-top: -150px;
+    }
+
+    .CadastroContainer .container {
+        width: 90%;
+        max-width: 600px;
+        padding: 35px;
+    }
+
+    .CadastroContainer h2 {
+        font-size: 1.4em;
+        padding: 18px;
+    }
+}
+
+/* Tablets pequenos (600px - 767px) */
+@media (max-width: 767px) {
+    .CadastroContainer .titulo {
+        font-size: 1.6em;
+        margin-top: -100px;
+        max-width: 95%;
+    }
+
+    .CadastroContainer .container {
+        width: 95%;
+        padding: 30px;
+        margin-top: -20px;
+    }
+
+    .CadastroContainer .row {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .CadastroContainer .row label {
+        font-size: 17px;
+        justify-content: flex-start;
+    }
+
+    .CadastroContainer input[type="date"] {
+        max-width: 100%;
+    }
+
+    .CadastroContainer select {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Smartphones (até 599px) */
+@media (max-width: 599px) {
+    .CadastroContainer body {
+        padding: 0.5rem;
+        gap: 15px;
+    }
+
+    .CadastroContainer .titulo {
+        font-size: 1.4em;
+        margin-top: -60px;
+        margin-bottom: 15px;
+    }
+
+    .CadastroContainer .container {
+        width: 100%;
+        padding: 25px 20px;
+        margin-top: 0;
+        min-height: auto;
+    }
+
+    .CadastroContainer h2 {
+        font-size: 1.2em;
+        padding: 15px;
+        margin: -25px -20px 15px -20px;
+    }
+
+    .CadastroContainer .genero-label {
+        font-size: 1.1em;
+    }
+
+    .CadastroContainer .row label {
+        font-size: 16px;
+    }
+
+    .CadastroContainer input,
+    .CadastroContainer select {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .CadastroContainer .button {
+        font-size: 16px;
+        padding: 14px;
+        max-width: 100%;
+    }
+
+    .CadastroContainer .terms {
+        font-size: 13px;
+    }
+}
+
+/* Smartphones muito pequenos (até 375px) */
+@media (max-width: 375px) {
+    .CadastroContainer .titulo {
+        font-size: 1.2em;
+        margin-top: -40px;
+    }
+
+    .CadastroContainer .container {
+        padding: 20px 15px;
+    }
+
+    .CadastroContainer h2 {
+        font-size: 1.1em;
+        padding: 12px;
+        margin: -20px -15px 12px -15px;
+    }
+
+    .CadastroContainer .genero-label {
+        font-size: 1em;
+    }
+
+    .CadastroContainer .row label {
+        font-size: 15px;
+    }
+
+    .CadastroContainer input,
+    .CadastroContainer select {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .CadastroContainer .terms {
+        font-size: 12px;
+    }
+}
+
+/* Orientação landscape em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+    .CadastroContainer .titulo {
+        margin-top: -30px;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .CadastroContainer .container {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .CadastroContainer h2 {
+        padding: 10px;
+        margin: -20px -20px 10px -20px;
+    }
 }

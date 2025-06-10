@@ -2,168 +2,209 @@
 
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body, #root {
-    height: 100%;
-    width: 100%;
-  }
-  
-  /* Layout principal */
-  .homepage {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    font-family: 'Montserrat', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* NavSection */
-  .nav-section {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f5f5f5;
-    align-items: center;
-    width: 100%;
-    padding: 1.2rem;
-  }
-  
-  /* Navbar */
-  .navbar {
-    padding: 0.1rem 2rem;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-    font-weight: 400;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-  }
-  
-  /* Conteúdo principal */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Layout principal */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NavSection */
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.1rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  font-weight: 400;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FF4343;
+}
+
+/* Conteúdo principal */
+.main-content {
+  margin: auto;
+  margin-top: -1.2rem;
+  width: 70%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-text {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+
+.main-content h1 {
+  color: #333;
+  text-align: left;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.blood-drop {
+  display: flex;
+  width: 256px;
+  justify-content: center;
+  margin-left: 5rem;
+  height: 100%;
+}
+
+.blood-drop img {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.blood-drop img:hover {
+  transform: scale(1.05);
+}
+
+/* Seção de login */
+.login-section {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.login-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.login-button {
+  background: #FF4343;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(255, 67, 67, 0.2);
+}
+
+.login-button:hover {
+  background: #e03a3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 67, 67, 0.3);
+}
+
+.call-action p {
+  margin: 1rem 0 3rem;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+/* Botão */
+.donate-button {
+  background: #FF4343;
+  color: white;
+  border: none;
+  padding: 1.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Changa One', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 67, 67, 0.2);
+}
+
+.donate-button:hover {
+  background: #e03a3a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 67, 67, 0.3);
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  justify-content: end;
+  align-items: end;
+  bottom: 0px;
+  right: 0px;
+}
+
+.logo img {
+  width: 256px;
+}
+
+/* ========== RESPONSIVIDADE HOME ========== */
+
+/* Desktop grande (1200px+) */
+@media (min-width: 1200px) {
   .main-content {
-    margin: auto;
-    margin-top: -1.2rem ;
-    width: 70%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    width: 60%;
+  }
+}
+
+/* Tablet grande (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .main-content {
+    width: 80%;
   }
 
-  .main-text {
-    position: relative;
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    width: 100%;
-
-  }
-  
   .main-content h1 {
-    color: #333;
-    text-align: left;
-    font-size: 4rem;
-    font-weight: 400;
+    font-size: 3.5rem;
   }
 
   .blood-drop {
-    display: flex;
-    width: 256px;
-    justify-content: center;
-    margin-left: 5rem;
-    height: 100%;
+    margin-left: 4rem;
   }
 
   .blood-drop img {
-    width: 150px;
+    width: 130px;
   }
-  
-  /* Seção de login */
-  .login-section {
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 200px;
-  }
-  
-  .login-section h2 {
-    color: #333;
-    margin-bottom: 1rem;
-  }
+}
 
-  .login-button {
-    background: #FF4343;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  .login-button:hover {
-    background: #e03a3a;
-  }
-
-  .call-action p {
-    margin: 1rem 0 3rem;
-    font-size: 1.3rem;
-  }
-  
-  /* Botão */
-  .donate-button {
-    background: #FF4343;
-    color: white;
-    border: none;
-    padding: 1.5rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-family: 'Changa One', cursive;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .donate-button:hover {
-    background: #e03a3a;
-  }
-
-  .logo {
-      display: flex;
-      position: absolute;
-      justify-content: end;
-      align-items: end;
-      bottom: 0px;
-      right: 0px;
-
-  }
-
-  .logo img {
-    width: 256px;
-  }
-
-
-  /* ========== RESPONSIVIDADE ========== */
-
-/* Tablet (768px a 1024px) */
-@media (max-width: 1024px) {
+/* Tablet médio (768px - 1023px) */
+@media (max-width: 1023px) {
   .main-content {
     width: 85%;
   }
@@ -188,9 +229,13 @@
   .nav-links {
     gap: 1.8rem;
   }
+
+  .logo img {
+    width: 220px;
+  }
 }
 
-/* Smartphone (até 767px) */
+/* Tablet pequeno e smartphones grandes (600px - 767px) */
 @media (max-width: 767px) {
   .nav-section {
     flex-direction: column;
@@ -207,6 +252,7 @@
     gap: 1rem;
     width: 100%;
     padding: 0.5rem 0;
+    flex-wrap: wrap;
   }
 
   .login-section {
@@ -218,6 +264,7 @@
   .main-content {
     width: 95%;
     margin-top: 0;
+    padding: 0 1rem;
   }
 
   .main-text {
@@ -258,8 +305,41 @@
   }
 }
 
-/* Smartphones pequenos (até 480px) */
-@media (max-width: 480px) {
+/* Smartphones médios (480px - 599px) */
+@media (max-width: 599px) {
+  .main-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .blood-drop img {
+    width: 90px;
+  }
+
+  .call-action p {
+    font-size: 1rem;
+  }
+
+  .donate-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.1rem;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+}
+
+/* Smartphones pequenos (até 479px) */
+@media (max-width: 479px) {
+  .nav-section {
+    padding: 0.8rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
   .main-content h1 {
     font-size: 2rem;
   }
@@ -269,11 +349,12 @@
   }
 
   .call-action p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin: 0.8rem 0 1.5rem;
   }
 
   .donate-button {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.8rem 1rem;
   }
 

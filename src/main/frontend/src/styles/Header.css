@@ -1,4 +1,4 @@
-/* Header.css */
+/* Header.css - Versão Responsiva */
 .headerContent {
     margin: 0;
     background-color: #ef2558;
@@ -10,6 +10,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    min-height: 60px;
+    box-sizing: border-box;
 }
 
 .headerContent nav {
@@ -23,6 +25,9 @@
     gap: 1.5rem;
     margin: 0;
     padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .headerContent ul li {
@@ -38,6 +43,8 @@
     padding: 0.5rem 0;
     transition: all 0.3s ease;
     display: inline-block;
+    white-space: nowrap;
+    position: relative;
 }
 
 /* Hover and Active Effects */
@@ -70,10 +77,46 @@
     width: 100%;
 }
 
-/* Responsive Design */
-@media (max-width: 800px) {
+/* RESPONSIVIDADE MELHORADA */
+
+/* Tablets grandes (1024px - 1199px) */
+@media (max-width: 1199px) {
+    .headerContent {
+        padding: 0.75rem 1.8rem;
+    }
+
+    .headerContent ul {
+        gap: 1.3rem;
+    }
+
+    .headerContent nav a {
+        font-size: 1.05rem;
+    }
+}
+
+/* Tablets médios (768px - 1023px) */
+@media (max-width: 1023px) {
     .headerContent {
         padding: 0.75rem 1.5rem;
+        min-height: 55px;
+    }
+
+    .headerContent ul {
+        gap: 1.2rem;
+        justify-content: center;
+    }
+
+    .headerContent nav a {
+        font-size: 1rem;
+        padding: 0.45rem 0;
+    }
+}
+
+/* Tablets pequenos (600px - 767px) */
+@media (max-width: 767px) {
+    .headerContent {
+        padding: 0.7rem 1.2rem;
+        min-height: 50px;
     }
 
     .headerContent ul {
@@ -82,21 +125,133 @@
     }
 
     .headerContent nav a {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
     }
 }
 
-@media (max-width: 480px) {
+/* Smartphones (até 599px) */
+@media (max-width: 599px) {
     .headerContent {
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1rem;
+        min-height: 48px;
     }
 
     .headerContent ul {
-        gap: 0.5rem;
+        gap: 0.8rem;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .headerContent nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.2rem;
+    }
+
+    /* Simplifica efeitos em telas pequenas */
+    .headerContent nav a:hover {
+        transform: none;
+    }
+
+    .headerContent nav a::after {
+        display: none;
+    }
+
+    .headerContent nav a.active::after {
+        display: none;
+    }
+
+    /* Adiciona indicador visual alternativo para link ativo */
+    .headerContent nav a.active {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 0.25rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+/* Smartphones muito pequenos (até 375px) */
+@media (max-width: 375px) {
+    .headerContent {
+        padding: 0.5rem 0.8rem;
+        min-height: 45px;
+    }
+
+    .headerContent ul {
+        gap: 0.6rem;
+    }
+
+    .headerContent nav a {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.15rem;
+    }
+
+    .headerContent nav a.active {
+        padding: 0.35rem 0.5rem;
+    }
+}
+
+/* Orientação landscape em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+    .headerContent {
+        min-height: 40px;
+        padding: 0.4rem 1rem;
+    }
+
+    .headerContent nav a {
+        padding: 0.3rem 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .headerContent nav a.active {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .headerContent ul {
+        gap: 0.8rem;
+    }
+}
+
+/* Menu hamburger para telas muito pequenas (opcional) */
+@media (max-width: 320px) {
+    .headerContent {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .headerContent ul {
+        gap: 0.4rem;
+        justify-content: space-between;
     }
 
     .headerContent nav a {
         font-size: 0.8rem;
-        padding: 0.5rem 0.25rem;
+        padding: 0.3rem 0.1rem;
+    }
+
+    .headerContent nav a.active {
+        padding: 0.3rem 0.4rem;
+    }
+}
+
+/* Telas muito grandes (acima de 1400px) */
+@media (min-width: 1400px) {
+    .headerContent {
+        padding: 1rem 3rem;
+        min-height: 70px;
+    }
+
+    .headerContent ul {
+        gap: 2rem;
+    }
+
+    .headerContent nav a {
+        font-size: 1.2rem;
+        padding: 0.6rem 0;
+    }
+}
+
+/* Ajustes para alta densidade de pixels */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .headerContent nav a::after {
+        height: 1px;
     }
 }
