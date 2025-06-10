@@ -9,7 +9,7 @@ const ListagemComprovantes = () => {
     const fetchComprovantes = async () => {
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("http://localhost:8083/submissions/pending", {
+            const response = await fetch("https://vidalink.onrender.com/submissions/pending", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

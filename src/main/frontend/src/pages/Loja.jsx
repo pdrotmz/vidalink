@@ -8,7 +8,7 @@ export const Loja = () => {
     useEffect(() => {
         const token = localStorage.getItem("token");
 
-        fetch("http://localhost:8083/rewards/available", {
+        fetch("https://vidalink.onrender.com/rewards/available", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -32,7 +32,7 @@ export const Loja = () => {
                     {recompensas.map((item) => (
                         <div key={item.id} className="lojaCard">
                             <img
-                                src={`http://localhost:8083/rewards/${item.id}/image`}
+                                src={`https://vidalink.onrender.com/rewards/${item.id}/image`}
                                 alt={item.name}
                                 className="lojaImage"
                                 onError={(e) => {

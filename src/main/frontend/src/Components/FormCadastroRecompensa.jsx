@@ -30,7 +30,7 @@ const FormCadastroRecompensa = ({ onClose, onSuccess }) => {
                 formDataToSend.append('file', formData.file);
             }
 
-            const response = await fetch("http://localhost:8083/rewards", {
+            const response = await fetch("https://vidalink.onrender.com/rewards", {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,

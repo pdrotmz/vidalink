@@ -6,7 +6,7 @@ const ModalComprovante = ({ comprovante, onClose }) => {
 
     const aprovarComprovante = async () => {
         try {
-            const response = await fetch(`http://localhost:8083/submissions/${comprovante.id}/validate`, {
+            const response = await fetch(`https://vidalink.onrender.com/submissions/${comprovante.id}/validate`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -31,7 +31,7 @@ const ModalComprovante = ({ comprovante, onClose }) => {
         if (!confirmacao) return;
 
         try {
-            const response = await fetch(`http://localhost:8083/submissions/${comprovante.id}`, {
+            const response = await fetch(`https://vidalink.onrender.com/submissions/${comprovante.id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ const ModalComprovante = ({ comprovante, onClose }) => {
 
                 {comprovante.filePath ? (
                     <img
-                        src={`http://localhost:8083/${comprovante.filePath}`}
+                        src={`https://vidalink.onrender.com/${comprovante.filePath}`}
                         alt="Comprovante"
                         style={{ maxWidth: "100%", maxHeight: "400px" }}
                     />

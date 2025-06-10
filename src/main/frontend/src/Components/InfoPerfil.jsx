@@ -14,7 +14,7 @@ const InfoPerfil = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch("http://localhost:8083/api/users/me", {
+                const response = await fetch("https://vidalink.onrender.com/api/users/me", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
