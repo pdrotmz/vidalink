@@ -2,27 +2,27 @@
 FROM node:20-alpine AS frontend-builder
 
 # O WORKDIR para o front-end será a pasta onde os arquivos do front-end estão
-WORKDIR /app/frontend
+# De acordo com sua estrutura, o frontend está em 'src/main/frontend'
+WORKDIR /app/src/main/frontend
 
 # Copia package.json e package-lock.json (ou yarn.lock) para cache de dependências
-# O caminho é relativo ao contexto de build do Docker (raiz do seu projeto)
-# Sua pasta 'frontend' está em 'src/main/frontend'
+# O caminho de origem é relativo ao contexto de build do Docker (raiz do seu projeto)
 COPY src/main/frontend/package*.json ./
 
 # Instala as dependências do front-end
 RUN npm install --omit=dev
 
-# Copia o restante do código-fonte do front-end
-# O caminho é relativo ao contexto de build do Docker
+# Copia o restante do código-source do front-end
+# O caminho de origem é relativo ao contexto de build do Docker
 COPY src/main/frontend/ .
 
-# Compila o front-end (gera a pasta 'dist' dentro de /app/frontend)
+# Compila o front-end (gera a pasta 'dist' dentro de /app/src/main/frontend)
 RUN npm run build
 
 # --- ETAPA 2: BUILD DO BACK-END (SPRING BOOT) E INTEGRAÇÃO DO FRONT-END ---
 FROM eclipse-temurin:21-jdk AS backend-builder
 
-# O WORKDIR para o back-end será a raiz do seu projeto dentro do container
+# O WORKDIR para o back-end será a raiz do seu projeto dentro do container (/app)
 WORKDIR /app
 
 # Copia o .env (se necessário para o build do Spring Boot ou runtime)
@@ -41,15 +41,18 @@ RUN chmod +x mvnw
 # O WORKDIR é /app, então o mvnw será encontrado aqui
 RUN ./mvnw dependency:go-offline
 
-# Copia o código-fonte do back-end
+# Copia o código-fonte do back-end (java)
 # O código-fonte Java está em src/main/java
 COPY src/main/java/ src/main/java/
-COPY src/main/resources/ src/main/resources/ # Copia os recursos (como application.properties)
+
+# Copia os recursos do back-end (application.properties, etc.)
+# Os recursos estão em src/main/resources
+COPY src/main/resources/ src/main/resources/
 
 # Copia os arquivos de build do front-end para o diretório de recursos estáticos do Spring Boot
-# A pasta `dist` foi gerada na etapa `frontend-builder` em /app/frontend/dist
+# A pasta `dist` foi gerada na etapa `frontend-builder` em /app/src/main/frontend/dist
 # Ela será copiada para `src/main/resources/static` na etapa atual (/app/src/main/resources/static)
-COPY --from=frontend-builder /app/frontend/dist src/main/resources/static
+COPY --from=frontend-builder /app/src/main/frontend/dist src/main/resources/static
 
 # Compila o projeto Spring Boot (agora com o front-end empacotado)
 # O WORKDIR é /app, então o mvnw será encontrado aqui
