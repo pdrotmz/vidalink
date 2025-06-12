@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -84,25 +86,57 @@ public class RewardController {
 
     @GetMapping("/{id}/image")
     public ResponseEntity<Resource> getRewardImage(@PathVariable UUID id) {
-        Optional<Reward> rewardOptional = Optional.ofNullable(rewardService.getById(id));
-
-        if (rewardOptional.isEmpty() || rewardOptional.get().getImageUrl() == null) {
-            return ResponseEntity.notFound().build();
-        }
-
         try {
-            Path imagePath = Paths.get("uploads").resolve(rewardOptional.get().getImageUrl());
-            Resource imageResource = new UrlResource(imagePath.toUri());
-
-            if (!imageResource.exists()) {
+            // 1. Buscar a recompensa pelo ID
+            Optional<Reward> rewardOpt = rewardService.findById(id);
+            if (rewardOpt.isEmpty()) {
                 return ResponseEntity.notFound().build();
             }
 
+            Reward reward = rewardOpt.get();
+            String imageUrl = reward.getImageUrl();
+
+            // 2. Verificar se tem imageUrl
+            if (imageUrl == null || imageUrl.trim().isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+
+            // 3. Construir o caminho do arquivo
+            Path filePath;
+            if (imageUrl.startsWith("uploads/")) {
+                // Remove "uploads/" do início se existir
+                String fileName = imageUrl.substring("uploads/".length());
+                filePath = Paths.get("uploads", fileName);
+            } else {
+                filePath = Paths.get("uploads", imageUrl);
+            }
+
+            // 4. Verificar se o arquivo existe
+            if (!Files.exists(filePath)) {
+                System.err.println("Arquivo não encontrado: " + filePath.toAbsolutePath());
+                return ResponseEntity.notFound().build();
+            }
+
+            // 5. Criar o Resource
+            Resource resource = new UrlResource(filePath.toUri());
+            if (!resource.exists() || !resource.isReadable()) {
+                System.err.println("Arquivo não legível: " + filePath.toAbsolutePath());
+                return ResponseEntity.notFound().build();
+            }
+
+            // 6. Determinar o tipo de conteúdo
+            String contentType = rewardService.determineContentType(filePath);
+
+            // 7. Retornar a resposta
             return ResponseEntity.ok()
-                    .contentType(MediaType.IMAGE_JPEG) // ou IMAGE_PNG, dependendo do seu tipo
-                    .body(imageResource);
-        } catch (IOException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                    .contentType(MediaType.parseMediaType(contentType))
+                    .header(HttpHeaders.CACHE_CONTROL, "max-age=3600") // Cache por 1 hora
+                    .body(resource);
+
+        } catch (Exception e) {
+            System.err.println("Erro ao servir imagem para reward " + id + ": " + e.getMessage());
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().build();
         }
     }
 

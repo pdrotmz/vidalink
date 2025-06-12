@@ -57,6 +57,11 @@ public class RewardService {
         return false;
     }
 
+    public Reward getById(UUID id) {
+        return rewardRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Recompensa não encontrada com ID: " + id));
+    }
+
     public Reward createReward(String name, String description, Integer pointsRequired, MultipartFile file) throws IOException {
         String imageUrl = null;
 
@@ -90,9 +95,8 @@ public class RewardService {
                 .collect(Collectors.toList());
     }
 
-    public Reward getById(UUID id) {
-        return rewardRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Recompensa não encontrada com ID: " + id));
+    public Optional<Reward> findById(UUID id) {
+        return rewardRepository.findById(id);
     }
 
     public List<Reward> findRewardByName(String name) {
@@ -101,6 +105,23 @@ public class RewardService {
             throw new RuntimeException("Não há nenhuma recompensa!");
         }
         return rewards;
+    }
+
+    public String determineContentType(Path filePath) {
+        String fileName = filePath.getFileName().toString().toLowerCase();
+        if (fileName.endsWith(".png")) {
+            return "image/png";
+        } else if (fileName.endsWith(".jpg") || fileName.endsWith(".jpeg")) {
+            return "image/jpeg";
+        } else if (fileName.endsWith(".gif")) {
+            return "image/gif";
+        } else if (fileName.endsWith(".svg")) {
+            return "image/svg+xml";
+        } else if (fileName.endsWith(".webp")) {
+            return "image/webp";
+        } else {
+            return "application/octet-stream";
+        }
     }
 
     public void redeemReward(UUID userId, UUID rewardId) {
