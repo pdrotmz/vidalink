@@ -2,6 +2,7 @@ package com.vidalink.controller;
 
 import com.vidalink.dto.reward.RewardDTO;
 import com.vidalink.dto.reward.RewardRedeemResponseDTO;
+import com.vidalink.dto.reward.RewardResponseDTO;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.user.User;
 import com.vidalink.services.RewardService;
@@ -114,7 +115,7 @@ public class RewardController {
 
     @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public ResponseEntity<Reward> updateReward(
+    public ResponseEntity<RewardResponseDTO> updateReward(
             @PathVariable UUID id,
             @RequestParam("name") String name,
             @RequestParam("description") String description,
@@ -126,7 +127,8 @@ public class RewardController {
         reward.setDescription(description);
         reward.setPointsRequired(pointsRequired);
 
-        return ResponseEntity.ok(rewardService.updateReward(id, reward, file));
+        Reward updated = rewardService.updateReward(id, reward, file);
+        return ResponseEntity.ok(new RewardResponseDTO(updated));
     }
 
 

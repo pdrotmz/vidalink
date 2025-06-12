@@ -77,6 +77,7 @@ const TabelaProdutos = ({ recompensas }) => {
                 <ModalEdicao
                     recompensa={recompensaSelecionada}
                     onClose={fecharModal}
+                    onSuccess={() => window.location.reload()}
                 />
             )}
         </div>
