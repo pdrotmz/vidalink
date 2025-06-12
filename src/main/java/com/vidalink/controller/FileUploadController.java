@@ -43,6 +43,7 @@ public class FileUploadController {
             // Salva o arquivo
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
+            // Retorna o caminho para acesso (ajuste conforme seu mapeamento)
             String fileUrl = "/uploads/" + filename;
             return ResponseEntity.ok().body(Map.of("url", fileUrl));
 
