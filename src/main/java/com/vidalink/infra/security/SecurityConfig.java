@@ -88,8 +88,6 @@ public class SecurityConfig {
                         // 🔐 ADMIN pode rejeitar (deletar) submissão
                         .requestMatchers(HttpMethod.DELETE, "/submissions/{id}").hasRole("ADMIN")
 
-                        .requestMatchers("/uploads/**").permitAll()
-
                         .requestMatchers(HttpMethod.GET, "api/users/**").hasRole("USER")
                         .requestMatchers(HttpMethod.GET, "/api/users/me").hasRole("USER")
                         .requestMatchers(HttpMethod.PUT, "/api/users/*/edit-profile").hasAnyRole("ADMIN", "USER")
@@ -105,7 +103,8 @@ public class SecurityConfig {
                         // 🔓 Público (listar recompensas ativas)
                         .requestMatchers(HttpMethod.GET, "/rewards/available").hasAnyRole("ADMIN", "USER")
 
-                        .requestMatchers(HttpMethod.GET, "/rewards/*/image").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/rewards/**/image").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/uploads/**").permitAll()
 
                         // 🔐 ADMIN pode criar recompensas
                         .requestMatchers(HttpMethod.POST, "/rewards").hasRole("ADMIN")

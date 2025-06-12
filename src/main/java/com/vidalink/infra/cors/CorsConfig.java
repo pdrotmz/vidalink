@@ -22,8 +22,9 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/profile-images/**")
-                .addResourceLocations("file:profile-images/");
+        registry.addResourceHandler("/uploads/**")
+                .addResourceLocations("file:uploads/")
+                .setCachePeriod(3600);
     }
 
     public void configureViewControlleres(ViewControllerRegistry registry) {
