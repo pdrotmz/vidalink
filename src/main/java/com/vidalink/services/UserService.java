@@ -8,6 +8,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -69,23 +70,12 @@ public class UserService {
         }
     }
 
-    public Resource loadProfileImage(UUID id) throws IOException {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
-
-        String filename = user.getProfileImage();
-        if (filename == null || filename.isBlank()) {
-            throw new FileNotFoundException("Imagem de perfil não encontrada");
-        }
-
-        // Caminho da imagem salva
-        Path imagePath = Paths.get("uploads/profile-images", filename);
-
+    public Resource loadProfileImage(UUID userId) throws IOException {
+        Path imagePath = Paths.get("profile-images", userId + ".jpg"); // ou .png etc.
         if (!Files.exists(imagePath)) {
-            throw new FileNotFoundException("Imagem não encontrada no sistema de arquivos");
+            throw new FileNotFoundException("Imagem não encontrada");
         }
-
-        return new FileSystemResource(imagePath);
+        return new UrlResource(imagePath.toUri());
     }
 
     private void updateFields(User user, UserProfileMultipartDTO dto, MultipartFile image) throws IOException {
