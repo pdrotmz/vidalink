@@ -23,6 +23,10 @@ export const Loja = () => {
             })
             .then(data => {
                 console.log("Dados recebidos:", data); // Para debug
+                // Verificar se cada item tem imageUrl
+                data.forEach(item => {
+                    console.log(`Item ${item.name}: imageUrl = ${item.imageUrl}`);
+                });
                 setRecompensas(data);
             })
             .catch(error => {
@@ -35,15 +39,19 @@ export const Loja = () => {
 
     // Função para construir a URL da imagem
     const getImageUrl = (item) => {
-        if (item.imageUrl) {
+        // Se tem imageUrl, tenta carregar a imagem
+        if (item.imageUrl && item.imageUrl.trim() !== '') {
             return `https://vidalink.onrender.com/rewards/${item.id}/image`;
         }
+        // Se não tem imageUrl, usa placeholder diretamente
         return placeholderImage;
     };
 
     // Função para tratar erro de imagem
-    const handleImageError = (e) => {
-        console.log("Erro ao carregar imagem, usando placeholder");
+    const handleImageError = (e, item) => {
+        console.log(`Erro ao carregar imagem para ${item.name} (ID: ${item.id})`);
+        console.log(`ImageUrl: ${item.imageUrl}`);
+        console.log(`URL tentada: ${e.target.src}`);
         e.target.src = placeholderImage;
         e.target.onerror = null; // Prevenir loop infinito
     };
@@ -73,7 +81,7 @@ export const Loja = () => {
                                     src={getImageUrl(item)}
                                     alt={item.name || 'Recompensa'}
                                     className="lojaImage"
-                                    onError={handleImageError}
+                                    onError={(e) => handleImageError(e, item)}
                                 />
                                 <p className="lojaNome">{item.name}</p>
                                 <p className="lojaPontos">
