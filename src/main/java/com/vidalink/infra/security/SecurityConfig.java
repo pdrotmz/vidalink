@@ -104,7 +104,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/rewards/available").hasAnyRole("ADMIN", "USER")
 
                         .requestMatchers(HttpMethod.GET, "/rewards/**/image").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/uploads/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/files/**").permitAll()
 
                         // 🔐 ADMIN pode criar recompensas
                         .requestMatchers(HttpMethod.POST, "/rewards").hasRole("ADMIN")

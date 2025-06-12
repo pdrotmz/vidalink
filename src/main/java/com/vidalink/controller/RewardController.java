@@ -87,58 +87,34 @@ public class RewardController {
     @GetMapping("/{id}/image")
     public ResponseEntity<Resource> getRewardImage(@PathVariable UUID id) {
         try {
-            // 1. Buscar a recompensa pelo ID
             Optional<Reward> rewardOpt = rewardService.findById(id);
             if (rewardOpt.isEmpty()) {
                 return ResponseEntity.notFound().build();
             }
 
             Reward reward = rewardOpt.get();
-            String imageUrl = reward.getImageUrl();
-
-            // 2. Verificar se tem imageUrl
-            if (imageUrl == null || imageUrl.trim().isEmpty()) {
+            if (reward.getImageUrl() == null || reward.getImageUrl().isEmpty()) {
                 return ResponseEntity.notFound().build();
             }
 
-            // 3. Construir o caminho do arquivo
-            Path filePath;
-            if (imageUrl.startsWith("uploads/")) {
-                // Remove "uploads/" do início se existir
-                String fileName = imageUrl.substring("uploads/".length());
-                filePath = Paths.get("uploads", fileName);
-            } else {
-                filePath = Paths.get("uploads", imageUrl);
-            }
-
-            // 4. Verificar se o arquivo existe
+            Path filePath = Paths.get("uploads").resolve(reward.getImageUrl());
             if (!Files.exists(filePath)) {
-                System.err.println("Arquivo não encontrado: " + filePath.toAbsolutePath());
                 return ResponseEntity.notFound().build();
             }
 
-            // 5. Criar o Resource
-            Resource resource = new UrlResource(filePath.toUri());
-            if (!resource.exists() || !resource.isReadable()) {
-                System.err.println("Arquivo não legível: " + filePath.toAbsolutePath());
-                return ResponseEntity.notFound().build();
-            }
-
-            // 6. Determinar o tipo de conteúdo
+            Resource file = new UrlResource(filePath.toUri());
             String contentType = rewardService.determineContentType(filePath);
 
-            // 7. Retornar a resposta
             return ResponseEntity.ok()
                     .contentType(MediaType.parseMediaType(contentType))
-                    .header(HttpHeaders.CACHE_CONTROL, "max-age=3600") // Cache por 1 hora
-                    .body(resource);
-
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + file.getFilename() + "\"")
+                    .body(file);
         } catch (Exception e) {
-            System.err.println("Erro ao servir imagem para reward " + id + ": " + e.getMessage());
             e.printStackTrace();
-            return ResponseEntity.internalServerError().build();
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao carregar imagem");
         }
     }
+
 
 
     @GetMapping("/my-rewards")
