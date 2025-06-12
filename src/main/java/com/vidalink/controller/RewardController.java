@@ -8,7 +8,10 @@ import com.vidalink.services.RewardService;
 import com.vidalink.services.storage.LocalStorageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -17,7 +20,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -72,6 +78,30 @@ public class RewardController {
             return ResponseEntity.status(HttpStatus.CREATED).body(reward);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao salvar a imagem.");
+        }
+    }
+
+    @GetMapping("/{id}/image")
+    public ResponseEntity<Resource> getRewardImage(@PathVariable UUID id) {
+        Optional<Reward> rewardOptional = Optional.ofNullable(rewardService.getById(id));
+
+        if (rewardOptional.isEmpty() || rewardOptional.get().getImageUrl() == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        try {
+            Path imagePath = Paths.get("uploads").resolve(rewardOptional.get().getImageUrl());
+            Resource imageResource = new UrlResource(imagePath.toUri());
+
+            if (!imageResource.exists()) {
+                return ResponseEntity.notFound().build();
+            }
+
+            return ResponseEntity.ok()
+                    .contentType(MediaType.IMAGE_JPEG) // ou IMAGE_PNG, dependendo do seu tipo
+                    .body(imageResource);
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
