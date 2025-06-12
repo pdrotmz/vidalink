@@ -95,6 +95,10 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/api/users/*/edit-profile").hasAnyRole("ADMIN", "USER")
                         .requestMatchers(HttpMethod.GET, "/api/users/*/profile-image").permitAll()
 
+                        .requestMatchers(HttpMethod.GET, "/placeholder.png").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/static/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/images/**").permitAll()
+
 
                         // 🎁 Recompensas
 

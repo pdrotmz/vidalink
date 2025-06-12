@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import "../styles/Loja.css";
+import placeholderImage from "../Assets/images/placeholder.jpeg"; // Importe a imagem
 
 export const Loja = () => {
     const [recompensas, setRecompensas] = useState([]);
@@ -36,7 +37,8 @@ export const Loja = () => {
                                 alt={item.name}
                                 className="lojaImage"
                                 onError={(e) => {
-                                    e.target.src = "/placeholder.png"; // fallback
+                                    e.target.src = placeholderImage; // Usar imagem importada
+                                    e.target.onerror = null; // Prevenir loop infinito
                                 }}
                             />
                             <p className="lojaNome">{item.name}</p>
