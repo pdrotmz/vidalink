@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import AdmHeader from "../Components/AdmHeader";
 import TabelaProdutos from "../Components/TabelaProdutos";
-import FormCadastroRecompensa from "../Components/FormCadastroRecompensa"; // novo
+import FormCadastroRecompensa from "../Components/FormCadastroRecompensa";
 
 import "../styles/ListagemProdutos.css";
 
 export const ListagemProdutos = () => {
     const [recompensas, setRecompensas] = useState([]);
     const [mostrarModal, setMostrarModal] = useState(false);
-    const [termoBusca, setTermoBusca] = useState(""); // <- novo
+    const [termoBusca, setTermoBusca] = useState("");
 
     const fetchRecompensas = async () => {
         try {
@@ -56,6 +56,29 @@ export const ListagemProdutos = () => {
         }
     };
 
+    // Função para atualizar uma recompensa específica na lista
+    const handleRecompensaAtualizada = (recompensaAtualizada) => {
+        setRecompensas(prevRecompensas =>
+            prevRecompensas.map(recompensa =>
+                recompensa.id === recompensaAtualizada.id
+                    ? recompensaAtualizada
+                    : recompensa
+            )
+        );
+    };
+
+    // Função para remover uma recompensa da lista
+    const handleRecompensaExcluida = (recompensaId) => {
+        setRecompensas(prevRecompensas =>
+            prevRecompensas.filter(recompensa => recompensa.id !== recompensaId)
+        );
+    };
+
+    // Função para adicionar nova recompensa à lista
+    const handleNovaRecompensa = (novaRecompensa) => {
+        setRecompensas(prevRecompensas => [...prevRecompensas, novaRecompensa]);
+    };
+
     useEffect(() => {
         fetchRecompensas();
     }, []);
@@ -85,19 +108,28 @@ export const ListagemProdutos = () => {
 
                 <TabelaProdutos
                     recompensas={recompensas}
-                    // ... onEdit e onDelete mantêm os mesmos
+                    onRecompensaUpdate={handleRecompensaAtualizada}
+                    onRecompensaDelete={handleRecompensaExcluida}
                 />
             </div>
 
             {mostrarModal && (
                 <FormCadastroRecompensa
                     onClose={() => setMostrarModal(false)}
-                    onSuccess={fetchRecompensas}
+                    onSuccess={(novaRecompensa) => {
+                        // Se o FormCadastroRecompensa retornar a nova recompensa criada,
+                        // adiciona à lista. Senão, faz o fetch completo como fallback
+                        if (novaRecompensa) {
+                            handleNovaRecompensa(novaRecompensa);
+                        } else {
+                            fetchRecompensas();
+                        }
+                        setMostrarModal(false);
+                    }}
                 />
             )}
         </div>
     );
 };
-
 
 export default ListagemProdutos;

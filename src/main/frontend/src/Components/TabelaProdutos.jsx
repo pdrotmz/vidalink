@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/TabelaProdutos.css";
 import ModalEdicao from "./ModalEdicao";
 
-const TabelaProdutos = ({ recompensas }) => {
+const TabelaProdutos = ({ recompensas, onRecompensaUpdate, onRecompensaDelete }) => {
     const [recompensaSelecionada, setRecompensaSelecionada] = useState(null);
     const [mostrarModal, setMostrarModal] = useState(false);
 
@@ -14,6 +14,44 @@ const TabelaProdutos = ({ recompensas }) => {
     const fecharModal = () => {
         setMostrarModal(false);
         setRecompensaSelecionada(null);
+    };
+
+    const handleRecompensaAtualizada = (recompensaAtualizada) => {
+        // Chama a função do componente pai para atualizar a lista
+        if (onRecompensaUpdate) {
+            onRecompensaUpdate(recompensaAtualizada);
+        }
+    };
+
+    const handleExcluirRecompensa = async (recompensa) => {
+        const confirmacao = window.confirm("Tem certeza que deseja excluir?");
+        if (confirmacao) {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`https://vidalink.onrender.com/rewards/${recompensa.id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    alert("Recompensa excluída com sucesso!");
+                    // Chama função do componente pai para atualizar a lista
+                    if (onRecompensaDelete) {
+                        onRecompensaDelete(recompensa.id);
+                    } else {
+                        // Fallback para reload se não tiver a função
+                        window.location.reload();
+                    }
+                } else {
+                    alert("Erro ao excluir recompensa");
+                }
+            } catch (error) {
+                console.error("Erro ao excluir recompensa", error);
+                alert("Erro ao excluir recompensa");
+            }
+        }
     };
 
     return (
@@ -34,39 +72,18 @@ const TabelaProdutos = ({ recompensas }) => {
                         <td>{reward.description}</td>
                         <td>{reward.pointsRequired}</td>
                         <td>
-                                <span
-                                    onClick={() => abrirModalEdicao(reward)}
-                                    style={{ cursor: "pointer", marginRight: "1rem" }}
-                                >
-                                    ✏️
-                                </span>
                             <span
-                                onClick={async () => {
-                                    const confirmacao = window.confirm("Tem certeza que deseja excluir?");
-                                    if (confirmacao) {
-                                        try {
-                                            const token = localStorage.getItem('token');
-                                            const response = await fetch(`https://vidalink.onrender.com/rewards/${reward.id}`, {
-                                                method: 'DELETE',
-                                                headers: {
-                                                    'Authorization': `Bearer ${token}`
-                                                }
-                                            });
-                                            if (response.ok) {
-                                                alert("Recompensa excluída com sucesso!");
-                                                window.location.reload();
-                                            } else {
-                                                alert("Erro ao excluir recompensa");
-                                            }
-                                        } catch (error) {
-                                            console.error("Erro ao excluir recompensa", error);
-                                        }
-                                    }
-                                }}
+                                onClick={() => abrirModalEdicao(reward)}
+                                style={{ cursor: "pointer", marginRight: "1rem" }}
+                            >
+                                ✏️
+                            </span>
+                            <span
+                                onClick={() => handleExcluirRecompensa(reward)}
                                 style={{ cursor: "pointer" }}
                             >
-    ❌
-</span>
+                                ❌
+                            </span>
                         </td>
                     </tr>
                 ))}
@@ -77,6 +94,7 @@ const TabelaProdutos = ({ recompensas }) => {
                 <ModalEdicao
                     recompensa={recompensaSelecionada}
                     onClose={fecharModal}
+                    onSuccess={handleRecompensaAtualizada}
                 />
             )}
         </div>

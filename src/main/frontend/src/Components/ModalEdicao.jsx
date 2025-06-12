@@ -51,7 +51,17 @@ const ModalEdicao = ({ recompensa, onClose, onSuccess }) => {
             }
 
             alert("Recompensa atualizada com sucesso!");
-            if (data) onSuccess(data);
+
+            // Chama onSuccess passando os dados atualizados
+            if (onSuccess) {
+                onSuccess(data || {
+                    ...recompensa,
+                    name: formData.name,
+                    description: formData.description,
+                    pointsRequired: formData.pointsRequired
+                });
+            }
+
             onClose();
         } catch (err) {
             console.error("Erro ao editar recompensa", err);
