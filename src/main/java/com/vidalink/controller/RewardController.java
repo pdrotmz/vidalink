@@ -116,11 +116,19 @@ public class RewardController {
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Reward> updateReward(
             @PathVariable UUID id,
-            @RequestPart("reward") @Valid Reward reward,
+            @RequestPart("name") String name,
+            @RequestPart("description") String description,
+            @RequestPart("pointsRequired") Integer pointsRequired,
             @RequestPart(value = "file", required = false) MultipartFile file
     ) {
+        Reward reward = new Reward();
+        reward.setName(name);
+        reward.setDescription(description);
+        reward.setPointsRequired(pointsRequired);
+
         return ResponseEntity.ok(rewardService.updateReward(id, reward, file));
     }
+
 
     @GetMapping("/search/{name}")
     @PreAuthorize("hasRole('ADMIN')")
