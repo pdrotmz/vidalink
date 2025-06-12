@@ -120,7 +120,7 @@ public class SecurityConfig {
 
                         .requestMatchers(HttpMethod.GET, "rewards/search/").hasRole("ADMIN")
 
-                        .requestMatchers(HttpMethod.PUT, "/rewards/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/rewards/**").hasAuthority("ROLE_ADMIN")
 
                         .requestMatchers(HttpMethod.DELETE, "/rewards/**").hasRole("ADMIN")
 

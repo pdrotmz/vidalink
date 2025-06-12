@@ -113,7 +113,7 @@ public class RewardController {
 
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<Reward> updateReward(
             @PathVariable UUID id,
             @RequestPart("name") String name,
