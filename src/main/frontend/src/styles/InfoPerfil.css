@@ -7,9 +7,12 @@
     background-repeat: no-repeat;
     padding: 2rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
     color: white;
+    z-index: 1;
+    top: -80px; /* sobe o bloco para centralizar melhor */
 }
 
 .infoPerfilContent {
@@ -20,12 +23,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .perfil {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .profile-image {
@@ -81,24 +86,16 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-.loading-spinner {
+.loading-spinner,
+.error-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     font-size: 1.2rem;
     color: white;
-}
-
-.error-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    color: white;
     text-align: center;
+    flex-direction: column;
 }
 
 .error-message {
@@ -128,7 +125,6 @@
 
 /* ========== RESPONSIVIDADE INFOPERFIL ========== */
 
-/* Tablet (768px - 1023px) */
 @media (max-width: 1023px) {
     .infoPerfilContainer {
         min-height: 450px;
@@ -145,11 +141,11 @@
     }
 }
 
-/* Tablet pequeno (600px - 767px) */
 @media (max-width: 767px) {
     .infoPerfilContainer {
         min-height: 400px;
         padding: 1.5rem;
+        top: -60px;
     }
 
     .infoPerfilContent {
@@ -178,11 +174,11 @@
     }
 }
 
-/* Smartphones (até 599px) */
 @media (max-width: 599px) {
     .infoPerfilContainer {
         padding: 1.2rem;
         min-height: 350px;
+        top: -40px;
     }
 
     .profile-image {
@@ -204,11 +200,11 @@
     }
 }
 
-/* Smartphones pequenos (até 479px) */
 @media (max-width: 479px) {
     .infoPerfilContainer {
         padding: 1rem;
         min-height: 300px;
+        top: -30px;
     }
 
     .profile-image {
