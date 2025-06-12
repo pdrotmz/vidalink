@@ -112,13 +112,13 @@ public class RewardController {
     }
 
 
-    @PutMapping("/{id}")
+    @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<Reward> updateReward(
             @PathVariable UUID id,
-            @RequestPart("name") String name,
-            @RequestPart("description") String description,
-            @RequestPart("pointsRequired") Integer pointsRequired,
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("pointsRequired") Integer pointsRequired,
             @RequestPart(value = "file", required = false) MultipartFile file
     ) {
         Reward reward = new Reward();
@@ -128,6 +128,7 @@ public class RewardController {
 
         return ResponseEntity.ok(rewardService.updateReward(id, reward, file));
     }
+
 
 
     @GetMapping("/search/{name}")
