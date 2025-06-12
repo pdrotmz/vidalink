@@ -9,6 +9,7 @@ import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -52,6 +53,18 @@ public class UserController {
     ) throws IOException {
         User updatedUser = userService.editionProfile(id, updateDTO, profileImage);
         return ResponseEntity.ok(UserResponseDTO.from(updatedUser));
+    }
+
+    @GetMapping("/{id}/profile-image")
+    public ResponseEntity<Resource> getProfileImage(@PathVariable UUID id) {
+        try {
+            Resource image = userService.loadProfileImage(id);
+            return ResponseEntity.ok()
+                    .contentType(MediaType.IMAGE_JPEG)
+                    .body(image);
+        } catch (IOException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PutMapping("/me/email")

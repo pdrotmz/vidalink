@@ -62,7 +62,7 @@ const InfoPerfil = () => {
             <div className="infoPerfilContent">
                 <div className="perfil">
                     <img
-                        src={user?.profileImage || defaultProfilePic}
+                        src={user?.profileImage ? `${user.profileImage}?t=${Date.now()}` : defaultProfilePic}
                         alt="Perfil"
                         className="profile-image"
                     />

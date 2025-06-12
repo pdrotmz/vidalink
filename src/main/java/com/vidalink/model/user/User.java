@@ -35,7 +35,6 @@ public class User implements UserDetails {
 
     private int points;
 
-    @Lob
     private String profileImage;
 
     @Override

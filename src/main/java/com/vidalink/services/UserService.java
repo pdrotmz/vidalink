@@ -6,11 +6,17 @@ import com.vidalink.repository.UserRepository;
 import com.vidalink.services.storage.LocalStorageService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -61,6 +67,25 @@ public class UserService {
         } catch (Exception e) {
             throw new RuntimeException("Erro interno ao editar perfil: " + e.getMessage(), e);
         }
+    }
+
+    public Resource loadProfileImage(UUID id) throws IOException {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
+
+        String filename = user.getProfileImage();
+        if (filename == null || filename.isBlank()) {
+            throw new FileNotFoundException("Imagem de perfil não encontrada");
+        }
+
+        // Caminho da imagem salva
+        Path imagePath = Paths.get("uploads/profile-images", filename);
+
+        if (!Files.exists(imagePath)) {
+            throw new FileNotFoundException("Imagem não encontrada no sistema de arquivos");
+        }
+
+        return new FileSystemResource(imagePath);
     }
 
     private void updateFields(User user, UserProfileMultipartDTO dto, MultipartFile image) throws IOException {

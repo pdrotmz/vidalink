@@ -15,11 +15,15 @@ public class UserResponseDTO {
     private String profileImage;
 
     public static UserResponseDTO from(User user) {
+        String imageUrl = user.getProfileImage() != null
+                ? "https://vidalink.onrender.com/api/users/" + user.getId() + "/profile-image"
+                : null;
+
         return UserResponseDTO.builder()
                 .id(user.getId())
                 .username(user.getUsername())
                 .email(user.getEmail())
-                .profileImage(user.getProfileImage())
+                .profileImage(imageUrl)
                 .build();
     }
 }
