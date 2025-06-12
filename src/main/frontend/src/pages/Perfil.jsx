@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import InfoPerfil from "../Components/InfoPerfil";
 import "../styles/Perfil.css";
+import placeholderImage from "../Assets/images/placeholder.jpeg"; // Importe a imagem
 
 export const Perfil = () => {
     const [recompensas, setRecompensas] = useState([]);
@@ -47,7 +48,8 @@ export const Perfil = () => {
                                     alt={item.name}
                                     className="recompensaImage"
                                     onError={(e) => {
-                                        e.target.src = "/placeholder.png"; // imagem de fallback
+                                        e.target.src = placeholderImage; // Usar imagem importada
+                                        e.target.onerror = null; // Prevenir loop infinito
                                     }}
                                 />
                                 <p className="recompensaNome">{item.name}</p>
@@ -59,5 +61,3 @@ export const Perfil = () => {
         </div>
     );
 };
-
-export default Perfil;
