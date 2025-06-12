@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/ModalComprovante.css";
 
-const ModalComprovante = ({ comprovante, onClose }) => {
+const ModalComprovante = ({ comprovante, onClose, onRemover }) => {
     const token = localStorage.getItem("token");
 
     const aprovarComprovante = async () => {
@@ -16,8 +16,8 @@ const ModalComprovante = ({ comprovante, onClose }) => {
 
             if (response.ok) {
                 alert("Comprovante aprovado com sucesso!");
+                onRemover(comprovante.id);
                 onClose();
-                window.location.reload();
             } else {
                 alert("Erro ao aprovar comprovante");
             }
@@ -40,8 +40,8 @@ const ModalComprovante = ({ comprovante, onClose }) => {
 
             if (response.ok) {
                 alert("Comprovante reprovado e removido!");
+                onRemover(comprovante.id);
                 onClose();
-                window.location.reload();
             } else {
                 alert("Erro ao reprovar comprovante");
             }
