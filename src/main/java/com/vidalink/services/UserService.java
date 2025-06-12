@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -70,12 +71,26 @@ public class UserService {
         }
     }
 
-    public Resource loadProfileImage(UUID userId) throws IOException {
-        Path imagePath = Paths.get("profile-images", userId + ".jpg"); // ou .png etc.
-        if (!Files.exists(imagePath)) {
-            throw new FileNotFoundException("Imagem não encontrada");
+    public String saveProfileImage(UUID userId, MultipartFile file) throws IOException {
+        // Criar diretório se não existir
+        Path uploadDir = Paths.get("profile-images");
+        if (!Files.exists(uploadDir)) {
+            Files.createDirectories(uploadDir);
         }
-        return new UrlResource(imagePath.toUri());
+
+        // Determinar extensão do arquivo
+        String originalFilename = file.getOriginalFilename();
+        String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+
+        // Nome do arquivo
+        String filename = userId + extension;
+        Path filePath = uploadDir.resolve(filename);
+
+        // Salvar arquivo
+        Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+
+        // Retornar URL da imagem
+        return "/api/users/" + userId + "/profile-image";
     }
 
     private void updateFields(User user, UserProfileMultipartDTO dto, MultipartFile image) throws IOException {

@@ -45,6 +45,19 @@ const InfoPerfil = () => {
         setModalAberto(false);
     };
 
+    // Função para construir URL da imagem corretamente
+    const getProfileImageUrl = () => {
+        if (user?.profileImage) {
+            // Se profileImage já é uma URL completa
+            if (user.profileImage.startsWith('http')) {
+                return `${user.profileImage}?t=${Date.now()}`;
+            }
+            // Se é um caminho relativo, construir URL completa
+            return `https://vidalink.onrender.com${user.profileImage}?t=${Date.now()}`;
+        }
+        return defaultProfilePic;
+    };
+
     if (loading) return <div className="loading-spinner">Carregando...</div>;
 
     if (error) {
@@ -62,9 +75,12 @@ const InfoPerfil = () => {
             <div className="infoPerfilContent">
                 <div className="perfil">
                     <img
-                        src={user?.profileImage ? `${user.profileImage}?t=${Date.now()}` : defaultProfilePic}
+                        src={getProfileImageUrl()}
                         alt="Perfil"
                         className="profile-image"
+                        onError={(e) => {
+                            e.target.src = defaultProfilePic;
+                        }}
                     />
                     <div className="textos">
                         <h2 className="username">{user?.username}</h2>

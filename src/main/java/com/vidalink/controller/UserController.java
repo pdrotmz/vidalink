@@ -1,5 +1,6 @@
 package com.vidalink.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vidalink.dto.profile.UserProfileMultipartDTO;
 import com.vidalink.dto.user.UserResponseDTO;
 import com.vidalink.model.user.User;
@@ -55,15 +56,40 @@ public class UserController {
         return ResponseEntity.ok(UserResponseDTO.from(updatedUser));
     }
 
-    @GetMapping("/{id}/profile-image")
-    public ResponseEntity<Resource> getProfileImage(@PathVariable UUID id) {
+    @PutMapping("/{id}/edit-profile")
+    public ResponseEntity<?> updateProfile(
+            @PathVariable UUID id,
+            @RequestParam("user") String userJson,
+            @RequestParam(value = "profileImage", required = false) MultipartFile profileImage) {
+
         try {
-            Resource image = userService.loadProfileImage(id);
-            return ResponseEntity.ok()
-                    .contentType(MediaType.IMAGE_JPEG)
-                    .body(image);
-        } catch (IOException e) {
-            return ResponseEntity.notFound().build();
+            // Parse do JSON
+            ObjectMapper mapper = new ObjectMapper();
+            User userUpdate = mapper.readValue(userJson, User.class);
+
+            // Buscar usuário existente
+            User existingUser = userService.findById(id);
+            if (existingUser == null) {
+                return ResponseEntity.notFound().build();
+            }
+
+            // Atualizar dados básicos
+            existingUser.setUsername(userUpdate.getUsername());
+            existingUser.setEmail(userUpdate.getEmail());
+
+            // Processar imagem se fornecida
+            if (profileImage != null && !profileImage.isEmpty()) {
+                String imageUrl = userService.saveProfileImage(id, profileImage);
+                existingUser.setProfileImage(imageUrl);
+            }
+
+            // Salvar no banco
+            User updatedUser = userService.registerUser(existingUser);
+
+            return ResponseEntity.ok(updatedUser);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro ao atualizar perfil: " + e.getMessage());
         }
     }
 
