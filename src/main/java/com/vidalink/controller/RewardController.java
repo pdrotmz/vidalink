@@ -127,8 +127,8 @@ public class RewardController {
         reward.setDescription(description);
         reward.setPointsRequired(pointsRequired);
 
-        Reward updated = rewardService.updateReward(id, reward, file);
-        return ResponseEntity.ok(new RewardResponseDTO(updated));
+        RewardResponseDTO responseDTO = rewardService.updateReward(id, reward, file);
+        return ResponseEntity.ok(responseDTO);
     }
 
 

@@ -35,33 +35,29 @@ const ModalEdicao = ({ recompensa, onClose, onSuccess }) => {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`
-                    // Não coloca Content-Type aqui. O fetch define isso corretamente com FormData.
                 },
                 body: formDataToSend
             });
 
-            // ⚠️ Garante que vai tentar ler a resposta como JSON, mas só se tiver conteúdo
             if (!response.ok) {
                 const errorText = await response.text();
                 throw new Error(errorText || "Erro desconhecido");
             }
 
-            // ✅ Só tenta processar JSON se tiver body
-            let data = null;
             const contentType = response.headers.get("content-type");
+            let data = null;
             if (contentType && contentType.includes("application/json")) {
                 data = await response.json();
             }
 
             alert("Recompensa atualizada com sucesso!");
-            onSuccess();
+            if (data) onSuccess(data);
             onClose();
         } catch (err) {
             console.error("Erro ao editar recompensa", err);
             alert("Erro ao editar recompensa");
         }
     };
-
 
     return (
         <div className="modal">
@@ -90,7 +86,6 @@ const ModalEdicao = ({ recompensa, onClose, onSuccess }) => {
                         placeholder="Pontos Necessários"
                         required
                     />
-
                     <div className="file-upload-container">
                         <label className={`file-upload-label ${formData.file ? 'has-file' : ''}`}>
                             {formData.file ? formData.file.name : "Alterar Imagem"}
@@ -107,7 +102,6 @@ const ModalEdicao = ({ recompensa, onClose, onSuccess }) => {
                             </div>
                         )}
                     </div>
-
                     <div className="botoes-modal">
                         <button type="submit">Salvar</button>
                         <button type="button" onClick={onClose}>Cancelar</button>

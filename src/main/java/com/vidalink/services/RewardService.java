@@ -1,6 +1,7 @@
 package com.vidalink.services;
 
 import com.vidalink.dto.reward.RewardDTO;
+import com.vidalink.dto.reward.RewardResponseDTO;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.reward.RewardRedemption;
 import com.vidalink.model.user.User;
@@ -125,18 +126,21 @@ public class RewardService {
         rewardRedemptionRepository.save(redemption);
     }
 
-    public Reward updateReward(UUID id, Reward updatedReward, MultipartFile file) {
-        Reward existing = getById(id);
-        existing.setName(updatedReward.getName());
-        existing.setDescription(updatedReward.getDescription());
-        existing.setPointsRequired(updatedReward.getPointsRequired());
+    public RewardResponseDTO updateReward(UUID id, Reward rewardData, MultipartFile file) {
+        Reward reward = rewardRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Reward not found"));
+
+        reward.setName(rewardData.getName());
+        reward.setDescription(rewardData.getDescription());
+        reward.setPointsRequired(rewardData.getPointsRequired());
 
         if (file != null && !file.isEmpty()) {
-            String imagePath = fileStorageService.saveFile(file);
-            existing.setImageUrl(imagePath);
+            String imageUrl = fileStorageService.saveFile(file);
+            reward.setImageUrl(imageUrl);
         }
 
-        return rewardRepository.save(existing);
+        Reward updated = rewardRepository.save(reward);
+        return new RewardResponseDTO(updated);
     }
 
     public void deleteReward(UUID id) {

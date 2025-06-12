@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../styles/TabelaProdutos.css";
 import ModalEdicao from "./ModalEdicao";
 
-const TabelaProdutos = ({ recompensas }) => {
+const TabelaProdutos = ({ recompensas: recompensasIniciais }) => {
+    const [recompensas, setRecompensas] = useState(recompensasIniciais);
     const [recompensaSelecionada, setRecompensaSelecionada] = useState(null);
     const [mostrarModal, setMostrarModal] = useState(false);
 
@@ -14,6 +15,12 @@ const TabelaProdutos = ({ recompensas }) => {
     const fecharModal = () => {
         setMostrarModal(false);
         setRecompensaSelecionada(null);
+    };
+
+    const atualizarRecompensaNaLista = (recompensaAtualizada) => {
+        setRecompensas(prev =>
+            prev.map(r => r.id === recompensaAtualizada.id ? recompensaAtualizada : r)
+        );
     };
 
     return (
@@ -54,7 +61,7 @@ const TabelaProdutos = ({ recompensas }) => {
                                             });
                                             if (response.ok) {
                                                 alert("Recompensa excluída com sucesso!");
-                                                window.location.reload();
+                                                setRecompensas(prev => prev.filter(r => r.id !== reward.id));
                                             } else {
                                                 alert("Erro ao excluir recompensa");
                                             }
@@ -65,8 +72,8 @@ const TabelaProdutos = ({ recompensas }) => {
                                 }}
                                 style={{ cursor: "pointer" }}
                             >
-    ❌
-</span>
+                                    ❌
+                                </span>
                         </td>
                     </tr>
                 ))}
@@ -77,7 +84,7 @@ const TabelaProdutos = ({ recompensas }) => {
                 <ModalEdicao
                     recompensa={recompensaSelecionada}
                     onClose={fecharModal}
-                    onSuccess={() => window.location.reload()}
+                    onSuccess={atualizarRecompensaNaLista}
                 />
             )}
         </div>
