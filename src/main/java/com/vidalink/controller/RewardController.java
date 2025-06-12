@@ -115,7 +115,7 @@ public class RewardController {
 
     @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public ResponseEntity<RewardResponseDTO> updateReward(
+    public ResponseEntity<Reward> updateReward(
             @PathVariable UUID id,
             @RequestParam("name") String name,
             @RequestParam("description") String description,
@@ -127,8 +127,7 @@ public class RewardController {
         reward.setDescription(description);
         reward.setPointsRequired(pointsRequired);
 
-        RewardResponseDTO responseDTO = rewardService.updateReward(id, reward, file);
-        return ResponseEntity.ok(responseDTO);
+        return ResponseEntity.ok(rewardService.updateReward(id, reward, file));
     }
 
 
