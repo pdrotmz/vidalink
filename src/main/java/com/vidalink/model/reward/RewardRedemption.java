@@ -1,5 +1,6 @@
 package com.vidalink.model.reward;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.vidalink.model.user.User;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -21,6 +22,7 @@ public class RewardRedemption {
     private User donor;
 
     @ManyToOne
+    @JsonIgnoreProperties("redemptions") // Evita loop
     private Reward reward;
 
     private LocalDateTime redeemedAt = LocalDateTime.now();

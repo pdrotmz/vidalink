@@ -2,7 +2,6 @@ package com.vidalink.controller;
 
 import com.vidalink.dto.reward.RewardDTO;
 import com.vidalink.dto.reward.RewardRedeemResponseDTO;
-import com.vidalink.dto.reward.RewardResponseDTO;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.user.User;
 import com.vidalink.services.RewardService;

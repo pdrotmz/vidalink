@@ -1,9 +1,11 @@
 package com.vidalink.model.reward;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import javax.net.ssl.SSLSession;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -20,5 +22,9 @@ public class Reward {
     private Integer pointsRequired;
     private String imageUrl;
     private boolean active;
+
+    @OneToMany(mappedBy = "reward")
+    @JsonIgnore
+    private List<RewardRedemption> redemptions;
 }
 
