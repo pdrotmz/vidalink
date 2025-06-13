@@ -10,8 +10,6 @@ import java.util.UUID;
 
 @Repository
 public interface RewardRepository extends JpaRepository<Reward, UUID> {
-    List<Reward> findByActiveTrue();
-
     Optional<Reward> findById(UUID id);
 
     List<Reward> findByNameContainingIgnoreCase(String name);

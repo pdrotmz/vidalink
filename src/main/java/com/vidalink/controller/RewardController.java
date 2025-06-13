@@ -3,7 +3,9 @@ package com.vidalink.controller;
 import com.vidalink.dto.reward.RewardDTO;
 import com.vidalink.dto.reward.RewardRedeemResponseDTO;
 import com.vidalink.model.reward.Reward;
+import com.vidalink.model.reward.RewardRedemption;
 import com.vidalink.model.user.User;
+import com.vidalink.repository.RewardRedemptionRepository;
 import com.vidalink.services.RewardService;
 import com.vidalink.services.storage.LocalStorageService;
 import jakarta.validation.Valid;
@@ -27,6 +29,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/rewards")
@@ -35,7 +38,7 @@ import java.util.UUID;
 public class RewardController {
 
     private final RewardService rewardService;
-    private final LocalStorageService fileStorageService;
+    private final RewardRedemptionRepository rewardRedemptionRepository;
 
 
     @GetMapping("/available")
@@ -117,9 +120,14 @@ public class RewardController {
 
 
     @GetMapping("/user/{id}")
-    public ResponseEntity<List<RewardDTO>> listRewardsByUserId(@PathVariable UUID id) {
-        List<RewardDTO> rewards = rewardService.getRewardsForUserId(id);
-        return ResponseEntity.ok(rewards);
+    public ResponseEntity<List<RewardDTO>> getUserRewards(@PathVariable UUID id) {
+        List<RewardRedemption> redemptions = rewardRedemptionRepository.findByDonorId(id);
+
+        List<RewardDTO> rewardDTOs = redemptions.stream()
+                .map(rr -> new RewardDTO(rr.getReward()))
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(rewardDTOs);
     }
 
 
