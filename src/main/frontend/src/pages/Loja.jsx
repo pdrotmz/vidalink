@@ -6,6 +6,8 @@ import placeholderImage from "../Assets/images/placeholder.jpeg";
 export const Loja = () => {
     const [recompensas, setRecompensas] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [userPoints, setUserPoints] = useState(0);
+
 
     useEffect(() => {
         const token = localStorage.getItem("token");
@@ -37,6 +39,28 @@ export const Loja = () => {
             });
     }, []);
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+
+        fetch("https://vidalink.onrender.com/api/users/me", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => {
+                if (!response.ok) throw new Error("Erro ao buscar usuário");
+                return response.json();
+            })
+            .then(data => {
+                setUserPoints(data.points || 0);
+            })
+            .catch(error => {
+                console.error("Erro ao carregar pontos do usuário:", error);
+            });
+    }, []);
+
     // Função para construir a URL da imagem
     const getImageUrl = (item) => {
         if (item.imageUrl && item.imageUrl.trim() !== '') {
@@ -54,6 +78,7 @@ export const Loja = () => {
         e.target.onerror = null; // Prevenir loop infinito
     };
 
+
     if (loading) {
         return (
             <div className="lojaContainer">
@@ -65,6 +90,31 @@ export const Loja = () => {
             </div>
         );
     }
+
+    const handleResgatar = (rewardId) => {
+        const token = localStorage.getItem("token");
+
+        fetch(`https://vidalink.onrender.com/rewards/redeem/${rewardId}`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => {
+                if (!response.ok) throw new Error("Erro ao resgatar recompensa");
+                return response.json();
+            })
+            .then(data => {
+                alert(data.message || "Recompensa resgatada com sucesso!");
+                setUserPoints(data.updatedPoints); // Atualiza os pontos no front
+            })
+            .catch(error => {
+                alert("Erro ao resgatar recompensa.");
+                console.error(error);
+            });
+    };
+
 
     return (
         <div className="lojaContainer">
@@ -82,9 +132,20 @@ export const Loja = () => {
                                     onError={(e) => handleImageError(e, item)}
                                 />
                                 <p className="lojaNome">{item.name}</p>
-                                <p className="lojaPontos">
-                                    {item.pointsRequired || 0} pts
-                                </p>
+                                <p className="lojaPontos">{item.pointsRequired || 0} pts</p>
+
+                                {userPoints >= item.pointsRequired ? (
+                                    <button
+                                        className="resgatarButton"
+                                        onClick={() => handleResgatar(item.id)}
+                                    >
+                                        Resgatar
+                                    </button>
+                                ) : (
+                                    <button className="resgatarButton" disabled>
+                                        Pontos insuficientes
+                                    </button>
+                                )}
                             </div>
                         ))
                     ) : (
