@@ -66,12 +66,8 @@ public class RewardService {
         String imageUrl = null;
 
         if (file != null && !file.isEmpty()) {
-            String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-            Path uploadPath = Paths.get("uploads");
-            Files.createDirectories(uploadPath);
-            Path filePath = uploadPath.resolve(fileName);
-            Files.write(filePath, file.getBytes());
-            imageUrl = fileName;
+
+            imageUrl = fileStorageService.saveFile(file);
         }
 
         Reward reward = new Reward();

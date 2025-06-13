@@ -44,7 +44,7 @@ export const Perfil = () => {
                         recompensas.map((item) => (
                             <div key={item.id} className="recompensaCard">
                                 <img
-                                    src={`https://vidalink.onrender.com/rewards/${item.id}/image`}
+                                    src={`https://vidalink.onrender.com/rewards/${item.imageUrl}`}
                                     alt={item.name}
                                     className="recompensaImage"
                                     onError={(e) => {
