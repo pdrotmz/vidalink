@@ -1,15 +1,19 @@
 .infoPerfilContainer {
     width: 100%;
-    min-height: 500px;
-    background: url("../Assets/images/bgPerfil.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
     display: flex;
     align-items: center;
     position: relative;
     color: white;
+    background-color: #ef2558;
+    background-image: url("../Assets/images/bgPerfil.svg");
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .infoPerfilContent {
@@ -20,6 +24,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    z-index: 2;
+    position: relative;
 }
 
 .perfil {

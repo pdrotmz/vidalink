@@ -36,7 +36,7 @@ export const Perfil = () => {
             <Header />
             <div className="perfilContent">
                 <InfoPerfil />
-                <h1>Minhas Recompensas</h1>
+                <h1 className="recompensaTitle">Minhas Recompensas</h1>
                 <div className="recompensasGrid">
                     {recompensas.length === 0 ? (
                         <p>Você ainda não possui recompensas.</p>
