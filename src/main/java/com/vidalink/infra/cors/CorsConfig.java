@@ -11,24 +11,9 @@ public class CorsConfig implements WebMvcConfigurer {
     private String uploadPath;
 
     @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("*") // Se quiser mais seguro, especifica domínio exato
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*")
-                .allowCredentials(true);
-    }
-
-    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/images/**")
                 .addResourceLocations("file:" + uploadPath + "/")
                 .setCachePeriod(3600);
-    }
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/{path:^(?!api).*$}")
-                .setViewName("forward:/index.html");
     }
 }
