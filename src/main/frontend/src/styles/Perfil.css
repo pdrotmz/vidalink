@@ -1,26 +1,18 @@
-/* src/styles/Perfil.css */
-
-.recompensasTitle {
-  text-align: center; /* Centraliza o texto horizontalmente */
-  margin-top: 100px; /* Aumente este valor para mais espaço do fundo rosa */
-  margin-bottom: 40px; /* Espaçamento entre o título e o grid de recompensas */
-  font-size: 2.5rem; /* Ajuste o tamanho da fonte, se desejar */
-  color: #333; /* Cor do texto */
+.perfilContainer {
+  min-height: 100vh;
 }
 
-/* Opcional: ajustar margens para dispositivos menores */
-@media (max-width: 767px) {
-  .recompensasTitle {
-    margin-top: 80px; /* Menor em telas menores */
-    font-size: 2rem;
-  }
+.perfilContent {
+  padding: 0 2rem 2rem 2rem;
 }
 
-@media (max-width: 479px) {
-  .recompensasTitle {
-    margin-top: 60px; /* Ainda menor em telas muito pequenas */
-    font-size: 1.8rem;
-  }
+.perfilContent h1 {
+  text-align: center;
+  margin-top: 4rem; /* Aumenta o espaçamento do fundo rosa */
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .recompensasGrid {
@@ -28,7 +20,14 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
-  /* Remova o margin-top aqui, pois o h1 já tem um */
+  margin-top: 20px;
+}
+
+.recompensasGrid p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
 }
 
 .recompensaCard {
@@ -39,6 +38,7 @@
   text-align: center;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .recompensaCard:hover {
@@ -56,4 +56,23 @@
   font-weight: bold;
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .perfilContent {
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  .perfilContent h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .perfilContent h1 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+  }
 }
