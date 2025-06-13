@@ -116,12 +116,10 @@ public class RewardController {
 
 
 
-    @GetMapping("/my-rewards")
-    public ResponseEntity<List<RewardDTO>> listUserRewards(@AuthenticationPrincipal User user) {
-        List<RewardDTO> dummy = List.of(new RewardDTO(
-                UUID.randomUUID(), "Teste", "Descrição", 10, "/images/exemplo.png"
-        ));
-        return ResponseEntity.ok(dummy);
+    @GetMapping("/user/{id}")
+    public ResponseEntity<List<RewardDTO>> listRewardsByUserId(@PathVariable UUID id) {
+        List<RewardDTO> rewards = rewardService.getRewardsForUserId(id);
+        return ResponseEntity.ok(rewards);
     }
 
 

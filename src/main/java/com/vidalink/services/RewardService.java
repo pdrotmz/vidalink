@@ -11,8 +11,10 @@ import com.vidalink.repository.UserRepository;
 import com.vidalink.services.storage.LocalStorageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -85,7 +87,10 @@ public class RewardService {
         return rewardRepository.save(reward);
     }
 
-    public List<RewardDTO> getRewardsForUser(User user) {
+    public List<RewardDTO> getRewardsForUserId(UUID userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário não encontrado"));
+
         return rewardRedemptionRepository.findByDonor(user).stream()
                 .map(rr -> new RewardDTO(rr.getReward()))
                 .collect(Collectors.toList());
