@@ -3,7 +3,6 @@ import ModalEdicaoPerfil from "../Components/ModalEdicaoPerfil";
 import "../styles/InfoPerfil.css";
 import defaultProfilePic from "../Assets/images/fotoperfil.jpg";
 import { Link } from "react-router-dom";
-import Header from "./Header.jsx";
 
 const InfoPerfil = () => {
     const [user, setUser] = useState(null);
@@ -73,9 +72,8 @@ const InfoPerfil = () => {
 
     return (
         <div className="infoPerfilContainer">
-            <Header />
             <div className="infoPerfilContent">
-                    <InfoPerfil />
+                <div className="perfil">
                     <img
                         src={getProfileImageUrl()}
                         alt="Perfil"
@@ -92,6 +90,7 @@ const InfoPerfil = () => {
                 <button onClick={() => setModalAberto(true)} className="edit-button">
                     Editar Perfil
                 </button>
+            </div>
 
             {modalAberto && (
                 <ModalEdicaoPerfil

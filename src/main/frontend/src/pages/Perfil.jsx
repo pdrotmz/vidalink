@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import InfoPerfil from "../Components/InfoPerfil";
 import "../styles/Perfil.css";
-import placeholderImage from "../Assets/images/placeholder.jpeg"; // Importe a imagem
+import placeholderImage from "../Assets/images/placeholder.jpeg";
 
 export const Perfil = () => {
     const [recompensas, setRecompensas] = useState([]);
@@ -34,9 +34,9 @@ export const Perfil = () => {
     return (
         <div className="perfilContainer">
             <Header />
+            <InfoPerfil />
             <div className="perfilContent">
-                <InfoPerfil />
-                <h1 className="recompensaTitle">Minhas Recompensas</h1>
+                <h1>Minhas Recompensas</h1>
                 <div className="recompensasGrid">
                     {recompensas.length === 0 ? (
                         <p>Você ainda não possui recompensas.</p>
@@ -48,8 +48,8 @@ export const Perfil = () => {
                                     alt={item.name}
                                     className="recompensaImage"
                                     onError={(e) => {
-                                        e.target.src = placeholderImage; // Usar imagem importada
-                                        e.target.onerror = null; // Prevenir loop infinito
+                                        e.target.src = placeholderImage;
+                                        e.target.onerror = null;
                                     }}
                                 />
                                 <p className="recompensaNome">{item.name}</p>

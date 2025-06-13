@@ -1,14 +1,14 @@
 .infoPerfilContainer {
     width: 100%;
-    min-height: 500px;
+    min-height: 500px; /* Reduzido de 500px para 300px */
     background: url("../Assets/images/bgPerfil.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem;
+    padding: 3rem 8rem; /* Reduzido o padding vertical */
     display: flex;
     align-items: center;
-    justify-content: center; /* Adiciona centralização horizontal */
+    justify-content: center;
     position: relative;
     color: white;
 }
@@ -127,13 +127,74 @@
     margin-top: 0.5rem;
 }
 
+/* CSS do conteúdo abaixo do perfil */
+.perfilContainer {
+    min-height: 100vh;
+}
+
+.perfilContent {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.perfilContent h1 {
+    text-align: center;
+    margin-top: 2rem; /* Reduzido de 4rem para 2rem */
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.recompensasGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.recompensasGrid p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.recompensaCard {
+    width: 140px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.recompensaCard:hover {
+    transform: scale(1.05);
+}
+
+.recompensaImage {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.recompensaNome {
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 /* ========== RESPONSIVIDADE INFOPERFIL ========== */
 
 /* Tablet (768px - 1023px) */
 @media (max-width: 1023px) {
     .infoPerfilContainer {
-        min-height: 450px;
-        padding: 1.8rem;
+        min-height: 280px; /* Reduzido de 450px */
+        padding: 1.5rem 1.8rem; /* Ajustado padding */
     }
 
     .profile-image {
@@ -149,8 +210,8 @@
 /* Tablet pequeno (600px - 767px) */
 @media (max-width: 767px) {
     .infoPerfilContainer {
-        min-height: 400px;
-        padding: 1.5rem;
+        min-height: 250px; /* Reduzido de 400px */
+        padding: 1.2rem 1.5rem; /* Ajustado padding */
     }
 
     .infoPerfilContent {
@@ -177,13 +238,17 @@
         width: 100%;
         max-width: 200px;
     }
+
+    .perfilContent h1 {
+        margin-top: 1.5rem; /* Reduzido para mobile */
+    }
 }
 
 /* Smartphones (até 599px) */
 @media (max-width: 599px) {
     .infoPerfilContainer {
-        padding: 1.2rem;
-        min-height: 350px;
+        padding: 1rem 1.2rem; /* Ajustado padding */
+        min-height: 220px; /* Reduzido de 350px */
     }
 
     .profile-image {
@@ -203,13 +268,18 @@
         padding: 0.6rem 1.5rem;
         font-size: 0.95rem;
     }
+
+    .perfilContent h1 {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
 }
 
 /* Smartphones pequenos (até 479px) */
 @media (max-width: 479px) {
     .infoPerfilContainer {
-        padding: 1rem;
-        min-height: 300px;
+        padding: 0.8rem 1rem; /* Ajustado padding */
+        min-height: 200px; /* Reduzido de 300px */
     }
 
     .profile-image {
@@ -225,5 +295,10 @@
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
         min-width: 120px;
+    }
+
+    .perfilContent h1 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
     }
 }
