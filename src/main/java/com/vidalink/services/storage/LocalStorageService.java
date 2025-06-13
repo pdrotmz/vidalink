@@ -1,6 +1,7 @@
 package com.vidalink.services.storage;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,7 +14,8 @@ import java.util.UUID;
 @Slf4j
 public class LocalStorageService implements StorageService {
 
-    private static final String UPLOAD_DIR = "uploads";
+    @Value("${upload.path}")
+    private String uploadPath;
 
     @Override
     public String saveFile(MultipartFile file) {
@@ -22,14 +24,14 @@ public class LocalStorageService implements StorageService {
                 throw new RuntimeException("Arquivo vazio");
             }
 
-            Files.createDirectories(Paths.get(UPLOAD_DIR));
+            Files.createDirectories(Paths.get(uploadPath));
 
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-            Path filePath = Paths.get(UPLOAD_DIR, fileName);
+            Path filePath = Paths.get(uploadPath, fileName);
 
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-            return filePath.toString();
+            return "/images/" + fileName; // Retorna o caminho que o frontend pode acessar
         } catch (IOException e) {
             throw new RuntimeException("Erro ao salvar o arquivo", e);
         }
@@ -38,7 +40,7 @@ public class LocalStorageService implements StorageService {
     @Override
     public void deleteFile(String path) {
         try {
-            Path filePath = Paths.get(path);
+            Path filePath = Paths.get(uploadPath, path);
             Files.deleteIfExists(filePath);
         } catch (IOException e) {
             log.error("Erro ao deletar arquivo: {}", path, e);

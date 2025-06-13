@@ -39,11 +39,9 @@ export const Loja = () => {
 
     // Função para construir a URL da imagem
     const getImageUrl = (item) => {
-        // Se tem imageUrl, tenta carregar a imagem
         if (item.imageUrl && item.imageUrl.trim() !== '') {
-            return `https://vidalink.onrender.com/rewards/${item.id}/image`;
+            return `https://vidalink.onrender.com${item.imageUrl}`;
         }
-        // Se não tem imageUrl, usa placeholder diretamente
         return placeholderImage;
     };
 
