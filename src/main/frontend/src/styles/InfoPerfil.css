@@ -1,19 +1,19 @@
+/* src/styles/InfoPerfil.css */
+
 .infoPerfilContainer {
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 5rem;
-    padding-bottom: 8rem;
+    /* Revertendo o min-height, mas mantendo a ideia de espaço */
+    /* A chave para o fundo não "quebrar" é permitir que o SVG preencha e a forma da onda seja a base */
+    min-height: 500px; /* Voltar para um min-height para garantir espaço vertical */
+    background: url("../Assets/images/bgPerfil.svg"); /* Usar a imagem de fundo original */
+    background-size: cover; /* Permite que a imagem cubra toda a área, cortando se necessário */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    padding: 2rem; /* Mantendo o padding para espaço interno */
     display: flex;
-    align-items: center;
+    align-items: center; /* Isso é crucial para o alinhamento vertical do conteúdo */
     position: relative;
     color: white;
-    background-color: #ef2558;
-    background-image: url("../Assets/images/bgPerfil.svg");
-    background-position: bottom center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .infoPerfilContent {
@@ -22,12 +22,16 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Garante que os itens dentro (perfil e botão) estejam alinhados verticalmente entre si */
     gap: 2rem;
-    z-index: 2;
-    position: relative;
+    /* z-index e position: relative; não devem ser estritamente necessários aqui se o background está bem */
+    /* Removendo z-index e position: relative; se não houver outros elementos sobrepondo */
 }
 
+/* Os estilos .perfil, .profile-image, .textos, .username, .email, .edit-button e as media queries
+   permanecem inalterados, pois eles já estavam funcionando bem para o layout interno e responsividade. */
+
+/* Coloque o restante do seu InfoPerfil.css aqui abaixo, sem modificações */
 .perfil {
     display: flex;
     align-items: center;
