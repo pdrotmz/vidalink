@@ -95,7 +95,7 @@ public class SecurityConfig {
 
                         .requestMatchers(HttpMethod.GET, "/placeholder.png").permitAll()
                         .requestMatchers(HttpMethod.GET, "/static/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/images/**").permitAll()
+                        .requestMatchers( "/images/**").permitAll()
 
 
                         // 🎁 Recompensas
