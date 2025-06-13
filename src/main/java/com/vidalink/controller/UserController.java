@@ -56,43 +56,6 @@ public class UserController {
         return ResponseEntity.ok(UserResponseDTO.from(updatedUser));
     }
 
-    @PutMapping("/{id}/edit-profile")
-    public ResponseEntity<?> updateProfile(
-            @PathVariable UUID id,
-            @RequestParam("user") String userJson,
-            @RequestParam(value = "profileImage", required = false) MultipartFile profileImage) {
-
-        try {
-            // Parse do JSON
-            ObjectMapper mapper = new ObjectMapper();
-            User userUpdate = mapper.readValue(userJson, User.class);
-
-            // Buscar usuário existente
-            User existingUser = userService.findById(id);
-            if (existingUser == null) {
-                return ResponseEntity.notFound().build();
-            }
-
-            // Atualizar dados básicos
-            existingUser.setUsername(userUpdate.getUsername());
-            existingUser.setEmail(userUpdate.getEmail());
-
-            // Processar imagem se fornecida
-            if (profileImage != null && !profileImage.isEmpty()) {
-                String imageUrl = userService.saveProfileImage(id, profileImage);
-                existingUser.setProfileImage(imageUrl);
-            }
-
-            // Salvar no banco
-            User updatedUser = userService.registerUser(existingUser);
-
-            return ResponseEntity.ok(updatedUser);
-
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro ao atualizar perfil: " + e.getMessage());
-        }
-    }
-
     @PutMapping("/me/email")
     public ResponseEntity<UserResponseDTO> updateMyEmail(
             @AuthenticationPrincipal User loggedUser,
