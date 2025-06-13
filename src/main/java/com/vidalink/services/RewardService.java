@@ -1,5 +1,6 @@
 package com.vidalink.services;
 
+
 import com.vidalink.dto.reward.RewardDTO;
 import com.vidalink.model.reward.Reward;
 import com.vidalink.model.reward.RewardRedemption;
@@ -84,11 +85,9 @@ public class RewardService {
         return rewardRepository.save(reward);
     }
 
-    public List<Reward> getRewardsForUser(User user) {
-        return rewardRedemptionRepository.findByDonor(user)
-                .stream()
-                .filter(r -> r.getReward() != null)
-                .map(RewardRedemption::getReward)
+    public List<RewardDTO> getRewardsForUser(User user) {
+        return rewardRedemptionRepository.findByDonor(user).stream()
+                .map(rr -> new RewardDTO(rr.getReward()))
                 .collect(Collectors.toList());
     }
 

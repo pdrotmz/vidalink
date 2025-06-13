@@ -117,7 +117,8 @@ public class RewardController {
 
 
     @GetMapping("/my-rewards")
-    public ResponseEntity<List<Reward>> listUserRewards(@AuthenticationPrincipal User user) {
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public ResponseEntity<List<RewardDTO>> listUserRewards(@AuthenticationPrincipal User user) {
         return ResponseEntity.ok(rewardService.getRewardsForUser(user));
     }
 

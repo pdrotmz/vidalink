@@ -14,16 +14,16 @@ import java.util.UUID;
 @AllArgsConstructor
 public class RewardDTO {
     private UUID id;
-    private String nome;
-    private String descricao;
-    private int preco;
-    private String imagemUrl;
+    private String name;
+    private String description;
+    private int pointsRequired;
+    private String imageUrl;
 
     public RewardDTO(Reward reward) {
         this.id = reward.getId();
-        this.nome = reward.getName();
-        this.descricao = reward.getDescription();
-        this.preco = reward.getPointsRequired();
-        this.imagemUrl = reward.getImageUrl();
+        this.name = reward.getName();
+        this.description = reward.getDescription();
+        this.pointsRequired = reward.getPointsRequired();
+        this.imageUrl = reward.getImageUrl();
     }
 }
