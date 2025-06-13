@@ -87,9 +87,11 @@ public class RewardService {
     public List<Reward> getRewardsForUser(User user) {
         return rewardRedemptionRepository.findByDonor(user)
                 .stream()
+                .filter(r -> r.getReward() != null)
                 .map(RewardRedemption::getReward)
                 .collect(Collectors.toList());
     }
+
 
     public Optional<Reward> findById(UUID id) {
         return rewardRepository.findById(id);

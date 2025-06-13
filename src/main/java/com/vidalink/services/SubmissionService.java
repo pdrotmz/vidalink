@@ -86,6 +86,7 @@ public class SubmissionService {
         submissionRepository.delete(submission);
     }
 
+
     private void checkAndApplyRewards(User user) {
         int currentPoints = user.getPoints();
 
