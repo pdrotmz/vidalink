@@ -25,4 +25,10 @@ public class CorsConfig implements WebMvcConfigurer {
                 .addResourceLocations("file:" + uploadPath + "/")
                 .setCachePeriod(3600);
     }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/{path:^(?!api).*$}")
+                .setViewName("forward:/index.html");
+    }
 }
