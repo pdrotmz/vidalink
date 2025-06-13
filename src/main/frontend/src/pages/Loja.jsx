@@ -6,8 +6,7 @@ import placeholderImage from "../Assets/images/placeholder.jpeg";
 export const Loja = () => {
     const [recompensas, setRecompensas] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [userPoints, setUserPoints] = useState(0);
-
+    const [userPoints, setUserPoints] = useState(null); // null = ainda carregando
 
     useEffect(() => {
         const token = localStorage.getItem("token");
@@ -24,8 +23,7 @@ export const Loja = () => {
                 return response.json();
             })
             .then(data => {
-                console.log("Dados recebidos:", data); // Para debug
-                // Verificar se cada item tem imageUrl
+                console.log("Dados recebidos:", data);
                 data.forEach(item => {
                     console.log(`Item ${item.name}: imageUrl = ${item.imageUrl}`);
                 });
@@ -54,14 +52,13 @@ export const Loja = () => {
                 return response.json();
             })
             .then(data => {
-                setUserPoints(data.points || 0);
+                setUserPoints(data.points); // não força 0
             })
             .catch(error => {
                 console.error("Erro ao carregar pontos do usuário:", error);
             });
     }, []);
 
-    // Função para construir a URL da imagem
     const getImageUrl = (item) => {
         if (item.imageUrl && item.imageUrl.trim() !== '') {
             return `https://vidalink.onrender.com${item.imageUrl}`;
@@ -69,27 +66,13 @@ export const Loja = () => {
         return placeholderImage;
     };
 
-    // Função para tratar erro de imagem
     const handleImageError = (e, item) => {
         console.log(`Erro ao carregar imagem para ${item.name} (ID: ${item.id})`);
         console.log(`ImageUrl: ${item.imageUrl}`);
         console.log(`URL tentada: ${e.target.src}`);
         e.target.src = placeholderImage;
-        e.target.onerror = null; // Prevenir loop infinito
+        e.target.onerror = null;
     };
-
-
-    if (loading) {
-        return (
-            <div className="lojaContainer">
-                <Header />
-                <div className="lojaContent">
-                    <h1>Top Medalhas</h1>
-                    <p>Carregando recompensas...</p>
-                </div>
-            </div>
-        );
-    }
 
     const handleResgatar = (rewardId) => {
         const token = localStorage.getItem("token");
@@ -107,7 +90,7 @@ export const Loja = () => {
             })
             .then(data => {
                 alert(data.message || "Recompensa resgatada com sucesso!");
-                setUserPoints(data.updatedPoints); // Atualiza os pontos no front
+                setUserPoints(data.updatedPoints);
             })
             .catch(error => {
                 alert("Erro ao resgatar recompensa.");
@@ -115,43 +98,47 @@ export const Loja = () => {
             });
     };
 
-
     return (
         <div className="lojaContainer">
             <Header />
             <div className="lojaContent">
                 <h1>Top Medalhas</h1>
-                <div className="lojaGrid">
-                    {recompensas.length > 0 ? (
-                        recompensas.map((item) => (
-                            <div key={item.id} className="lojaCard">
-                                <img
-                                    src={getImageUrl(item)}
-                                    alt={item.name || 'Recompensa'}
-                                    className="lojaImage"
-                                    onError={(e) => handleImageError(e, item)}
-                                />
-                                <p className="lojaNome">{item.name}</p>
-                                <p className="lojaPontos">{item.pointsRequired || 0} pts</p>
 
-                                {userPoints >= item.pointsRequired ? (
-                                    <button
-                                        className="resgatarButton"
-                                        onClick={() => handleResgatar(item.id)}
-                                    >
-                                        Resgatar
-                                    </button>
-                                ) : (
-                                    <button className="resgatarButton" disabled>
-                                        Pontos insuficientes
-                                    </button>
-                                )}
-                            </div>
-                        ))
-                    ) : (
-                        <p>Nenhuma recompensa disponível no momento.</p>
-                    )}
-                </div>
+                {userPoints === null || loading ? (
+                    <p>Carregando recompensas...</p>
+                ) : (
+                    <div className="lojaGrid">
+                        {recompensas.length > 0 ? (
+                            recompensas.map((item) => (
+                                <div key={item.id} className="lojaCard">
+                                    <img
+                                        src={getImageUrl(item)}
+                                        alt={item.name || 'Recompensa'}
+                                        className="lojaImage"
+                                        onError={(e) => handleImageError(e, item)}
+                                    />
+                                    <p className="lojaNome">{item.name}</p>
+                                    <p className="lojaPontos">{item.pointsRequired} pts</p>
+
+                                    {userPoints >= item.pointsRequired ? (
+                                        <button
+                                            className="resgatarButton"
+                                            onClick={() => handleResgatar(item.id)}
+                                        >
+                                            Resgatar
+                                        </button>
+                                    ) : (
+                                        <button className="resgatarButton" disabled>
+                                            Pontos insuficientes
+                                        </button>
+                                    )}
+                                </div>
+                            ))
+                        ) : (
+                            <p>Nenhuma recompensa disponível no momento.</p>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );
