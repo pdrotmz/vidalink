@@ -1,73 +1,80 @@
 import React from "react";
 import "../styles/ModalComprovante.css";
+import placeholderImage from "../Assets/images/placeholder.jpeg";
+
 
 const ModalComprovante = ({ comprovante, onClose, onRemover }) => {
-    const token = localStorage.getItem("token");
+    const { userName, userId, submissionDate, filePath } = comprovante;
 
-    const aprovarComprovante = async () => {
+    // Montar URL da imagem
+    const imageUrl = filePath
+        ? `https://vidalink.onrender.com${filePath}`
+        : placeholderImage;
+
+    const handleValidar = async () => {
+        const token = localStorage.getItem("token");
         try {
-            const response = await fetch(`https://vidalink.onrender.com/submissions/${comprovante.id}/validate`, {
-                method: "PUT",
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json",
-                },
-            });
-
-            if (response.ok) {
-                alert("Comprovante aprovado com sucesso!");
-                onRemover(comprovante.id);
-                onClose();
-            } else {
-                alert("Erro ao aprovar comprovante");
-            }
-        } catch (error) {
-            console.error("Erro ao aprovar comprovante:", error);
+            const res = await fetch(
+                `https://vidalink.onrender.com/submissions/${comprovante.id}/validate`,
+                {
+                    method: "PUT",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            if (!res.ok) throw new Error("Erro ao validar comprovante");
+            alert("Comprovante validado com sucesso!");
+            onRemover(comprovante.id);
+            onClose();
+        } catch (err) {
+            console.error(err);
+            alert("Erro ao validar.");
         }
     };
 
-    const reprovarComprovante = async () => {
-        const confirmacao = window.confirm("Tem certeza que deseja reprovar e excluir este comprovante?");
-        if (!confirmacao) return;
-
+    const handleRejeitar = async () => {
+        const token = localStorage.getItem("token");
         try {
-            const response = await fetch(`https://vidalink.onrender.com/submissions/${comprovante.id}`, {
-                method: "DELETE",
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
-
-            if (response.ok) {
-                alert("Comprovante reprovado e removido!");
-                onRemover(comprovante.id);
-                onClose();
-            } else {
-                alert("Erro ao reprovar comprovante");
-            }
-        } catch (error) {
-            console.error("Erro ao reprovar comprovante:", error);
+            const res = await fetch(
+                `https://vidalink.onrender.com/submissions/${comprovante.id}`,
+                {
+                    method: "DELETE",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            if (!res.ok) throw new Error("Erro ao rejeitar comprovante");
+            alert("Comprovante rejeitado e deletado.");
+            onRemover(comprovante.id);
+            onClose();
+        } catch (err) {
+            console.error(err);
+            alert("Erro ao rejeitar.");
         }
     };
 
     return (
-        <div className="modal-comprovante-backdrop" onClick={onClose}>
-            <div className="modal-comprovante" onClick={(e) => e.stopPropagation()}>
-                <h2>{comprovante.userName}</h2>
-
-                {comprovante.filePath ? (
-                    <img
-                        src={`https://vidalink.onrender.com/${comprovante.filePath}`}
-                        alt="Comprovante"
-                        style={{ maxWidth: "100%", maxHeight: "400px" }}
-                    />
-                ) : (
-                    <p>Imagem do comprovante não disponível.</p>
-                )}
-
-                <div className="buttons">
-                    <button className="reprovar" onClick={reprovarComprovante}>Reprovar</button>
-                    <button className="aprovar" onClick={aprovarComprovante}>Aprovar</button>
+        <div className="modal-comprovante-overlay">
+            <div className="modal-comprovante">
+                <h3>Detalhes do Comprovante</h3>
+                <p><strong>Usuário:</strong> {userName}</p>
+                <p><strong>ID:</strong> {userId}</p>
+                <p><strong>Data:</strong> {new Date(submissionDate).toLocaleDateString()}</p>
+                <img
+                    src={imageUrl}
+                    alt="Comprovante"
+                    className="modal-comprovante-img"
+                    onError={(e) => {
+                        e.target.src = placeholderImage;
+                        e.target.onerror = null;
+                    }}
+                />
+                <div className="botoes-modal">
+                    <button className="validar-btn" onClick={handleValidar}>Validar</button>
+                    <button className="rejeitar-btn" onClick={handleRejeitar}>Rejeitar</button>
+                    <button className="fechar-btn" onClick={onClose}>Fechar</button>
                 </div>
             </div>
         </div>
