@@ -111,6 +111,7 @@ public class SecurityConfig {
 
                         // 👤 USER pode resgatar recompensa
                         .requestMatchers(HttpMethod.POST, "/rewards/redeem").hasRole("USER")
+                        .requestMatchers(HttpMethod.POST, "/rewards/redeem/**").hasRole("USER")
 
                         // 👤 USER pode ver suas recompensas conquistadas
                         .requestMatchers(HttpMethod.GET, "/rewards/my-rewards").hasAnyRole("USER", "ADMIN")
