@@ -13,6 +13,7 @@ public class UserResponseDTO {
     private String username;
     private String email;
     private String profileImage;
+    private int points;
 
     public static UserResponseDTO from(User user) {
         String imageUrl = user.getProfileImage() != null
@@ -24,6 +25,7 @@ public class UserResponseDTO {
                 .username(user.getUsername())
                 .email(user.getEmail())
                 .profileImage(imageUrl)
+                .points(user.getPoints())
                 .build();
     }
 }
